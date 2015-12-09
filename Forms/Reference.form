@@ -1,216 +1,168 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
- replicaid='85257EDD00698137'>
-<noteinfo noteid='612' unid='6C2D8FCA32A252BA85257ED1005BC997' sequence='9'>
-<created><datetime dst='true'>20151001T124233,83-04</datetime></created>
-<modified><datetime>20151117T114705,68-05</datetime></modified>
-<revised><datetime>20151117T114705,67-05</datetime></revised>
-<lastaccessed><datetime>20151117T114705,68-05</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20151013T151403,30-04</datetime></addedtofile></noteinfo>
+<form name='Reference' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='85257F16005C245F' publicaccess='false' designerversion='8.5.3'
+ renderpassthrough='true'>
+<noteinfo noteid='6fe' unid='A84E6346ACB17FE485257F16005C2A0B' sequence='2'>
+<created><datetime>20151209T114640,75-05</datetime></created>
+<modified><datetime>20151209T114644,62-05</datetime></modified>
+<revised><datetime>20151209T114644,61-05</datetime></revised>
+<lastaccessed><datetime>20151209T114644,62-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114644,60-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
 <wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name='Name' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>Reference</text></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Info' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
-</rawitemdata></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion'><text>8.5.3</text></item>
-<item name='$Fonts'>
-<rawitemdata type='1'>
-i/8oAAEABSJTbWFsbCBGb250cwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>Reference</text></item>
-<item name='ReferenceName' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Company' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Title' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Phone' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='EMail' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='DateEmployedFrom' summary='false'>
-<rawitemdata type='400'>
-AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='DateEmployedTo' summary='false'>
-<rawitemdata type='400'>
-AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='RefTakenBy' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='DateRef' summary='false'>
-<rawitemdata type='400'>
-AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='RefContext' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RefAccomplishments' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RefWeakness' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RefScale' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RefScaleWhy' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RefResponsible' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RefGetAlong' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RefAttendance' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RefRehire' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RefManageAdvice' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RefNotes' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='UniqueID2' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='ParentUniqueID2' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Employee_Name' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$Fields'><textlist><text>Employee_Name</text><text>ParentUniqueID2</text><text
->UniqueID2</text><text>RefNotes</text><text>RefManageAdvice</text><text>RefRehire</text><text
->RefAttendance</text><text>RefGetAlong</text><text>RefResponsible</text><text
->RefScaleWhy</text><text>RefScale</text><text>RefWeakness</text><text>RefAccomplishments</text><text
->RefContext</text><text>DateRef</text><text>RefTakenBy</text><text>DateEmployedTo</text><text
->DateEmployedFrom</text><text>Email</text><text>Phone</text><text>Title</text><text
->Company</text><text>ReferenceName</text></textlist></item>
-<item name='$Body' sign='true'>
-<rawitemdata type='1'>
-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
-</rawitemdata></item></note>
+<body><richtext>
+<pardef id='1'/>
+<par def='1'/>
+<par def='1'>REFERENCE</par>
+<par def='1'/>
+<pardef id='2' leftmargin='1in' tabs='L3in'/>
+<par def='2'>Name:	<field type='text' kind='editable' name='ReferenceName'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='7' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='2'>Company: 	<field type='text' kind='editable' name='Company'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata> </par>
+<par def='2'>Title:	<field type='text' kind='editable' name='Title'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='2'>Phone:	<field type='text' kind='editable' name='Phone'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='2'>Email: 	<field type='text' kind='editable' name='Email'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='8pt'
+ style='bold extrude' name='Small Fonts' pitch='variable' truetype='false'
+ familyid='20' color='silver'/></run></par>
+<par def='2'>Dates Employed:	<field type='datetime' kind='editable' name='DateEmployedFrom'><datetimeformat
+ show='date' date='yearmonthday' fourdigityearfor21stcentury='true' zone='never'
+ dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/></field> to <field
+ type='datetime' kind='editable' name='DateEmployedTo'><datetimeformat show='date'
+ date='yearmonthday' fourdigityearfor21stcentury='true' zone='never' dateformat='weekdaymonthdayyear'
+ dayformat='twodigitday' monthformat='twodigitmonth' yearformat='fourdigityear'
+ weekdayformat='shortname' dateseparator1=' ' dateseparator2='/' dateseparator3='/'
+ timeseparator=':' preference='usersetting'/></field></par>
+<par def='2'>Reference Taken by:	<field type='text' kind='editable' name='RefTakenBy'><code
+ event='defaultvalue'><formula>@V3UserName</formula></code></field><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='2'>Reference Taken:	<field type='datetime' kind='editable' name='DateRef'><datetimeformat
+ show='date' date='yearmonthday' fourdigityearfor21stcentury='true' zone='never'
+ dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/><code event='defaultvalue'><formula
+>@Date(@Now)</formula></code></field></par>
+<par def='2'/>
+<par def='2'>REFERENCE QUESTIONS</par>
+<par def='2'/>
+<pardef id='3' leftmargin='1in' tabs='L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in'/>
+<par def='3'>In what context did you work with the candidate?</par>
+<par def='3'><field type='text' kind='editable' name='RefContext'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='3'/>
+<par def='3'>When working with this individual what did you feel were his/her biggest strengths or areas of accomplishment?</par>
+<par def='3'><field type='text' kind='editable' name='RefAccomplishments'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='3'/>
+<par def='3'>What about a weaker point or area for an improvement?</par>
+<par def='3'><field type='text' kind='editable' name='RefWeakness'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='3'/>
+<par def='3'>On a scale of 1-10, how would you rate his/her overall performance? </par>
+<par def='3'><field type='keyword' kind='editable' name='RefScale'><keywords
+ ui='dialoglist'><textlist><text>1</text><text>2</text><text>3</text></textlist></keywords></field></par>
+<par def='3'/>
+<par def='3'>WHY?</par>
+<par def='3'><field type='text' kind='editable' name='RefScaleWhy'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='3'/>
+<par def='3'>This candidate will be responsible for the following: —Discuss key hiring indicators for position. —Other technical must-have's?  —How do you think they will perform?</par>
+<par def='3'><field type='text' kind='editable' name='RefResponsible'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='3'/>
+<par def='3'>How did this person get along with their peers?</par>
+<par def='3'><field type='text' kind='editable' name='RefGetAlong'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='3'/>
+<par def='3'>Attendance / Punctuality?</par>
+<par def='3'><field type='text' kind='editable' name='RefAttendance'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='3'/>
+<par def='3'>Would you rehire them?</par>
+<par def='3'><field type='text' kind='editable' name='RefRehire'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='3'/>
+<par def='3'>Do you have any advice on how to best manage this individual?</par>
+<par def='3'><field type='text' kind='editable' name='RefManageAdvice'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='3'/>
+<par def='3'>NOTES / ATTACHMENTS:</par>
+<par def='3'><field type='richtext' kind='editable' name='RefNotes'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAEAAAA=
+</compositedata></par>
+<par def='3'/>
+<par def='3'><run><font color='maroon'/>Hidden Fields:</run></par>
+<pardef id='4' align='none' leftmargin='0.8750in' firstlineleftmargin='1in'
+ tabs='L1in L2.1250in L3.5000in L4.2500in' keeptogether='true'/>
+<par def='4'><run><font color='maroon'/></run><run><font color='maroon'/><field
+ type='text' kind='editable' name='UniqueID2'><code event='defaultvalue'><formula
+>DEFAULT UniqueID2:=@If(UniqueID2="";@Text(@DocumentUniqueID);UniqueID2);UniqueID2</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='10' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font color='maroon'/></run><run
+><font color='maroon'/><field type='text' kind='editable' name='ParentUniqueID2'/></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='19' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font color='maroon'/></run><run
+><font color='maroon'/><field type='text' kind='editable' name='Employee_Name'><code
+ event='defaultvalue'><formula>Employee_Name</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='28' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font color='maroon'/></run></par></richtext></body>
+<item name='$$ScriptName' summary='false' sign='true'><text>Reference</text></item></form>
 

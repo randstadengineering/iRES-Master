@@ -1,17 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="5b6" sequence="12" unid="3EC19FF1881C03C085257EC40061807F">
-<created><datetime dst="true">20150918T134458,87-04</datetime></created>
-<modified><datetime>20151117T114648,73-05</datetime></modified>
-<revised><datetime>20151117T114648,72-05</datetime></revised>
-<lastaccessed><datetime>20151117T114648,73-05</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20151013T151357,53-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name="$TITLE"><text>ButtonStyling.css</text></item>
-<item name="$MimeType"><text>text/css</text></item>
-<item name="$Flags"><text>34C=Q</text></item>
-<item name="$MimeCharSet"><text>UTF-8</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$FileNames" sign="true"><text>ButtonStyling.css</text></item></note>
+<?xml version="1.0" encoding="UTF-8"?><stylesheetresource charset="UTF-8" designerversion="8.5.3" maintenanceversion="1.0" name="ButtonStyling.css" publicaccess="false" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="6c6" sequence="3" unid="3FCF01F360D66C9385257F16005C299C">
+<created><datetime>20151209T114639,64-05</datetime></created>
+<modified><datetime>20151209T114643,80-05</datetime></modified>
+<revised><datetime>20151209T114643,79-05</datetime></revised>
+<lastaccessed><datetime>20151209T114643,80-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114643,76-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby></stylesheetresource>

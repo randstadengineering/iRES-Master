@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="13be" sequence="116" unid="C31F0F3F9710C05A85257F00004DF589">
-<created><datetime>20151117T091131,29-05</datetime></created>
-<modified><datetime>20151201T193523,77-05</datetime></modified>
-<revised><datetime>20151201T193523,76-05</datetime></revised>
-<lastaccessed><datetime>20151201T193523,77-05</datetime></lastaccessed>
-<addedtofile><datetime>20151117T091131,53-05</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="7ce" sequence="8" unid="197275F00F7C13E185257F16005C2C64">
+<created><datetime>20151209T114646,76-05</datetime></created>
+<modified><datetime>20151209T114705,65-05</datetime></modified>
+<revised><datetime>20151209T114705,64-05</datetime></revised>
+<lastaccessed><datetime>20151209T114705,65-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114648,72-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
 <wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
 <item name="$TITLE"><text>ccDocJobDetails.xsp</text></item>
@@ -12,12 +12,12 @@
 
 
 
+
+<item name="$FileNames" sign="true"><text>ccDocJobDetails.xsp</text></item>
 <item name="$DesignerVersion"><text>8.5.3</text></item>
 
 
 
-
-<item name="$FileNames" sign="true"><text>ccDocJobDetails.xsp</text></item>
 
 
 

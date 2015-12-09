@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="125a" sequence="105" unid="51ABD41D4C9B52EB85257EDF00683A6B">
-<created><datetime dst="true">20151015T145826,99-04</datetime></created>
-<modified><datetime>20151117T115506,28-05</datetime></modified>
-<revised><datetime>20151117T115506,27-05</datetime></revised>
-<lastaccessed><datetime>20151117T115506,28-05</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20151015T145827,00-04</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="732" sequence="8" unid="4B6D0DF1A2B84C3285257F16005C2A93">
+<created><datetime>20151209T114642,11-05</datetime></created>
+<modified><datetime>20151209T114702,13-05</datetime></modified>
+<revised><datetime>20151209T114702,12-05</datetime></revised>
+<lastaccessed><datetime>20151209T114702,13-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114645,60-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
 <wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
 <item name="$TITLE"><text>utilContextMenuBar.xsp</text></item>

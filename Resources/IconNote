@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
- maintenanceversion='1.0' replicaid='85257EDD00698137'>
-<noteinfo noteid='122' unid='1DBC83998901819185257EBC0048C3E7' sequence='37'>
-<created><datetime dst='true'>20150910T091447,43-04</datetime></created>
-<modified><datetime>20151117T171009,16-05</datetime></modified>
-<revised><datetime>20151117T171009,15-05</datetime></revised>
-<lastaccessed><datetime>20151117T171009,16-05</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20151013T151225,63-04</datetime></addedtofile></noteinfo>
+ maintenanceversion='1.0' replicaid='85257F16005C245F'>
+<noteinfo noteid='11a' unid='4F17348F21156AC085257F16005C2466' sequence='8'>
+<created><datetime>20151209T114626,30-05</datetime></created>
+<modified><datetime>20151209T114652,44-05</datetime></modified>
+<revised><datetime>20151209T114652,43-05</datetime></revised>
+<lastaccessed><datetime>20151209T114652,44-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114626,35-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
 <wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
 <item name='IconBitmap' summary='true'>
@@ -27,8 +27,7 @@ AAAAUEECICABAAD/////+A4DgA==
 <item name='$LaunchXPageRunOnServer'><text>0</text></item>
 <item name='$Daos'><text>0</text></item>
 <item name='$DefaultXPage'><text>start.xsp</text></item>
+<item name='$TITLE'><text>iRES</text></item>
 <item name='$Flags'><text>J!</text></item>
-<item name='$FlagsNoRefresh'><text>rv</text></item>
-<item name='$TITLE'><text>iRES DominoDev2
-#1bgh2</text></item></note>
+<item name='$FlagsNoRefresh'><text>rv</text></item></note>
 

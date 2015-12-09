@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="14c2" sequence="2" unid="BA3A2AD93E086D3885257F1500756F1D">
-<created><datetime>20151208T162241,57-05</datetime></created>
-<modified><datetime>20151208T162241,60-05</datetime></modified>
-<revised><datetime>20151208T162241,59-05</datetime></revised>
-<lastaccessed><datetime>20151208T162241,60-05</datetime></lastaccessed>
-<addedtofile><datetime>20151208T162241,58-05</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="826" sequence="3" unid="3E609343FEF2B3D285257F16005C2D61">
+<created><datetime>20151209T114649,29-05</datetime></created>
+<modified><datetime>20151209T114650,24-05</datetime></modified>
+<revised><datetime>20151209T114650,23-05</datetime></revised>
+<lastaccessed><datetime>20151209T114650,24-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114650,20-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
 <wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
 <item name="$TITLE"><text>commons-logging-1.1.1.jar</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
 <item name="$Flags"><text>34567Cg~,</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
 
 
 

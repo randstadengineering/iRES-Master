@@ -1,17 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1426" sequence="35" unid="BC04CB093B70720D85257F060056256C">
-<created><datetime>20151123T104056,76-05</datetime></created>
-<modified><datetime>20151208T230643,38-05</datetime></modified>
-<revised><datetime>20151208T230643,37-05</datetime></revised>
-<lastaccessed><datetime>20151208T230643,38-05</datetime></lastaccessed>
-<addedtofile><datetime>20151123T104056,77-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name="$Flags"><text>34C=Q</text></item>
-<item name="$FlagsExt" sign="true"><text>D</text></item>
-<item name="$FileModDT" sign="true"><datetime dst="true">20151026T102838,38-04</datetime></item>
-<item name="$TITLE" sign="true"><text>formStyles.css</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$FileNames" sign="true"><text>formStyles.css</text></item></note>
+<?xml version="1.0" encoding="UTF-8"?><stylesheetresource designerversion="8.5.3" maintenanceversion="1.0" name="formStyles.css" publicaccess="false" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="6a2" sequence="3" unid="8DC109FF3389662185257F16005C2953">
+<created><datetime>20151209T114638,91-05</datetime></created>
+<modified><datetime>20151209T114643,26-05</datetime></modified>
+<revised><datetime>20151209T114643,25-05</datetime></revised>
+<lastaccessed><datetime>20151209T114643,26-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114643,22-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby></stylesheetresource>

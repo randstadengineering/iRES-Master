@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1412" sequence="20" unid="364A4ACD5E1F366A85257F06004B4F39">
-<created><datetime>20151123T084234,81-05</datetime></created>
-<modified><datetime>20151123T084959,22-05</datetime></modified>
-<revised><datetime>20151123T084959,21-05</datetime></revised>
-<lastaccessed><datetime>20151123T084959,22-05</datetime></lastaccessed>
-<addedtofile><datetime>20151123T084234,85-05</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="75e" sequence="8" unid="DBC2EDFEF61862BF85257F16005C2B1C">
+<created><datetime>20151209T114643,48-05</datetime></created>
+<modified><datetime>20151209T114703,41-05</datetime></modified>
+<revised><datetime>20151209T114703,40-05</datetime></revised>
+<lastaccessed><datetime>20151209T114703,41-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114646,48-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
 <wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
 <item name="$Flags"><text>gC~4;</text></item>
-
-
-<item name="$FileNames" sign="true"><text>CC_CandidateSubmitRate.xsp</text></item>
-
-
 <item name="$TITLE" sign="true"><text>profileCandidateSubmitRate.xsp</text></item>
+
+
+
+
+<item name="$FileNames" sign="true"><text>profileCandidateSubmitRate.xsp</text></item>
 <item name="$DesignerVersion"><text>8.5</text></item>
 
 

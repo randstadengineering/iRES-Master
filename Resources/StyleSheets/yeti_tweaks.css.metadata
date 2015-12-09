@@ -1,16 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="124a" sequence="10" unid="E58B3568B806A3BD85257EDF00662AB2">
-<created><datetime dst="true">20151015T143556,02-04</datetime></created>
-<modified><datetime>20151117T114623,10-05</datetime></modified>
-<revised><datetime>20151117T114623,09-05</datetime></revised>
-<lastaccessed><datetime>20151117T114623,10-05</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20151015T143556,15-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name="$Flags"><text>34C=Q</text></item>
-<item name="$TITLE"><text>yeti_tweaks.css</text></item>
-<item name="$MimeType"><text>text/css</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$FileNames" sign="true"><text>yeti_tweaks.css</text></item></note>
+<?xml version="1.0" encoding="UTF-8"?><stylesheetresource designerversion="8.5.3" maintenanceversion="1.0" name="yeti_tweaks.css" publicaccess="false" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="662" sequence="3" unid="3BA9A827303B6F4B85257F16005C28E9">
+<created><datetime>20151209T114637,85-05</datetime></created>
+<modified><datetime>20151209T114642,30-05</datetime></modified>
+<revised><datetime>20151209T114642,29-05</datetime></revised>
+<lastaccessed><datetime>20151209T114642,30-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114642,26-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby></stylesheetresource>

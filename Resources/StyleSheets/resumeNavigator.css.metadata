@@ -1,17 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="5ba" sequence="62" unid="B9DE58807A76F0F185257EC40064FBEB">
-<created><datetime dst="true">20150918T142300,91-04</datetime></created>
-<modified><datetime>20151202T093058,77-05</datetime></modified>
-<revised><datetime>20151202T093058,76-05</datetime></revised>
-<lastaccessed><datetime>20151202T093058,77-05</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20151013T151357,77-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name="$TITLE"><text>resumeNavigator.css</text></item>
-<item name="$MimeType"><text>text/css</text></item>
-<item name="$Flags"><text>34C=Q</text></item>
-<item name="$MimeCharSet"><text>UTF-8</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$FileNames" sign="true"><text>resumeNavigator.css</text></item></note>
+<?xml version="1.0" encoding="UTF-8"?><stylesheetresource charset="UTF-8" designerversion="8.5.3" maintenanceversion="1.0" name="resumeNavigator.css" publicaccess="false" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="682" sequence="3" unid="0353584F731659C885257F16005C2919">
+<created><datetime>20151209T114638,33-05</datetime></created>
+<modified><datetime>20151209T114642,78-05</datetime></modified>
+<revised><datetime>20151209T114642,77-05</datetime></revised>
+<lastaccessed><datetime>20151209T114642,78-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114642,74-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby></stylesheetresource>

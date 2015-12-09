@@ -1,18 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="166" sequence="183" unid="F9132AD9921FB2E485257EBC0048EFE0">
-<created><datetime dst="true">20150910T091640,00-04</datetime></created>
-<modified><datetime>20151202T131410,92-05</datetime></modified>
-<revised><datetime>20151202T131410,91-05</datetime></revised>
-<lastaccessed><datetime>20151202T131410,92-05</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20151013T151228,82-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name="$TITLE"><text>jQueryDataTableCategory.css</text></item>
-<item name="$MimeType" sign="true"><text>text/css</text></item>
-<item name="$Flags"><text>34C=Q</text></item>
-<item name="$MimeCharSet" sign="true"><text>UTF-8</text></item>
-<item name="$Comment" sign="true"><text>Used for some special styling in the jQDT. Such as grouping and hiding the seach bar</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$FileNames" sign="true"><text>jQueryDataTableCategory.css</text></item></note>
+<?xml version="1.0" encoding="UTF-8"?><stylesheetresource charset="UTF-8" comment="Used for some special styling in the jQDT. Such as grouping and hiding the seach bar" designerversion="8.5.3" maintenanceversion="1.0" name="jQueryDataTableCategory.css" publicaccess="false" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="69a" sequence="3" unid="0AB07F5182F05AC085257F16005C2940">
+<created><datetime>20151209T114638,72-05</datetime></created>
+<modified><datetime>20151209T114643,14-05</datetime></modified>
+<revised><datetime>20151209T114643,13-05</datetime></revised>
+<lastaccessed><datetime>20151209T114643,14-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114643,10-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby></stylesheetresource>

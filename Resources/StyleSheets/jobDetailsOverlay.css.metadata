@@ -1,18 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="14aa" sequence="32" unid="E18722F836A90BF585257F0E007A3F8E">
-<created><datetime>20151201T171516,62-05</datetime></created>
-<modified><datetime>20151201T193032,57-05</datetime></modified>
-<revised><datetime>20151201T193032,56-05</datetime></revised>
-<lastaccessed><datetime>20151201T193032,57-05</datetime></lastaccessed>
-<addedtofile><datetime>20151201T171516,63-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name="$Comment"><text>used in iframe, do not combine</text></item>
-<item name="$TITLE"><text>jobDetailsOverlay.css</text></item>
-<item name="$MimeType"><text>text/css</text></item>
-<item name="$Flags"><text>34C=Q</text></item>
-<item name="$MimeCharSet"><text>UTF-8</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$FileNames" sign="true"><text>jobDetailsOverlay.css</text></item></note>
+<?xml version="1.0" encoding="UTF-8"?><stylesheetresource charset="UTF-8" comment="used in iframe, do not combine" designerversion="8.5.3" maintenanceversion="1.0" name="jobDetailsOverlay.css" publicaccess="false" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="692" sequence="3" unid="78CC2B8F607AACD185257F16005C2932">
+<created><datetime>20151209T114638,58-05</datetime></created>
+<modified><datetime>20151209T114643,02-05</datetime></modified>
+<revised><datetime>20151209T114643,01-05</datetime></revised>
+<lastaccessed><datetime>20151209T114643,02-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114642,98-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby></stylesheetresource>

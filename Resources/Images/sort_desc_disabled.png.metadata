@@ -1,20 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="18a" sequence="15" unid="AE6BD297E19BB1BC85257EBC0048FCA2">
-<created><datetime dst="true">20150910T091712,66-04</datetime></created>
-<modified><datetime>20151117T114649,85-05</datetime></modified>
-<revised><datetime>20151117T114649,84-05</datetime></revised>
-<lastaccessed><datetime>20151117T114649,85-05</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20151015T144502,73-04</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" maintenanceversion="1.0" name="sort_desc_disabled.png" publicaccess="false" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="6ca" sequence="3" unid="2A8557C9BD31AD8285257F16005C29AC">
+<created><datetime>20151209T114639,80-05</datetime></created>
+<modified><datetime>20151209T114643,86-05</datetime></modified>
+<revised><datetime>20151209T114643,85-05</datetime></revised>
+<lastaccessed><datetime>20151209T114643,86-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114643,82-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name="$TITLE"><text>sort_desc_disabled.png</text></item>
-<item name="$Flags"><text>34CiQ</text></item>
-<item name="$FlagsExt"><text>D</text></item>
-<item name="$ImagesWide" sign="true"><number>1</number></item>
-<item name="$ImagesHigh" sign="true"><number>1</number></item>
-<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby><jpeg>
+iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAQAAADYWf5HAAAAWUlEQVQoz2NgGAWDCtyJvPPzznc4
+/HknEbsy9js77vyHw313eHGZZ3PnE1TRuzuOuK1lvDMRqmzuHUZ87lO+cxuo6PEdLUIeyb7z604p
+Yf+y3Zlwh4u2YQoAc7ZCBHH4jigAAAAASUVORK5CYII=
+</jpeg>
 <item name="$FileModDT" sign="true"><datetime dst="true">20150901T094209,03-04</datetime></item>
-<item name="$ImageNames" sign="true"><text>sort_desc_disabled.png</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-</note>
+</imageresource>

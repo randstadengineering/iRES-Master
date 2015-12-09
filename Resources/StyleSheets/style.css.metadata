@@ -1,16 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1492" sequence="1" unid="26D5AB4BD853AB0685257F0C0056D431">
-<created><datetime>20151129T104824,17-05</datetime></created>
-<modified><datetime>20151129T104825,39-05</datetime></modified>
-<revised><datetime>20151129T104825,38-05</datetime></revised>
-<lastaccessed><datetime>20151129T104825,39-05</datetime></lastaccessed>
-<addedtofile><datetime>20151129T104825,39-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name="$TITLE"><text>style.css</text></item>
-<item name="$MimeType"><text>text/css</text></item>
-<item name="$Flags"><text>34C=Q</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$FileNames" sign="true"><text>style.css</text></item></note>
+<?xml version="1.0" encoding="UTF-8"?><stylesheetresource designerversion="8.5.3" maintenanceversion="1.0" name="style.css" publicaccess="false" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="67a" sequence="3" unid="5A3FF42CB73E6E2C85257F16005C2910">
+<created><datetime>20151209T114638,24-05</datetime></created>
+<modified><datetime>20151209T114642,66-05</datetime></modified>
+<revised><datetime>20151209T114642,65-05</datetime></revised>
+<lastaccessed><datetime>20151209T114642,66-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114642,62-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby></stylesheetresource>

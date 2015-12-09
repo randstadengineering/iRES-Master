@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1442" sequence="39" unid="06BB8BAAA6405E5A85257F0800521955">
-<created><datetime>20151125T095644,37-05</datetime></created>
-<modified><datetime>20151129T115019,04-05</datetime></modified>
-<revised><datetime>20151129T115019,03-05</datetime></revised>
-<lastaccessed><datetime>20151129T115019,04-05</datetime></lastaccessed>
-<addedtofile><datetime>20151125T095644,38-05</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="736" sequence="8" unid="E71E43749404DC3D85257F16005C2A9C">
+<created><datetime>20151209T114642,20-05</datetime></created>
+<modified><datetime>20151209T114702,45-05</datetime></modified>
+<revised><datetime>20151209T114702,44-05</datetime></revised>
+<lastaccessed><datetime>20151209T114702,45-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114645,68-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
 <wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
 <item name="$Flags"><text>gC~4;</text></item>
-
-
 <item name="$TITLE" sign="true"><text>subCandidateSubmitRate.xsp</text></item>
-
 
 
 
 
 <item name="$FileNames" sign="true"><text>subCandidateSubmitRate.xsp</text></item>
 <item name="$DesignerVersion"><text>8.5.1</text></item>
+
+
+
 
 
 </note>

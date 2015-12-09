@@ -1,17 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note default='true' class='view' xmlns='http://www.lotus.com/dxl' version='9.0'
- maintenanceversion='1.0' replicaid='85257EDD00698137'>
-<noteinfo noteid='11e' unid='7593ECAF1719E5EF85257EBC0048C3E6' sequence='9'>
-<created><datetime dst='true'>20150910T091447,42-04</datetime></created>
-<modified><datetime>20151117T114616,78-05</datetime></modified>
-<revised><datetime>20151117T114616,77-05</datetime></revised>
-<lastaccessed><datetime>20151117T114616,78-05</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20151013T151225,44-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name='$TITLE'><text/></item>
-<item name='$Formula' summary='true'><formula compiled='true'>
-HAAFAA4ACgABAAQAJCQkJAQABAAAAAgAZgADAA==
-</formula></item>
-<item name='$FormulaClass'><text>1</text></item></note>
+<view xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='85257F16005C245F' showinmenu='true' publicaccess='false' default='true'
+ noviewformat='true'>
+<noteinfo noteid='116' unid='D3B4D57A386520A385257F16005C2465' sequence='1'>
+<created><datetime>20151209T114626,29-05</datetime></created>
+<modified><datetime>20151209T114626,33-05</datetime></modified>
+<revised><datetime>20151209T114626,32-05</datetime></revised>
+<lastaccessed><datetime>20151209T114626,33-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114626,33-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby><code event='selection'><formula
+>SELECT @All</formula></code>
+<item name='$FormulaClass'><text>1</text></item></view>
 

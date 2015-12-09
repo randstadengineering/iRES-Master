@@ -1,17 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1256" sequence="136" unid="F4DA5A87EE92BE5785257EDF006823C9">
-<created><datetime dst="true">20151015T145729,05-04</datetime></created>
-<modified><datetime>20151117T114644,94-05</datetime></modified>
-<revised><datetime>20151117T114644,93-05</datetime></revised>
-<lastaccessed><datetime>20151117T114644,94-05</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20151015T145729,10-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name="$TITLE"><text>contextual-menu.css</text></item>
-<item name="$MimeType"><text>text/css</text></item>
-<item name="$Flags"><text>34C=Q</text></item>
-<item name="$MimeCharSet"><text>UTF-8</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$FileNames" sign="true"><text>contextual-menu.css</text></item></note>
+<?xml version="1.0" encoding="UTF-8"?><stylesheetresource charset="UTF-8" designerversion="8.5.3" maintenanceversion="1.0" name="contextual-menu.css" publicaccess="false" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="6b6" sequence="3" unid="718659CC6ADE241085257F16005C297F">
+<created><datetime>20151209T114639,35-05</datetime></created>
+<modified><datetime>20151209T114643,56-05</datetime></modified>
+<revised><datetime>20151209T114643,55-05</datetime></revised>
+<lastaccessed><datetime>20151209T114643,56-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114643,52-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby></stylesheetresource>

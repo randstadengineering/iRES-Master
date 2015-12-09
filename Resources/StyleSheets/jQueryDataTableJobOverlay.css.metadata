@@ -1,17 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="646" sequence="68" unid="E00A073714A16B0285257EDC005881BC">
-<created><datetime dst="true">20151012T120643,80-04</datetime></created>
-<modified><datetime>20151117T114637,70-05</datetime></modified>
-<revised><datetime>20151117T114637,69-05</datetime></revised>
-<lastaccessed><datetime>20151117T114637,70-05</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20151015T144502,49-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name="$TITLE"><text>jQueryDataTableJobOverlay.css</text></item>
-<item name="$MimeType"><text>text/css</text></item>
-<item name="$Flags"><text>34C=Q</text></item>
-<item name="$MimeCharSet"><text>UTF-8</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$FileNames" sign="true"><text>jQueryDataTableJobOverlay.css</text></item></note>
+<?xml version="1.0" encoding="UTF-8"?><stylesheetresource charset="UTF-8" designerversion="8.5.3" maintenanceversion="1.0" name="jQueryDataTableJobOverlay.css" publicaccess="false" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="696" sequence="3" unid="C90E093D07E8185685257F16005C293A">
+<created><datetime>20151209T114638,66-05</datetime></created>
+<modified><datetime>20151209T114643,08-05</datetime></modified>
+<revised><datetime>20151209T114643,07-05</datetime></revised>
+<lastaccessed><datetime>20151209T114643,08-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114643,04-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby></stylesheetresource>

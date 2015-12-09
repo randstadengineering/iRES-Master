@@ -1,18 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="65e" sequence="83" unid="CCC93202CA548DDB85257EDD005758CB">
-<created><datetime dst="true">20151013T115403,63-04</datetime></created>
-<modified><datetime>20151208T230411,65-05</datetime></modified>
-<revised><datetime>20151208T230411,64-05</datetime></revised>
-<lastaccessed><datetime>20151208T230411,65-05</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20151013T151410,27-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name="$MimeType" sign="true"><text>text/css</text></item>
-<item name="$Flags"><text>34C=Q</text></item>
-<item name="$MimeCharSet" sign="true"><text>UTF-8</text></item>
-<item name="$TITLE" sign="true"><text>ires_master.css</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-
-<item name="$FileNames" sign="true"><text>ires_master.css</text></item></note>
+<?xml version="1.0" encoding="UTF-8"?><stylesheetresource charset="UTF-8" designerversion="8.5.3" maintenanceversion="1.0" name="ires_master.css" publicaccess="false" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="69e" sequence="3" unid="DCCA789C5FB1C20C85257F16005C2946">
+<created><datetime>20151209T114638,78-05</datetime></created>
+<modified><datetime>20151209T114643,20-05</datetime></modified>
+<revised><datetime>20151209T114643,19-05</datetime></revised>
+<lastaccessed><datetime>20151209T114643,20-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114643,16-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby></stylesheetresource>

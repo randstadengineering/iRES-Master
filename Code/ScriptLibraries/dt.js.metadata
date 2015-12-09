@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="196" sequence="13" unid="36401223645005A385257EBC00490767">
-<created><datetime dst="true">20150910T091740,23-04</datetime></created>
-<modified><datetime>20151117T114910,19-05</datetime></modified>
-<revised><datetime>20151117T114910,18-05</datetime></revised>
-<lastaccessed><datetime>20151117T114910,19-05</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20151013T151231,29-04</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="7f2" sequence="3" unid="6D152AAC377AC2C685257F16005C2CD3">
+<created><datetime>20151209T114647,87-05</datetime></created>
+<modified><datetime>20151209T114649,43-05</datetime></modified>
+<revised><datetime>20151209T114649,42-05</datetime></revised>
+<lastaccessed><datetime>20151209T114649,43-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114649,38-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
 <wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
 <item name="$TITLE" sign="true"><text>dt.js</text></item>

@@ -1,16 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="15e" sequence="12" unid="B7BA24A79872ADEB85257EBC0048EFDE">
-<created><datetime dst="true">20150910T091639,98-04</datetime></created>
-<modified><datetime>20151117T114647,54-05</datetime></modified>
-<revised><datetime>20151117T114647,53-05</datetime></revised>
-<lastaccessed><datetime>20151117T114647,54-05</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20151015T144502,57-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name="$Flags"><text>34C=Q</text></item>
-<item name="$TITLE"><text>bs3_tweaks.css</text></item>
-<item name="$MimeType"><text>text/css</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$FileNames" sign="true"><text>bs3_tweaks.css</text></item></note>
+<?xml version="1.0" encoding="UTF-8"?><stylesheetresource designerversion="8.5.3" maintenanceversion="1.0" name="bs3_tweaks.css" publicaccess="false" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="6c2" sequence="3" unid="6A460B025D86EA9D85257F16005C2994">
+<created><datetime>20151209T114639,56-05</datetime></created>
+<modified><datetime>20151209T114643,74-05</datetime></modified>
+<revised><datetime>20151209T114643,73-05</datetime></revised>
+<lastaccessed><datetime>20151209T114643,74-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114643,70-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby></stylesheetresource>

@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="14de" sequence="20" unid="1EB36185CDC49DFC85257F160043456C">
-<created><datetime>20151209T071446,84-05</datetime></created>
-<modified><datetime>20151209T074423,25-05</datetime></modified>
-<revised><datetime>20151209T074423,24-05</datetime></revised>
-<lastaccessed><datetime>20151209T074423,25-05</datetime></lastaccessed>
-<addedtofile><datetime>20151209T071446,85-05</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="25a" sequence="7" unid="5A30F63C1AF8D8DE85257F16005C25F4">
+<created><datetime>20151209T114630,28-05</datetime></created>
+<modified><datetime>20151209T114701,25-05</datetime></modified>
+<revised><datetime>20151209T114701,24-05</datetime></revised>
+<lastaccessed><datetime>20151209T114701,25-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114631,50-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
 <wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
 <item name="$TITLE"><text>vwDailyFocus.xsp</text></item>
 <item name="$Flags"><text>gC~4K</text></item>
 
+
+<item name="$FileNames" sign="true"><text>vwDailyFocus.xsp</text></item>
 <item name="$DesignerVersion"><text>8.5</text></item>
 
 
 
-
-<item name="$FileNames" sign="true"><text>vwDailyFocus.xsp</text></item>
 
 </note>

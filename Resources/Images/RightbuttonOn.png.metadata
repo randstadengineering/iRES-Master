@@ -1,20 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="13a6" sequence="7" unid="F6027DB4770411E185257EFB00639E55">
-<created><datetime>20151112T130805,97-05</datetime></created>
-<modified><datetime>20151117T114701,25-05</datetime></modified>
-<revised><datetime>20151117T114701,24-05</datetime></revised>
-<lastaccessed><datetime>20151117T114701,25-05</datetime></lastaccessed>
-<addedtofile><datetime>20151112T130805,98-05</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" maintenanceversion="1.0" name="RightbuttonOn.png" publicaccess="false" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="6ee" sequence="3" unid="C3CCF279A459B19C85257F16005C29F0">
+<created><datetime>20151209T114640,48-05</datetime></created>
+<modified><datetime>20151209T114644,40-05</datetime></modified>
+<revised><datetime>20151209T114644,39-05</datetime></revised>
+<lastaccessed><datetime>20151209T114644,40-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114644,36-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name="$TITLE"><text>RightbuttonOn.png</text></item>
-<item name="$Flags"><text>34CiQ</text></item>
-<item name="$FlagsExt"><text>D</text></item>
-<item name="$ImagesWide" sign="true"><number>1</number></item>
-<item name="$ImagesHigh" sign="true"><number>1</number></item>
-<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby><jpeg>
+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
+75Gx9JrA/wHMnG/+eTI/wwAAAABJRU5ErkJggg==
+</jpeg>
 <item name="$FileModDT" sign="true"><datetime dst="true">20150915T100908,00-04</datetime></item>
-<item name="$ImageNames" sign="true"><text>RightbuttonOn.png</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-</note>
+</imageresource>

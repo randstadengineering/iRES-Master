@@ -1,20 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1232" sequence="10" unid="AD426EA5240D549585257EDF0065780A">
-<created><datetime dst="true">20151015T142818,66-04</datetime></created>
-<modified><datetime>20151117T114655,97-05</datetime></modified>
-<revised><datetime>20151117T114655,96-05</datetime></revised>
-<lastaccessed><datetime>20151117T114655,97-05</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20151015T142818,69-04</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" maintenanceversion="1.0" name="logoWhite.png" noquery="true" publicaccess="false" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="6de" sequence="3" unid="4A3EDA52DE98284E85257F16005C29D8">
+<created><datetime>20151209T114640,24-05</datetime></created>
+<modified><datetime>20151209T114644,16-05</datetime></modified>
+<revised><datetime>20151209T114644,15-05</datetime></revised>
+<lastaccessed><datetime>20151209T114644,16-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114644,12-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name="$TITLE"><text>logoWhite.png</text></item>
-<item name="$Flags"><text>D34CiQ</text></item>
-<item name="$FlagsExt"><text>D</text></item>
-<item name="$ImagesWide" sign="true"><number>1</number></item>
-<item name="$ImagesHigh" sign="true"><number>1</number></item>
-<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby><jpeg>
+iVBORw0KGgoAAAANSUhEUgAAAIwAAABECAYAAABTe93nAAAABHNCSVQICAgIfAhkiAAAAwlJREFU
+eJzt3T+rHGUYhvFrjjEkEdFCCIJgECvBRrQVkYBFLO0jaGcTBEkw/iMatfEbCJFU2qqFBiSN30DQ
+QhDUYIpoQJCIRXJZbCCiZM88c2Z3Zl7vXzvz7jyzc7F7OC+H06m/MD9/AD8CXwLnuq77beJ5tkJ9
+BDgOPAncD+yfdqL/uNipTj3FLn4HTnRd99HUg2yKeifwAfASsDPxOOt8sW/qCXq4BzinHum67q2p
+hxmbehD4FDg69Sx9zLnmf3tTPTP1EGO6GcvnLCQWWFYwAK+3Es0/Ynl66lkqlhYMNBDNUmOBZQYD
+q2jennqIIZYcCyw3GIDXlhbN0mOBZQcDC4qmhVhg+cHAKpp3ph5inVZigTaCATg912haigXaCQZm
+GE1rsUBbwcCMomkxFmgvGFhFc3bKAVqNBWAf8O3UQ+ziDuAwcG9hzasqXded3tBMt6UeAj6jFssN
+4ApwFZjzZvBPUw/Qm3qXekz9UP3Tfrb6SaMeVL/qOdsl9az6hLqETeDlUh9Qz/d8MO9uaaa+sVxT
+T7n62optUl9U/5o6mkIsl9THNzlL7EJ9Tr0xVTSFWH5VH9rEDFGknunxwEaPphDLdfWpMa8de6Du
+V3/oGc17I13zUM9YVM+Pcc0Ykfp8z4e352iKsVxXHxzrPmMk6t32+wF4T9EUY1H9eux7jZGoFwoP
+shzNgFhUT27qfqfQ2tbA98XzT6mv9DlR3QE+of7r/upMs9ZaMEP+KO999bEe570MPDvg9S8PWDNb
+rQVzbcCaHeCNdSeoB4Ch+1JDZpqt1oIZ6hlXm4a3c5Ta5mezEszKAeDhNccf3dYgc5dgbrlv4LH/
+lQRzS7fmWN6nm/JGREmCiZIEEyUJJkoSTJQkmChJMFGSYKIkwURJgomSBBMlCSZKEkyUJJgoSTBR
+kmCiJMFESYKJkgQTJQkmShJMlCSYKEkwUZJgoiTBREmCiZIEEyUJJkoSTJQkmChJMFGSYKIkwURJ
+gomSBBMlrf3ruAvACwPXfrfm2MfANwNf9+eB6yKW72/giQSbHXjl1gAAAABJRU5ErkJggg==
+</jpeg>
 <item name="$FileModDT" sign="true"><datetime dst="true">20150901T142627,45-04</datetime></item>
-<item name="$ImageNames" sign="true"><text>logoWhite.png</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-</note>
+</imageresource>

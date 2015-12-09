@@ -1,16 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="162" sequence="10" unid="8AC5C5231FAD1D9485257EBC0048EFDF">
-<created><datetime dst="true">20150910T091639,99-04</datetime></created>
-<modified><datetime>20151117T114643,66-05</datetime></modified>
-<revised><datetime>20151117T114643,65-05</datetime></revised>
-<lastaccessed><datetime>20151117T114643,66-05</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20151013T151228,67-04</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name="$Flags"><text>34C=Q</text></item>
-<item name="$TITLE"><text>flatly_tweaks.css</text></item>
-<item name="$MimeType"><text>text/css</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$FileNames" sign="true"><text>flatly_tweaks.css</text></item></note>
+<?xml version="1.0" encoding="UTF-8"?><stylesheetresource designerversion="8.5.3" maintenanceversion="1.0" name="flatly_tweaks.css" publicaccess="false" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="6a6" sequence="3" unid="743B405AEB3E74C085257F16005C295B">
+<created><datetime>20151209T114638,99-05</datetime></created>
+<modified><datetime>20151209T114643,32-05</datetime></modified>
+<revised><datetime>20151209T114643,31-05</datetime></revised>
+<lastaccessed><datetime>20151209T114643,32-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114643,28-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby></stylesheetresource>

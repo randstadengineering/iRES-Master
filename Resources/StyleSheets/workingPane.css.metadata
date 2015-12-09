@@ -1,17 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1396" sequence="56" unid="402ABEFAEE5C11CE85257EFA0055EE29">
-<created><datetime>20151111T103835,29-05</datetime></created>
-<modified><datetime>20151208T200432,23-05</datetime></modified>
-<revised><datetime>20151208T200432,22-05</datetime></revised>
-<lastaccessed><datetime>20151208T200432,23-05</datetime></lastaccessed>
-<addedtofile><datetime>20151111T103835,38-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
-<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
-<item name="$MimeType" sign="true"><text>text/css</text></item>
-<item name="$Flags"><text>34C=Q</text></item>
-<item name="$MimeCharSet" sign="true"><text>UTF-8</text></item>
-<item name="$TITLE" sign="true"><text>workingPane.css</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$FileNames" sign="true"><text>workingPane.css</text></item></note>
+<?xml version="1.0" encoding="UTF-8"?><stylesheetresource charset="UTF-8" designerversion="8.5.3" maintenanceversion="1.0" name="workingPane.css" publicaccess="false" replicaid="85257F16005C245F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="66e" sequence="3" unid="3B9F5546B23C863385257F16005C28FD">
+<created><datetime>20151209T114638,05-05</datetime></created>
+<modified><datetime>20151209T114642,48-05</datetime></modified>
+<revised><datetime>20151209T114642,47-05</datetime></revised>
+<lastaccessed><datetime>20151209T114642,48-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T114642,44-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby></stylesheetresource>
