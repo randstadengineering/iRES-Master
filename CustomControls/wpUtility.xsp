@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:panel styleClass="utilityView">
+			<iframe id="utilityViewFrame" src="" style="border:0px; height: 80vh; width: 100%;overflow-x:auto;"></iframe></xp:panel>
+</xp:view>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.resources>
+		<xp:styleSheet href="/styles.css"></xp:styleSheet>
+	</xp:this.resources>
+
+
+	
+	<xp:this.afterPageLoad><![CDATA[#{javascript:if (currentDocument.isNewNote()==false){
+var doc:NotesDocument = document1.getDocument();
+viewScope.candidateDocID = doc.getUniversalID();
+}}]]></xp:this.afterPageLoad>
+
+	
+	<ul class="fancyNav">
+		<li class="barmenuIcon">
+			<img src="3bar.svg"></img>
+		</li>
+		<xp:panel tagName="li">
+			<xp:link escape="true" text="Contact Info" id="link1" value="#">
+				<xp:eventHandler event="onclick" submit="true"
+					refreshMode="partial" refreshId="candidateProfileWrapper" execMode="partial" disableValidators="true">
+					<xp:this.action><![CDATA[#{javascript:viewScope.candidateCC="contactInfo"}]]></xp:this.action>
+				</xp:eventHandler></xp:link></xp:panel>
+		<xp:panel tagName="li">
+			<xp:link escape="true" text="Resumes" id="link2">
+				<xp:eventHandler event="onclick" submit="true"
+					refreshMode="partial" refreshId="candidateProfileWrapper" execMode="partial" disableValidators="true">
+					<xp:this.action><![CDATA[#{javascript:viewScope.candidateCC="resumes"}]]></xp:this.action>
+				</xp:eventHandler></xp:link></xp:panel>
+					<xp:panel tagName="li">
+			<xp:link escape="true" text="Candidate Info" id="link3">
+				<xp:eventHandler event="onclick" submit="true"
+					refreshMode="partial" refreshId="candidateProfileWrapper" disableValidators="true" execMode="partial">
+					<xp:this.action><![CDATA[#{javascript:viewScope.candidateCC="candidateInfo"}]]></xp:this.action>
+				</xp:eventHandler></xp:link></xp:panel>
+			<xp:panel tagName="li">
+			<xp:link escape="true" text="Notes" id="link4">
+				<xp:eventHandler event="onclick" submit="true"
+					refreshMode="partial" refreshId="candidateProfileWrapper" disableValidators="true" execMode="partial">
+					<xp:this.action><![CDATA[#{javascript:viewScope.candidateCC="notes"}]]></xp:this.action>
+				</xp:eventHandler></xp:link></xp:panel>
+			<xp:panel tagName="li">
+			<xp:link escape="true" text="References" id="link5">
+				<xp:eventHandler event="onclick" submit="true"
+					refreshMode="partial" refreshId="candidateProfileWrapper" disableValidators="true" execMode="partial">
+					<xp:this.action><![CDATA[#{javascript:viewScope.candidateCC="references"}]]></xp:this.action>
+				</xp:eventHandler></xp:link></xp:panel>
+	<xp:panel tagName="li">
+			<xp:link escape="true" text="Activity" id="link6">
+				<xp:eventHandler event="onclick" submit="true"
+					refreshMode="partial" refreshId="candidateProfileWrapper" disableValidators="true" execMode="partial">
+					<xp:this.action><![CDATA[#{javascript:viewScope.candidateCC="activity"}]]></xp:this.action>
+				</xp:eventHandler></xp:link></xp:panel>
+	</ul>
+
+	&#160;
+</xp:view>

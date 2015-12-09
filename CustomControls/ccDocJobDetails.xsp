@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex"
+		dojoForm="true"
+	dojoParseOnLoad="true"
+	dojoTheme="true"
+	>
+	<xp:this.resources>
+		<xp:script
+			src="/generalSSJSUtilities.jss"
+			clientSide="false">
+		</xp:script>
+		<xp:dojoModule name="dijit.layout.TabContainer"></xp:dojoModule>
+		<xp:dojoModule name="dijit.layout.ContentPane"></xp:dojoModule>
+	</xp:this.resources>
+	<xp:panel tagName="div" styleClass="jobDetailsOverlayContent" id="jobdetails">
+		<xp:this.data>
+			<xp:dominoDocument var="document1" formName="Job"
+				action="openDocument">
+				<xp:this.documentId><![CDATA[#{javascript:try {
+	var v = session.getDatabase("","ats/jobs10.nsf").getView("AllNum")
+	var unid = v.getDocumentByKey(param.jonum).getUniversalID();
+	print("JOB UNID: " + unid);
+	return unid;
+} catch (e) { print (e) };}]]></xp:this.documentId>
+				<xp:this.databaseName><![CDATA[#{javascript:"!!ats/jobs10.nsf"}]]></xp:this.databaseName>
+			</xp:dominoDocument>
+		</xp:this.data>
+
+		
+		<xe:djAccordionContainer id="djAccordionContainer1">
+			<xe:djAccordionPane id="djAccordionPane1"
+				title="Job Summary">
+				<xp:table>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td style="width:20px"></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td style="width:20px"></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="AM:" id="label40"
+								style="font-weight:bold">
+							</xp:label>
+							&#160;&#160;
+							<xp:text escape="true" id="computedField57"
+								value="#{document1.salesperson}" style="font-weight:bold">
+							</xp:text>
+						</xp:td>
+						<xp:td>
+							<xp:label value="PM:" id="label41"
+								style="font-weight:bold">
+							</xp:label>
+							&#160;&#160;
+							<xp:text escape="true" id="computedField58"
+								value="#{document1.recruiter}" style="font-weight:bold">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="Branch: " id="label42"
+								style="font-weight:bold">
+							</xp:label>
+							<xp:text escape="true" id="computedField59"
+								value="#{document1.branchid}" style="font-weight:bold">
+							</xp:text>
+						</xp:td>
+						<xp:td>
+							<xp:label id="label43" value="Date Created:"
+								style="font-weight:bold">
+							</xp:label>
+							&#160;&#160;
+							<xp:text escape="true" id="computedField60"
+								value="#{document1.Composedate}" style="font-weight:bold">
+								<xp:this.converter>
+									<xp:convertDateTime type="date"
+										dateStyle="short">
+									</xp:convertDateTime>
+								</xp:this.converter>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Company:" id="label1"></xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField1"
+								value="#{document1.CompanyName}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="Job Type:" id="label2"></xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField2"
+								value="#{document1.jotype}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="VMS:" id="label12"></xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField12"
+								value="#{document1.vms}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Website:" id="label3"></xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField3"
+								value="#{document1.websitelink_1}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="Job Level:" id="label4"></xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField4"
+								value="#{document1.joblevel}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="URL:" id="label14"></xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField14">
+								<xp:this.value><![CDATA[#{javascript:return "Calc Doc # and sibs";}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Contact:" id="label5"></xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField5"
+								value="#{document1.contactname}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="# Positions:"
+								id="label6">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField6"
+								value="#{document1.numpositions}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="Username:" id="label16"></xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField16"
+								value="#{document1.vms_username}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Phone:" id="label7"></xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField7"
+								value="#{document1.contactPhone_1}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="Reason Open:"
+								id="label8">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField8"
+								value="#{document1.reasonopen}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="Password:" id="label18"></xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField18"
+								value="#{document1.vms_password}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Email:" id="label9"></xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField9"
+								value="#{document1.eMailAddress}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="Previous JO#:"
+								id="label10">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField10">
+								<xp:this.value><![CDATA[#{javascript:var oldjo=document1.getItemValueString('oldjo');
+var rewr=document1.getItemValueString('rewrite');
+if(oldjo.toUpperCase() == 'NONE'){
+	return 'NONE';
+} else if(rewr.length() > 1){
+	return 'Rewrite of #' + oldjo;
+} else {
+	return 'Copy of #' + oldjo;
+}}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="Position App/Bue:"
+								id="label20">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField20">
+								<xp:this.value><![CDATA[#{javascript:document1.getItemValueString('position_approved') + " / " + document1.getItemValueString('position_budgetedeted');}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td style="height:15px"></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+						</xp:td>
+						<xp:td>
+
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Min Years Exp:"
+								id="label11">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField11"
+								value="#{document1.minyears}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:label value="Interview with:"
+								id="label21">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:text escape="true" id="computedField21"
+								value="#{document1.interviewwith}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:label value="Flexible w/ rate:"
+								id="label22">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:text escape="true" id="computedField22"
+								value="#{document1.flexible}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Min Stability:"
+								id="label13">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField13"
+								value="#{document1.minstability}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:label value="Interview times:"
+								id="label23">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:text escape="true" id="computedField23"
+								value="#{document1.intdate}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:label value="Mobilization:"
+								id="label24">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:text escape="true" id="computedField24"
+								value="#{document1.mob}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Min Degree:"
+								id="label15">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField15"
+								value="#{document1.education}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:label value="Start Date:"
+								id="label25">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:text escape="true" id="computedField25"
+								value="#{document1.startdate}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:label value="Per Diem:" id="label26"></xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:text escape="true" id="computedField26"
+								value="#{document1.perDiem}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+							<xp:label value="Work Schedule:"
+								id="label17">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField17"
+								value="#{document1.WorkSchedule}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:label value="Travel Required:"
+								id="label19">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:text escape="true" id="computedField19"
+								value="#{document1.travel}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="Paid Relo:" id="label28">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField28"
+								value="#{document1.PaidRelo}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+
+					<xp:tr>
+						<xp:td style="height:15px">
+
+						</xp:td>
+						<xp:td>
+
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+						</xp:td>
+						<xp:td>
+
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+						<xp:td></xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+
+							<xp:label value="Job Title Proper:"
+								id="label27">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:text escape="true" id="computedField27"
+								value="#{document1.properjt}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:label value="Salary:" id="label36"></xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:text escape="true"
+								id="computedField36">
+								<xp:this.value><![CDATA[#{javascript://@Text(salary) + " - " + @Text(UpperSalary) + " K/yr"
+ var iVector:java.util.Vector;
+var iVector2:java.util.Vector;
+iVector = SSJSgetItemValueSet(document1.getDocument(), "salary", iVector);
+iVector2 = SSJSgetItemValueSet(document1.getDocument(), "UpperSalary", iVector);
+if(iVector != null){
+	if(iVector2 != null){
+		return iVector.elementAt(0).toString() + " - " + iVector2.elementAt(0).toString() + " K/yr";
+	} else {
+		return iVector.elementAt(0).toString() + " K/yr";;
+	}
+} else {
+	if(iVector2 != null){
+		return iVector.elementAt(0).toString() + " - " + iVector2.elementAt(0).toString() + " K/yr";
+	} else {
+		return "not found";
+	}
+}}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="Hourly:" id="label32"></xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField32">
+								<xp:this.value><![CDATA[#{javascript://@Text(payrate) + " - " + @Text(upperpay) + " $/hr"
+var iVector:java.util.Vector;
+var iVector2:java.util.Vector;
+iVector = SSJSgetItemValueSet(document1.getDocument(), "payrate", iVector);
+iVector2 = SSJSgetItemValueSet(document1.getDocument(), "upperpay", iVector);
+if(iVector != null){
+	if(iVector2 != null){
+		return iVector.elementAt(0).toString() + " - " + iVector2.elementAt(0).toString() + " $/hr";
+	} else {
+		return iVector.elementAt(0).toString() + " $/hr";
+	}
+} else {
+	if(iVector2 != null){
+		return iVector.elementAt(0).toString() + " - " + iVector2.elementAt(0).toString() + " $/hr";
+	} else {
+		return "not found";
+	}
+}}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+
+							<xp:label value="Client Job Title:"
+								id="label29">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:text escape="true" id="computedField29"
+								value="#{document1.clientjt}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:label value="Markup:" id="label37"></xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:text escape="true"
+								id="computedField37">
+								<xp:this.value><![CDATA[#{javascript://@If(markup_fixed != ""; "Fixed @ " + @Text(markup);@Text(markup))
+var iVector:java.util.Vector;
+var iVector2:java.util.Vector;
+iVector = SSJSgetItemValueSet(document1.getDocument(), "markup_fixed", iVector);
+iVector2 = SSJSgetItemValueSet(document1.getDocument(), "markup", iVector);
+if(iVector != null){
+		if(iVector.elementAt(0) > 1){
+			return "Fixed @ " + iVector.elementAt(0);
+		} else {
+			if(iVector2 != null){
+				return iVector2.elementAt(0).toString();
+			} else {
+				return "Not found";
+			}
+		}
+	}}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="Bill Rate:" id="label33">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField33">
+								<xp:this.value><![CDATA[#{javascript://@Text(BillRate) + " - " + @Text(upperbillrate)
+var iVector:java.util.Vector;
+var iVector2:java.util.Vector;
+iVector = SSJSgetItemValueSet(document1.getDocument(), "BillRate", iVector);
+iVector2 = SSJSgetItemValueSet(document1.getDocument(), "upperbillrate", iVector);
+if(iVector != null){
+	if(iVector2 != null){
+		return iVector.elementAt(0).toString() + " - " + iVector2.elementAt(0).toString();
+	} else {
+		return iVector.elementAt(0).toString();
+	}
+} else {
+	if(iVector2 != null){
+		return iVector.elementAt(0).toString() + " - " + iVector2.elementAt(0).toString();
+	} else {
+		return "not found";
+	}
+}}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+
+							<xp:label value="Job Title Desc:"
+								id="label30">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:text escape="true" id="computedField30"
+								value="#{document1.JobTitleDesc}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+
+							<xp:label value="Industry Vertical:"
+								id="label38">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:text escape="true" id="computedField38"
+								value="#{document1.vertical}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="Fee:" id="label34"></xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true"
+								id="computedField34">
+								<xp:this.value><![CDATA[#{javascript://@If(fixedfee!="";"Fixed @ " + @Text(fixedfee);@Text(fee))
+var iVector:java.util.Vector;
+var iVector2:java.util.Vector;
+iVector = SSJSgetItemValueSet(document1.getDocument(), "fixedfee", iVector);
+iVector2 = SSJSgetItemValueSet(document1.getDocument(), "fee", iVector);
+if(iVector.elementAt(0),toString().length() > 1){
+	return "Fixed @ " + iVector.elementAt(0),toString();
+} else {
+	return iVector2.elementAt(0),toString();
+}	}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+					<xp:tr>
+						<xp:td>
+
+							<xp:label id="label31"
+								value="Job Location:">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+
+							<xp:text escape="true"
+								id="computedField31">
+								<xp:this.value><![CDATA[#{javascript://@If(city1="";companycity + ", " + companystate;city1 + ", " + state1);
+var city=document1.getItemValueString('city1');
+if(city.length < 1){
+	return document1.getItemValueString('companycity') + ", " + document1.getItemValueString('companystate');
+} else {
+	return city + ", " + document1.getItemValueString('state1');
+}}]]></xp:this.value>
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="Vertical Segment:"
+								id="label39">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField39"
+								value="#{document1.segments}">
+							</xp:text>
+						</xp:td>
+						<xp:td></xp:td>
+						<xp:td>
+							<xp:label value="Lead Source:"
+								id="label35">
+							</xp:label>
+						</xp:td>
+						<xp:td>
+							<xp:text escape="true" id="computedField35"
+								value="#{document1.leadSource}">
+							</xp:text>
+						</xp:td>
+					</xp:tr>
+				</xp:table>
+				
+			</xe:djAccordionPane>
+			<xe:djAccordionPane id="djAccordionPane2"
+				title="Job Description">
+				<xp:text escape="false" id="computedField40"
+					value="#{document1.JOPosDescHTMLStyled}">
+				</xp:text>
+				
+			</xe:djAccordionPane>
+			<xe:djAccordionPane id="djAccordionPane3"
+				title="Key Hiring Indicators">
+				<xe:this.rendered><![CDATA[#{javascript:(document1.getItemValueString("hiring_indicators"))}]]></xe:this.rendered>
+				<xp:inputRichText id="inputRichText1"
+					value="#{document1.hiring_indicators}">
+				</xp:inputRichText>
+			</xe:djAccordionPane>
+		<xe:djAccordionPane id="djAccordionPane4"
+				title="Knockout Indicators">
+			<xe:this.rendered><![CDATA[#{javascript:(document1.getItemValueString("knockout_factors"))}]]></xe:this.rendered>
+			<xp:inputRichText id="inputRichText2" readonly="true"
+				value="#{document1.knockout_factors}">
+			</xp:inputRichText>
+		</xe:djAccordionPane>
+		<xe:djAccordionPane id="djAccordionPane5"
+				title="Other Sources">
+			<xe:this.rendered><![CDATA[#{javascript:(document1.getItemValueString('other_sources'))}]]></xe:this.rendered>
+			<xp:inputRichText id="inputRichText3" readonly="true"
+				value="#{document1.other_sources}">
+			</xp:inputRichText>
+		</xe:djAccordionPane>
+		<xe:djAccordionPane id="djAccordionPane6"
+				title="Hiring Timeframe">
+			<xe:this.rendered><![CDATA[#{javascript:(document1.getItemValueString("hiring_timeframe"))}]]></xe:this.rendered>
+			<xp:br></xp:br>
+			<xp:inputRichText id="inputRichText4"
+				value="#{document1.hiring_timeframe}" readonly="true">
+			</xp:inputRichText>
+		</xe:djAccordionPane>
+		<xe:djAccordionPane id="djAccordionPane7"
+				title="Search Notes">
+			<xe:this.rendered><![CDATA[#{javascript:(document1.getItemValueString("search_notes"))}]]></xe:this.rendered>
+			<xp:inputRichText id="inputRichText5" readonly="true"
+				value="#{document1.search_notes}">
+			</xp:inputRichText>
+		</xe:djAccordionPane>
+		<xe:djAccordionPane id="djAccordionPane8"
+						title="Last Results">
+					<xp:repeat id="repeat1" rows="30" var="rowData">
+						<xp:this.value><![CDATA[#{javascript:try {
+			return document1.getItemValue("LastResult")
+		} catch (e) {};}]]></xp:this.value>
+						<xp:text escape="true" id="computedField46"
+							value="#{rowData}">
+		
+						</xp:text>
+						<xp:br></xp:br>
+					</xp:repeat>
+		</xe:djAccordionPane>
+
+		<xe:djAccordionPane id="djAccordionPane9"
+				title="Client Description">
+			<xe:this.rendered><![CDATA[#{javascript:(document1.getItemValueString("ClientDesc"))}]]></xe:this.rendered>
+			<xp:inputRichText id="inputRichText6" readonly="true"
+				value="#{document1.ClientDesc}">
+			</xp:inputRichText>
+		</xe:djAccordionPane>
+		<xe:djAccordionPane id="djAccordionPane10"
+				title="Company Description">
+			<xe:this.rendered><![CDATA[#{javascript:(document1.getItemValueString("companydesc"))}]]></xe:this.rendered>
+			<xp:inputRichText id="inputRichText7" readonly="true"
+				value="#{document1.companydesc}">
+			</xp:inputRichText>
+	</xe:djAccordionPane>
+		<xe:djAccordionPane id="djAccordionPane11"
+				title="Sample Resume">
+			<xe:this.rendered><![CDATA[#{javascript:(document1.getItemValueString("sample_resume"))}]]></xe:this.rendered>
+			<xp:inputRichText id="inputRichText8"
+				value="#{document1.sample_resume}" readonly="true">
+			</xp:inputRichText>
+		</xe:djAccordionPane>
+		<xe:djAccordionPane id="djAccordionPane12"
+				title="Internal Notes">
+			<xe:this.rendered><![CDATA[#{javascript:(document1.getItemValueString("ATSNotes"))}]]></xe:this.rendered>
+			<xp:inputRichText id="inputRichText9" readonly="true"
+				value="#{document1.ATSNotes}">
+			</xp:inputRichText>
+		</xe:djAccordionPane>
+				</xe:djAccordionContainer>
+	</xp:panel>
+</xp:view>

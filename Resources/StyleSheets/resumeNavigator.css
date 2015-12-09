@@ -1,0 +1,417 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+
+.fancyNav div:after{
+
+	/* This creates a pseudo element inslide each LI */	
+	
+	content:'.';
+
+	overflow:hidden;
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index:1;
+	opacity:0;
+}
+
+
+
+
+.resumeNav div:hover:after,
+.resumeNav div.selected:after,
+.resumeNav div:target:after{
+	/* This property triggers the CSS3 transition */
+	opacity:1;
+}
+
+.resumeNav:hover div.selected:after,
+.resumeNav:hover div:target:after{
+	/* Hides the targeted li when we are hovering on the UL */
+	opacity:0;
+}
+
+.resumeNav div.selected:hover:after,
+.resumeNav div:target:hover:after{
+	opacity:1 !important;
+}
+
+/*----------------------------
+	CSS3 Animated Navigation
+-----------------------------*/
+
+
+.resumeNav{
+	/* Affects the UL element */
+	overflow: hidden;
+	display: inline-block;
+}
+
+
+
+/* Styling the anchor elements */
+
+.resumeNav a{
+	
+	display: inline-block;
+	font-family: 'Arial', sans-serif;
+	padding: 10px 0px 0px 5px;
+	position: relative;
+	z-index:2;
+	text-decoration:none !important;
+	white-space:nowrap;
+}
+
+.resumeNav a.notesIcon{
+    background: url('images/NotesButtonOn.svg') no-repeat left center;
+    display: block;
+    position: relative;
+    margin-left: 5px;
+    margin-right: 0px;
+    width: 122px;
+    height: 24px;
+    margin-top: 4px;
+}
+
+.resumeNav a.namIcon{
+	background:url('images/NamOn.svg') no-repeat center center;
+	display: block;
+	overflow: visible
+    margin-left:0px;
+    margin-right: 10px;
+	padding-left: -0px;
+    margin-top: 5px;
+	text-indent: 0px;
+	width: 45px;
+    height: 21px;
+}
+
+.resumeNav a.holdIcon{
+	background:url('images/HoldOn.svg') no-repeat center center;
+	display: block;
+	overflow: visible;
+	margin-right: 8px;
+	padding-left: -10px;
+    margin-top: 5px;
+	text-indent: 0px;
+	width: 55px;
+    height: 21px;
+}
+
+.resumeNav a.callIcon{
+	background:url('images/CallOn.svg') no-repeat center center;
+	display: block;
+	overflow: visible;
+    margin-top: 5px;
+	margin-right: 12px;
+	padding-left: -15px;
+	text-indent: 0px;
+	width: 50px;
+    height: 21px;
+}
+
+.resumeNav a.oneIcon{
+	background:url('images/1On.svg') no-repeat center center;
+	padding-left: 0px;
+	padding-right: 0px;
+	text-indent: 0px;
+	width: 24px;
+    height: 30px;
+}
+
+.resumeNav a.twoIcon{
+	background:url('images/2On.svg') no-repeat center center;
+	overflow: visible;
+	padding-left: 0px;
+	padding-right: 3px;
+	text-indent: 0px;
+	width: 24px;
+    height: 30px;
+}
+
+.resumeNav a.threeIcon{
+	background:url('images/3On.svg') no-repeat center center;
+	overflow: visible;
+	padding-left: 0px;
+	padding-right: 3px;
+	text-indent: 0px;
+	width: 24px;
+    height: 30px;
+}
+
+.resumeNav a.fourIcon{
+	background:url('images/4On.svg') no-repeat center center;
+	overflow: visible;
+	padding-left: 0px;
+	padding-right: 3px;
+	text-indent: 0px;
+	width: 24px;
+    height: 30px;
+}
+
+.resumeNav a.submitIcon{
+	background:url('images/SubmitOn.svg') no-repeat center center;
+	display: block;
+	overflow: visible;
+    margin-left:8px;
+    margin-right: -35px;
+	padding-left: 0px;
+	padding-right: 10px;
+	text-indent: 0px;
+	width: 116px;
+    height: 29px;
+}
+
+.resumeNav a.barmenuIcon{
+    background: url('images/3barMenuOn.svg') no-repeat right center;
+    display: block;
+    position: relatvie;
+    position: relative;
+    margin-right: 0px;
+    padding-right: 0px;
+    text-indent: 0px;
+    width: 112px;
+    height: 28px;
+}
+/*-------------------------
+	a:visited Button States
+--------------------------*/
+.resumeNav a:visited.notesIcon{
+	background:url('images/NotesButtonOff.svg') no-repeat left center;
+}
+
+.resumeNav a:visited.namIcon{
+	background:url('images/NamOff.svg') no-repeat center center;
+	display: block;
+	overflow: visible
+    margin-left:0px;
+    margin-right: 10px;
+	padding-left: -0px;
+    margin-top: 5px;
+	text-indent: 0px;
+	width: 45px;
+    height: 21px;
+}
+
+.resumeNav a:visited.holdIcon{
+	background:url('images/HoldOff.svg') no-repeat center center;
+	display: block;
+	overflow: visible;
+	margin-right: 8px;
+	padding-left: -10px;
+    margin-top: 5px;
+	text-indent: 0px;
+	width: 55px;
+    height: 21px;
+}
+
+.resumeNav a:visited.callIcon{
+	background:url('images/CallOff.svg') no-repeat center center;
+	display: block;
+	overflow: visible;
+    margin-top: 5px;
+	margin-right: 12px;
+	padding-left: -15px;
+	text-indent: 0px;
+	width: 50px;
+    height: 21px;
+}
+
+.resumeNav a:visited.oneIcon{
+	background:url('images/1Off.svg') no-repeat center center;
+	padding-left: 0px;
+	padding-right: 0px;
+	text-indent: 0px;
+	width: 24px;
+    height: 30px;
+}
+
+.resumeNav a:visited.twoIcon{
+	background:url('images/2Off.svg') no-repeat center center;
+	overflow: visible;
+	padding-left: 0px;
+	padding-right: 3px;
+	text-indent: 0px;
+	width: 24px;
+    height: 30px;
+}
+
+.resumeNav a:visited.threeIcon{
+	background:url('images/3Off.svg') no-repeat center center;
+	overflow: visible;
+	padding-left: 0px;
+	padding-right: 3px;
+	text-indent: 0px;
+	width: 24px;
+    height: 30px;
+}
+
+.resumeNav a:visited.fourIcon{
+	background:url('images/4Off.svg') no-repeat center center;
+	overflow: visible;
+	padding-left: 0px;
+	padding-right: 3px;
+	text-indent: 0px;
+	width: 24px;
+    height: 30px;
+}
+
+.resumeNav a:visited.submitIcon{
+	background:url('images/SubmitOff.svg') no-repeat center center;
+	display: block;
+	overflow: visible;
+    margin-left:8px;
+    margin-right: -35px;
+	padding-left: 0px;
+	padding-right: 10px;
+	text-indent: 0px;
+	width: 116px;
+    height: 29px;
+}
+
+.resumeNav a:visited.barmenuIcon{
+	background:url('images/3barMenuOff.svg') no-repeat right center;
+}
+
+
+/*-------------------------
+	a:hover Button States
+--------------------------*/
+
+.resumeNav a:hover.notesIcon{
+	background:url('images/NotesButtonOver.svg') no-repeat left center;
+}
+
+.resumeNav a:hover.namIcon{
+	background:url('images/NamOver.svg') no-repeat center center;
+	display: block;
+	overflow: visible
+    margin-left:0px;
+    margin-right: 10px;
+	padding-left: -0px;
+    margin-top: 5px;
+	text-indent: 0px;
+	width: 45px;
+    height: 21px;
+}
+
+.resumeNav a:hover.holdIcon{
+	background:url('images/HoldOver.svg') no-repeat center center;
+	display: block;
+	overflow: visible;
+	margin-right: 8px;
+	padding-left: -10px;
+    margin-top: 5px;
+	text-indent: 0px;
+	width: 55px;
+    height: 21px;
+}
+
+.resumeNav a:hover.callIcon{
+	background:url('images/CallOver.svg') no-repeat center center;
+	display: block;
+	overflow: visible;
+    margin-top: 5px;
+	margin-right: 12px;
+	padding-left: -15px;
+	text-indent: 0px;
+	width: 50px;
+    height: 21px;
+}
+
+.resumeNav a:hover.oneIcon, .resumeNav a.oneIcon.select{
+	background:url('images/1Over.svg') no-repeat center center;
+	overflow: visible;
+	padding-left: 0px;
+	padding-right: 0px;
+	text-indent: 0px;
+	width: 24px;
+    height: 30px;
+}
+
+.resumeNav a:hover.twoIcon, .resumeNav a.twoIcon.select{
+	background:url('images/2Over.svg') no-repeat center center;
+	overflow: visible;
+	padding-left: 0px;
+	padding-right: 3px;
+	text-indent: 0px;
+	width: 24px;
+    height: 30px;
+}
+
+.resumeNav a:hover.threeIcon, .resumeNav a.threeIcon.select{
+	background:url('images/3Over.svg') no-repeat center center;
+	overflow: visible;
+	padding-left: 0px;
+	padding-right: 3px;
+	text-indent: 0px;
+	width: 24px;
+    height: 30px;
+}
+
+.resumeNav a:hover.fourIcon, .resumeNav a.fourIcon.select{
+	background:url('images/4Over.svg') no-repeat center center;
+	overflow: visible;
+	padding-left: 0px;
+	padding-right: 3px;
+	text-indent: 0px;
+	width: 24px;
+    height: 30px;
+}
+
+
+.resumeNav a:hover.submitIcon{
+	background:url('images/SubmitOver.svg') no-repeat center center;
+	display: block;
+	overflow: visible;
+    margin-left:8px;
+    margin-right: -35px;
+	padding-left: 0px;
+	padding-right: 10px;
+	text-indent: 0px;
+	width: 116px;
+    height: 29px;
+}
+
+.resumeNav a:hover.barmenuIcon{
+	background:url('images/3barMenuOver.svg') no-repeat right center;
+}
+
+
+/*-------------------------
+	Nav bar style
+--------------------------*/
+
+.resumeNav{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+    height: 40px;    
+ 
+         background-color: background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(19,19,19)), color-stop(0%,rgb(74,76,89)), color-stop(8%,rgb(25,50,109)), color-stop(100%,rgb(40,40,40))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgb(19,19,19) 0%,rgb(74,76,89) 0%,rgb(25,50,109) 8%,rgb(40,40,40) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgb(19,19,19) 0%,rgb(74,76,89) 0%,rgb(25,50,109) 8%,rgb(40,40,40) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgb(19,19,19) 0%,rgb(74,76,89) 0%,rgb(25,50,109) 8%,rgb(40,40,40) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgb(19,19,19) 0%,rgb(74,76,89) 0%,rgb(25,50,109) 8%,rgb(40,40,40) 100%);
+border: solid 1px #999999;
+}
+
+.resumeNav div {
+	flex-grow: 1;
+	}
+
+
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+}

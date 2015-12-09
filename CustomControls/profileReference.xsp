@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:table>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Name:"
+					id="referenceName_Label1" for="referenceName1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="ReferenceName" styleClass="cpInput">
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("ReferenceName")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Company:" id="company_Label1"
+					for="company1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="Company" styleClass="cpInput">
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("Company")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Title:" id="title_Label1"
+					for="title1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="Title" styleClass="cpInput">
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("Title")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Phone:" id="phone_Label1"
+					for="phone1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="Phone" styleClass="cpInput">
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("Phone")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Email:" id="email_Label1"
+					for="email1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="Email" styleClass="cpInput">
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("Email")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Date employed from:"
+					id="dateEmployedFrom_Label1" for="dateEmployedFrom1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="DateEmployedFrom"
+					styleClass="cpInput">
+					<xp:dateTimeHelper id="dateTimeHelper1"></xp:dateTimeHelper>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"
+							dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("DateEmployedFrom")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Date employed to:"
+					id="dateEmployedTo_Label1" for="dateEmployedTo1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="DateEmployedTo"
+					styleClass="cpInput">
+					<xp:dateTimeHelper id="dateTimeHelper2"></xp:dateTimeHelper>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"
+							dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("DateEmployedTo")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Reference Taken By:" id="refTakenBy_Label1"
+					for="refTakenBy1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefTakenBy" styleClass="cpInput">
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("RefTakenBy")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Reference Taken:" id="dateRef_Label1"
+					for="dateRef1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="DateRef" styleClass="cpInput">
+					<xp:dateTimeHelper id="dateTimeHelper3"></xp:dateTimeHelper>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"
+							dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("DateRef")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="In what context did you work with the candidate?" id="refContext_Label1"
+					for="refContext1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefContext" styleClass="cpInput">
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("RefContext")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="When working with this individual what did you feel were his/her biggest strengths?"
+					id="refAccomplishments_Label1" for="refAccomplishments1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefAccomplishments"
+					styleClass="cpInput">
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("RefAccomplishments")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="What about a weaker point or area for an improvement?" id="refWeakness_Label1"
+					for="refWeakness1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefWeakness" styleClass="cpInput">
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("RefWeakness")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="On a scale of 1-10, how would you rate his/her overall performance?" id="refScale_Label1"
+					for="refScale1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefScale" styleClass="cpInput">
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("RefScale")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="WHY?" id="refScaleWhy_Label1"
+					for="refScaleWhy1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefScaleWhy" styleClass="cpInput">
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("RefScaleWhy")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="This candidate will be responsible for the following: —Discuss key hiring indicators"
+					id="refResponsible_Label1" for="refResponsible1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefResponsible"
+					styleClass="cpInput">
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("RefResponsible")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="How did this person get along with their peers?" id="refGetAlong_Label1"
+					for="refGetAlong1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefGetAlong" styleClass="cpInput">
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("RefGetAlong")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Attendance / Punctuality?"
+					id="refAttendance_Label1" for="refAttendance1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefAttendance" styleClass="cpInput">
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("RefAttendance")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Would you rehire them?" id="refRehire_Label1"
+					for="refRehire1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefRehire" styleClass="cpInput">
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("RefRehire")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Do you have any advice on how to best manage this individual?"
+					id="refManageAdvice_Label1" for="refManageAdvice1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefManageAdvice"
+					styleClass="cpInput">
+					<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("RefManageAdvice")}]]>
+					</xp:this.defaultValue>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="NOTES / ATTACHMENTS:" id="refNotes_Label1"
+					for="refNotes1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputRichText id="RefNotes">
+				<xp:this.defaultValue><![CDATA[#{javascript:rowData.getColumnValue("RefNotes")}]]>
+				</xp:this.defaultValue>
+				</xp:inputRichText>
+			</xp:td>
+		</xp:tr>
+	</xp:table>
+	</xp:view>

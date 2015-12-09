@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<div id='min'>
+			<xp:eventHandler event="onclick" submit="false">
+				<xp:this.script><![CDATA[closeFormDialog();]]></xp:this.script>
+			</xp:eventHandler>
+	</div>
+	<div id='close'>
+			<xp:eventHandler event="onclick" submit="false">
+				<xp:this.script><![CDATA[minimizeFormDialog();]]></xp:this.script>
+			</xp:eventHandler>
+	</div>
+</xp:view>

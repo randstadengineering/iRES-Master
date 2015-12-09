@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.resources>
+		<xp:styleSheet href="/candidateStyles.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xp:this.afterPageLoad><![CDATA[#{javascript:if (currentDocument.isNewNote()==false){
+var doc:NotesDocument = document1.getDocument();
+viewScope.candidateDocID = doc.getUniversalID();
+}}]]></xp:this.afterPageLoad>
+	
+	<xp:panel style="background-color:rgb(162,182,217)">
+		
+		<xp:panel style="width:75.0%">
+			<xp:image url="/burgerbar2.JPG" id="image1"
+				style="margin-left:24px">
+			</xp:image>
+			<xp:text escape="true" id="computedField1"
+				style="height:30px;margin-left:24px;border-color:rgb(255,255,255);border-style:solid;border-width:thin;font-size:14pt;margin-top:px;margin-bottom:px;padding-top:2.0px;padding-bottom:2.0px">
+				<xp:this.value><![CDATA[#{javascript:return "Lastname, Firstname"}]]></xp:this.value>
+			</xp:text>
+			<xp:text escape="true" id="computedField2"
+				style="margin-left:24px;border-color:rgb(255,255,255);border-style:solid;border-width:thin;color:rgb(255,255,255);height:30px;font-size:14pt;margin-top:px;margin-bottom:px;padding-top:2.0px;padding-bottom:2.0px">
+				<xp:this.value><![CDATA[#{javascript:return "JOB: ######"}]]></xp:this.value>
+			</xp:text>
+			<xp:button value="Submit" id="button1"
+				style="margin-left:24px" styleClass="cpbannerButton">
+			</xp:button>
+		</xp:panel>
+
+		
+	</xp:panel>
+	</xp:view>

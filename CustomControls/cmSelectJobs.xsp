@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:panel styleClass="menuBox">
+		<xp:link escape="true" id="alljobs"
+			styleClass="btnAlljobs inactive">
+			<xp:eventHandler event="onclick" submit="false">
+				<xp:this.script><![CDATA[showBusy(true);
+window.location.reload(true);]]></xp:this.script>
+				</xp:eventHandler>
+			</xp:link>
+			<xp:link escape="true" id="selectjobs"
+				styleClass="btnSelectjob">
+			</xp:link>
+		</xp:panel>
+		<div id="contextMenuJobGrouping"></div>
+
+	<xp:panel id="selectJob" styleClass="selectJobOverlay cmOverlay">
+		<xc:ccSelectJob></xc:ccSelectJob></xp:panel>
+</xp:view>

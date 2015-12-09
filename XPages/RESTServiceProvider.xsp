@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	This page is not designed to be shown. It is a place to hold the REST service endpoints needed for iRES/ATS.&#160;<xp:br></xp:br><xp:br></xp:br>Each REST service should have a unique name&#160;<xp:br></xp:br><xp:br></xp:br><xp:br></xp:br><xp:br></xp:br>
+	<xe:restService id="restService1" pathInfo="individualPipeline">
+		<xe:this.service>
+			<xe:customRestService contentType="application/json">
+				<xe:this.doGet><![CDATA[#{javascript:var reqMap:Map = facesContext.getExternalContext().getRequestParameterMap();
+
+var json = indPipeline.getIndividualPipeline(reqMap.get('recruiterInitials'));
+return json;}]]></xe:this.doGet>
+			</xe:customRestService>
+		</xe:this.service>
+	</xe:restService>
+	<xe:restService
+		id="restService2"
+		pathInfo="JOdata">
+		<xe:this.service>
+			<xe:customRestService contentType="application/json">
+				<xe:this.doGet><![CDATA[#{javascript:var reqMap:Map = facesContext.getExternalContext().getRequestParameterMap();
+
+var json = indPipeline.getJOPipeline(reqMap.get('JONumber'), reqMap.get('recruiterInitials'));
+return json;}]]></xe:this.doGet>
+			</xe:customRestService>
+		</xe:this.service>
+	</xe:restService>
+<xe:restService id="restService3" pathInfo="individualJOs">
+		<xe:this.service>
+			<xe:customRestService>
+				<xe:this.doGet><![CDATA[#{javascript:var reqMap:Map = facesContext.getExternalContext().getRequestParameterMap();
+
+var json = indPipeline.getJOPipelineRecuiter(reqMap.get('recruiterInitials'));
+return json;}]]></xe:this.doGet>
+			</xe:customRestService>
+		</xe:this.service>
+	</xe:restService>
+	<xe:restService id="restService4" pathInfo="leftNav">
+		<xe:this.service>
+			<xe:customRestService contentType="application/json">
+				<xe:this.doGet><![CDATA[#{javascript:var reqMap:Map = facesContext.getExternalContext().getRequestParameterMap();
+var initals = reqMap.get('initials');
+var jonum = reqMap.get('jobnumber');
+
+if (jonum) {
+	return fwUtils.joNavEntries(jonum + '');
+} else {
+	return fwUtils.individualNavEntries(reqMap.get('initials'));
+}}]]></xe:this.doGet>
+			</xe:customRestService>
+		</xe:this.service>
+	</xe:restService>
+	<xe:restService id="restService5" pathInfo="getResume">
+		<xe:this.service>
+			<xe:customRestService contentType="text/plain">
+				<xe:this.doGet><![CDATA[#{javascript:var reqMap:Map = facesContext.getExternalContext().getRequestParameterMap();
+var noteID = reqMap.get('docid');
+return attNames.GetFilesFromNotesDocs(noteID);}]]></xe:this.doGet>
+			</xe:customRestService>
+		</xe:this.service>
+	</xe:restService></xp:view>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom" 
+	xmlns:xe="http://www.ibm.com/xsp/coreex"
+	xmlns:debug="http://www.openntf.org/xsp/debugtoolbar">
+
+<xp:this.beforePageLoad><![CDATA[#{javascript:if(@UserName().toUpperCase() =='ANONYMOUS'){
+	context.redirectToPage("\start.xsp");
+}
+
+//This sets the user ID for testing
+initializeUserEnvironment();}]]></xp:this.beforePageLoad>
+	<xe:keepSessionAlive id="keepSessionAlive1"></xe:keepSessionAlive>
+	<xp:this.resources>
+		<xp:script src="/generalSSJSUtilities.jss" clientSide="false"></xp:script>
+		<xp:script src="/common-js.js" clientSide="true"></xp:script>
+		<xp:script src="/userEnvironment.jss" clientSide="false"></xp:script>
+		<xp:script src="/anime.js" clientSide="true"></xp:script>
+		<xp:styleSheet href="/ires_master.css"></xp:styleSheet>
+		<xp:styleSheet href="/masthead.css"></xp:styleSheet>
+		<xp:styleSheet href="/burgerMenu.css"></xp:styleSheet>
+		<xp:styleSheet href="/formStyles.css"></xp:styleSheet>
+		<xp:styleSheet href="/workingPane.css"></xp:styleSheet>
+		<xp:styleSheet href="/viewResume.css"></xp:styleSheet>
+		
+	</xp:this.resources>
+	<debug:toolbar defaultCollapsed="false" collapseTo="left"
+		>
+	</debug:toolbar>
+	<xp:panel id="outerFrame" styleClass="outerFrame" rendered="true">
+		<xp:this.style><![CDATA[width:100%;height:100%;background-color:rgb(255,0,0);z-index: 0;position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0]]></xp:this.style>
+		<xc:utiliResMasthead rendered="true"></xc:utiliResMasthead>
+
+		<xc:utilContextMenuBar rendered="true"></xc:utilContextMenuBar>
+		<xc:utilmainWorkingPane rendered="true"></xc:utilmainWorkingPane>
+		<xc:utilleftNav rendered="true"></xc:utilleftNav>
+	</xp:panel>
+	<iframe id="work" style="border:0px; height:0px; width:0px;" src=""></iframe>
+	<xc:gDriveAPILoader></xc:gDriveAPILoader></xp:view>

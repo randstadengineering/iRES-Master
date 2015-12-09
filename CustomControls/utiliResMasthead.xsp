@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" style="margin-top:0.0%"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<xp:panel id="iRESMasthead"  styleClass="mastHead">
+ 	<div class="mastHead">
+     
+         <a id="pipeline" href="#" class="pipeline mastHeadMenu">PIPELINE</a>
+         <a id="candidate" href="#" class="round-button mastHeadMenu">C</a>
+         <a id="searchlight" href="#" class="round-button mastHeadMenu">S</a>
+         <a id="email" href="#" class="round-button mastHeadMenu">E</a>
+         <a id="utility" href="#" class="round-button mastHeadMenu">U</a>
+        
+		<div id="sb-search" class="sb-search">
+		<input class="sb-search-input" placeholder=" type something here to search..."   type="search" value="" name="search" id="search"></input>
+		<input class="sb-search-submit" type="submit" value=""></input>
+				<span class="sb-icon-search"></span>
+		</div>
+        
+	</div>
+	
+	</xp:panel>
+	</xp:view>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.beforePageLoad><![CDATA[#{javascript:/*importPackage( ch.hasselba.xpages );
+var fc:ch.hasselba.xpages.ThemeSwitcherFacesContext = facesContext;
+fc.setStyleKitId( "datatables");
+fc.loadStyleKit();*/}]]></xp:this.beforePageLoad>
+
+	<xp:this.resources>
+		<xp:styleSheet href="/jQueryDataTableJobOverlay.css"></xp:styleSheet>
+	</xp:this.resources>
+
+	<div id="winSelectJob" class="joSelectTable">
+		<xp:scriptBlock id="scriptBlock1" type="text/javascript"
+		rendered="true">
+		<xp:this.value><![CDATA[$(document).ready( function() {
+		 var initials = "#{javascript:sessionScope.user_initials}";
+		 table = $("#jQDTSelectJO").dataTable( {
+		 "pageLength": 500,
+		 scrollY : "33vh",
+		 "ajax" : "RESTServiceProvider.xsp/individualJOs?recruiterInitials=" + initials,
+		 "columns" : [{
+				"data" : "NumSubmits",
+				"class" : "textCtr"
+			}, {
+				"data" : "NumInterviews",
+				"class" : "textCtr"
+			},  {
+				"data" : "results",
+				"class" : "textCtr"
+			}, {
+				"data" : "NumApplies",
+				"class" : "textCtr"
+			} , {
+				"data" : "JONumber",
+				"class" : "textCtr"
+			} , {
+				"data" : "ProperJT"
+			}, {
+				"data" : "CompanyName"
+			}, {
+				"data" : "location"
+			}, {
+				"data" : "unid",
+				"visible" : false
+			}, {
+				"data" : "JOStatus",
+				"visible" : false
+			}, {
+				"data" : "hotornot",
+				"visible" : false
+			}],
+			
+	
+			"columnDefs": [
+		       { "orderData": [ 10, 4 ], "targets": "_all"},
+		       { "visible": false, "targets": [8, 9, 10]},
+		       { "orderable": false, "targets": [0, 1, 2, 3]}],
+			"createdRow": function ( row, data, index ) {
+	            if (data["JOStatus"] != "HOT" ) {
+	                $(row).addClass("jobnothot");
+	            } else {
+	            	 $(row).addClass("jobhot");
+	            	 //$("td:eq(3)", row).removeClass("jobhot");
+	            	 $("td:eq(3)", row).addClass("zeroRed");
+	            }
+	            if(Number(data["NumSubmits"]) < 1){
+	            	$("td:eq(0)", row).addClass("zeroRed");
+	            }
+	              if(Number(data["NumInterviews"]) < 1){
+	            	$("td:eq(1)", row).addClass("zeroRed");
+	            }
+	              if(Number(data["results"]) < 1){
+	            	$("td:eq(2)", row).addClass("zeroRed");
+	            }
+	            if(Number(data["NumApplies"]) < 1){
+	            	$("td:eq(3)", row).addClass("zeroRed");
+	            }
+	            }
+			});
+				
+			table.on("click", "tr", function() {
+				loadPipeline(table.fnGetData(this).JONumber, initials);	
+			});
+			
+})]]></xp:this.value>
+	</xp:scriptBlock>
+	<table id="jQDTSelectJO">
+		<thead>
+			<tr class="header">
+				<th>
+					<img src="images/inbox.svg" width="20px"></img>
+				</th>
+				<th>
+					<img src="images/calendar.svg" width="20px"></img>
+				</th>
+				<th>
+					<img src="images/folder.svg" width="20px"></img>
+				</th>
+				<th style="color:#0000FF">APPS</th>
+				<th style="color:#0000FF">JOB #</th>
+				<th style="color:#0000FF">TITLE</th>
+				<th style="color:#0000FF">CLIENT</th>
+				<th style="color:#0000FF">LOCATION</th>
+			</tr>
+		</thead>
+	</table>
+	</div>
+</xp:view>

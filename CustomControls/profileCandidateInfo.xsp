@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+
+	<div>
+		<xp:table style="font-size:9pt">
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Years Exp:" id="label10" styleClass="cpLabel">
+					</xp:label>
+					<xp:inputText id="inputText6" value="#{document1.Years}"
+						styleClass="cpInput">
+						<xp:this.converter>
+							<xp:convertNumber type="number" integerOnly="true">
+							</xp:convertNumber>
+						</xp:this.converter>
+					</xp:inputText>
+				</xp:td>
+				<xp:td>
+					<xp:label value="Desired Rate:" id="label14" styleClass="cpLabel">
+					</xp:label>
+					<xp:inputText id="inputText9" value="#{document1.PayRate}"
+						styleClass="cpInput">
+						<xp:this.converter>
+							<xp:convertNumber type="currency"></xp:convertNumber>
+						</xp:this.converter>
+					</xp:inputText>
+					<xp:label value="$ / hr" id="label1" styleClass="cpLabel">
+					</xp:label>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+
+					<xp:label value="Year Start Work:" id="label8" styleClass="cpLabel">
+					</xp:label>
+					<xp:inputText id="inputText8" value="#{document1.YearGrad}"
+						styleClass="cpInput">
+						<xp:this.converter>
+							<xp:convertNumber type="number" integerOnly="true">
+							</xp:convertNumber>
+						</xp:this.converter>
+					</xp:inputText>
+				</xp:td>
+				<xp:td>
+					<xp:label value="Current Rate:" id="label15" styleClass="cpLabel">
+					</xp:label>
+					<xp:inputText id="inputText10" value="#{document1.PayRateCurrent}"
+						styleClass="cpInput">
+						<xp:this.converter>
+							<xp:convertNumber type="number"></xp:convertNumber>
+						</xp:this.converter>
+					</xp:inputText>
+					<xp:label value="$ / hr" id="label3" styleClass="cpLabel">
+					</xp:label>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="# Years 1 Job:" id="label12" styleClass="cpLabel">
+					</xp:label>
+					<xp:inputText id="inputText7" value="#{document1.Stability}"
+						styleClass="cpInput">
+						<xp:this.converter>
+							<xp:convertNumber type="number"></xp:convertNumber>
+						</xp:this.converter>
+					</xp:inputText>
+				</xp:td>
+				<xp:td>
+					<xp:label value="Desired Salary:" id="label16" styleClass="cpLabel">
+					</xp:label>
+					<xp:inputText id="inputText11" value="#{document1.PaySalary}"
+						styleClass="cpInput">
+						<xp:this.converter>
+							<xp:convertNumber type="number"></xp:convertNumber>
+						</xp:this.converter>
+					</xp:inputText>
+					<xp:label value="$ / yr = k" id="label2" styleClass="cpLabel">
+					</xp:label>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Travel %:" id="label13" styleClass="cpLabel">
+					</xp:label>
+
+					<xp:comboBox id="comboBox2" value="#{document1.AutoTravel}"
+						styleClass="cpComboBox">
+						<xp:selectItem itemLabel="0 - Zero"></xp:selectItem>
+						<xp:selectItem itemLabel="1 to 10%"></xp:selectItem>
+						<xp:selectItem itemLabel="11 to 25%"></xp:selectItem>
+						<xp:selectItem itemLabel="26 or greater"></xp:selectItem>
+					</xp:comboBox>
+				</xp:td>
+				<xp:td>
+					<xp:label value="Current Salary:" id="label17" styleClass="cpLabel">
+					</xp:label>
+					<xp:inputText id="inputText12" value="#{document1.PaySalaryCurrent}"
+						styleClass="cpInput">
+						<xp:this.converter>
+							<xp:convertNumber type="number"></xp:convertNumber>
+						</xp:this.converter>
+					</xp:inputText>
+					<xp:label value="$ / yr = k" id="label9" styleClass="cpLabel">
+					</xp:label>
+				</xp:td>
+			</xp:tr>
+		</xp:table>
+		<xp:label value="Education:" id="label18" styleClass="cpLabel"></xp:label>
+		<xp:listBox id="listBox1" multiple="true" value="#{document1.Education}">
+			<xp:selectItem itemLabel="Associates Degree"></xp:selectItem>
+			<xp:selectItem itemLabel="A+ Certified"></xp:selectItem>
+			<xp:selectItem itemLabel="Bachelor Degree-Arts (BA)"></xp:selectItem>
+			<xp:selectItem itemLabel="BS Architecture"></xp:selectItem>
+			<xp:selectItem itemLabel="BS Chemistry"></xp:selectItem>
+			<xp:selectItem itemLabel="BS Engineering/Technical"></xp:selectItem>
+			<xp:selectItem itemLabel="BS Interior Design"></xp:selectItem>
+			<xp:selectItem itemLabel="BS Math"></xp:selectItem>
+			<xp:selectItem itemLabel="BS Nuclear Engineering"></xp:selectItem>
+			<xp:selectItem itemLabel="BS Physics"></xp:selectItem>
+			<xp:selectItem itemLabel="BS Telecommunications"></xp:selectItem>
+			<xp:selectItem itemLabel="BSAE"></xp:selectItem>
+			<xp:selectItem itemLabel="BSCE"></xp:selectItem>
+			<xp:selectItem itemLabel="BSChE"></xp:selectItem>
+			<xp:selectItem itemLabel="BSCS"></xp:selectItem>
+			<xp:selectItem itemLabel="BSEE"></xp:selectItem>
+			<xp:selectItem itemLabel="BSIE"></xp:selectItem>
+			<xp:selectItem itemLabel="BSME"></xp:selectItem>
+			<xp:selectItem itemLabel="BS/BA/BBA"></xp:selectItem>
+			<xp:selectItem itemLabel="BS/Mat Science"></xp:selectItem>
+			<xp:selectItem itemLabel="Certificate"></xp:selectItem>
+			<xp:selectItem itemLabel="CNA (Novell)"></xp:selectItem>
+			<xp:selectItem itemLabel="CNE (Novell)"></xp:selectItem>
+			<xp:selectItem itemLabel="CPA"></xp:selectItem>
+			<xp:selectItem itemLabel="EIT/FE"></xp:selectItem>
+			<xp:selectItem itemLabel="High School"></xp:selectItem>
+			<xp:selectItem itemLabel="Masters degree"></xp:selectItem>
+			<xp:selectItem itemLabel="Masters Degree Arts (MBA)"></xp:selectItem>
+			<xp:selectItem itemLabel="MBA"></xp:selectItem>
+			<xp:selectItem itemLabel="MCP"></xp:selectItem>
+			<xp:selectItem itemLabel="MCSE"></xp:selectItem>
+			<xp:selectItem itemLabel="Military Sch/Trng"></xp:selectItem>
+			<xp:selectItem itemLabel="MS Architecture"></xp:selectItem>
+			<xp:selectItem itemLabel="MS Chemistry"></xp:selectItem>
+			<xp:selectItem itemLabel="MS Engineering/Technical"></xp:selectItem>
+			<xp:selectItem itemLabel="MS Math"></xp:selectItem>
+			<xp:selectItem itemLabel="MS Metallurgy/Mat Science"></xp:selectItem>
+			<xp:selectItem itemLabel="MS Nuclear Engineering"></xp:selectItem>
+			<xp:selectItem itemLabel="MS Physics"></xp:selectItem>
+			<xp:selectItem itemLabel="MSAE"></xp:selectItem>
+			<xp:selectItem itemLabel="MSCE"></xp:selectItem>
+			<xp:selectItem itemLabel="MSChE"></xp:selectItem>
+			<xp:selectItem itemLabel="MSCS"></xp:selectItem>
+			<xp:selectItem itemLabel="MSEE"></xp:selectItem>
+			<xp:selectItem itemLabel="MSIE"></xp:selectItem>
+			<xp:selectItem itemLabel="MSME"></xp:selectItem>
+			<xp:selectItem itemLabel="PE"></xp:selectItem>
+			<xp:selectItem itemLabel="PhD."></xp:selectItem>
+			<xp:selectItem itemLabel="Professional Registration"></xp:selectItem>
+			<xp:selectItem itemLabel="Student"></xp:selectItem>
+			<xp:selectItem itemLabel="Technical School/Trng"></xp:selectItem>
+			<xp:selectItem itemLabel="Uncodeable"></xp:selectItem>
+		</xp:listBox>
+		<xp:br></xp:br>
+		<xp:table style="width:auto">
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Present/Previous Job Title:" id="label4"
+						styleClass="cpLabel"></xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:inputText id="inputText1" value="#{document1.JobTitle}"
+						styleClass="cpInput"></xp:inputText>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Present/Previous Employer:" id="label5"
+						styleClass="cpLabel"></xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:inputText id="inputText2" value="#{document1.PreviousEmp}"
+						styleClass="cpInput"></xp:inputText>
+				</xp:td>
+			</xp:tr>
+		</xp:table>
+		<xp:table style="width:auto">
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Portfolio:" id="label6" styleClass="cpLabel"></xp:label>
+					<xp:comboBox id="comboBox1" value="#{document1.Portfolio}"
+						styleClass="cpComboBox">
+						<xp:selectItem itemLabel="MPA" itemValue="MPA"></xp:selectItem>
+						<xp:selectItem itemLabel="Excellent" itemValue="Excellent"></xp:selectItem>
+						<xp:selectItem itemLabel="Good" itemValue="Good"></xp:selectItem>
+						<xp:selectItem itemLabel="Fair" itemValue="Fair"></xp:selectItem>
+						<xp:selectItem itemLabel="Poor" itemValue="Poor"></xp:selectItem>
+					</xp:comboBox>
+				</xp:td>
+				<xp:td>
+					<xp:label value="URL:" id="label7" styleClass="cpLabel"></xp:label>
+					<xp:inputText id="inputText4" value="#{document1.URL}"
+						styleClass="cpInput"></xp:inputText>
+				</xp:td>
+			</xp:tr>
+		</xp:table>
+	</div>
+</xp:view>

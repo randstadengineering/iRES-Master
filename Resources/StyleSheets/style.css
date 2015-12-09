@@ -1,0 +1,132 @@
+div::selection {color:red;background:blue;background-color:blue;};
+div::-moz-selection {color:red;background:blue;background-color:blue;};
+
+.wrapword{
+white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+white-space: -pre-wrap;      /* Opera 4-6 */
+white-space: -o-pre-wrap;    /* Opera 7 */
+white-space: pre-wrap;       /* css-3 */
+word-wrap: break-word;       /* Internet Explorer 5.5+ */
+word-break: keep-all;
+white-space: normal;
+}
+li.menu_link a:hover {
+	cursor:pointer;
+	text-decoration:underline;
+	color:#04559f;
+}
+li.menu_link a{
+	padding-bottom:2px;	
+	color:#000000;
+}
+li.menu_link a:visited {
+	color:#000000;
+}
+
+.sectionTitle {
+	background-color:rgb(0,50,100);
+	color:rgb(255,255,255);
+	border-style:ridge;
+	border-width:1px
+}
+
+.pager_activity_section {
+	text-align: left;
+}
+
+.taskview_row1 {
+	border:3px solid #efefef;
+}
+
+.sections {
+	border:2px outset #e0e0e0;
+	background-color:rgb(255,255,255);
+	padding-top:3px;
+	padding-bottom:3px;
+	font-size:8pt;
+	font-weight:bold;
+	color:rgb(0,40,76);
+}
+.section a:hover {
+	cursor: pointer;
+	text-decoration: none;
+}
+.section a:visited {
+	text-decoration: none;
+}
+.section a:active {
+	text-decoration: none;
+}
+.section a:link {
+	text-decoration: none;
+}	
+
+.form_label {
+	text-align: right;
+	font-weight: bold;
+	font-size: 8pt;
+	vertical-align:top;
+	background-color:rgb(240,240,240);
+}
+.form_edit_input {
+	font-size: 8pt;
+	margin-left: 5px;
+	border:1px solid #e0e0e0;
+	height:16px;
+}
+.form_edit_input_selected {
+	font-size: 8pt;
+	margin-left: 5px;
+	background-color: rgb(221,238,255);
+}
+.form_dropdown {
+	font-size: 8pt;
+	margin-left: 5px;
+	border:1px solid #e0e0e0;
+	height:20px;
+}
+.form_multiline {
+	font-size: 8pt;
+	margin-left: 5px;
+}
+.form_radio {
+	font-size: 8pt;
+	margin-left: 5px;
+}
+
+.highliteViewRow {
+	background-color: #FFFFFF;
+}
+
+.highliteViewRow:hover {
+   background-color: rgb(221,238,255);
+   cursor:pointer;
+}
+
+.leftAlignPager {
+	text-align: left;
+}
+.profileSections {
+	width:100.0%;
+	border:2px outset #e0e0e0;
+	background-color:rgb(252,252,252)
+}
+.leadListNote{
+    background: #F5F5F5;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 0 1px -1px rgba(0,0,0,0.2) inset, 0 0px 0 rgba(0,0,0,0.05) inset;
+    transition: all 0.2s linear;
+    color: #222222;
+    position: relative;
+    overflow: auto;
+    vertical-align:top;
+    margin-bottom: 0px;
+    padding: 10px;
+}    
+.leadListNote:focus{
+        box-shadow: 0 1px 0 #2392F3 inset, 0 -1px 0 #2392F3 inset, 1px 0 0 #2392F3 inset, -1px 0 0 #2392F3 inset, 0 0 4px rgba(35,146,243,0.5);
+        outline: none;
+        background: #FFF;
+}
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	
+	
+	<xp:inputRichText id="inputRichText1" readonly="false"
+		multipleTrim="false" styleClass="resumeViewer">
+		<xp:this.rendered><![CDATA[#{javascript:/*try{
+if(document1 != null){
+	if(document1.hasItem('OCRText')){
+		var rtItem:NotesItem = document1.getDocument().getFirstItem('OCRText');
+		if(rtItem.getText().length() > 15){
+			//if we have more than 15, we'll consider this a field to display.
+			return true;
+		}
+	}
+}
+} catch (e) {
+	return false;
+}
+return false;
+*/
+return true;}]]></xp:this.rendered>
+
+
+
+
+
+	</xp:inputRichText>
+
+</xp:view>

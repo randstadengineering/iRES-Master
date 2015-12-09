@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="14ca" sequence="9" unid="BA57A8DDE1FCF14085257F160043449B">
+<created><datetime>20151209T071444,75-05</datetime></created>
+<modified><datetime>20151209T072919,61-05</datetime></modified>
+<revised><datetime>20151209T072919,60-05</datetime></revised>
+<lastaccessed><datetime>20151209T072919,61-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T071444,76-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
+<item name="$TITLE"><text>vwPayChg.xsp</text></item>
+<item name="$Flags"><text>gC~4K</text></item>
+
+
+
+<item name="$FileNames" sign="true"><text>vwPayChg.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+</note>

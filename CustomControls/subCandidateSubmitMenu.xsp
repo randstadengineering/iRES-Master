@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.resources>
+		<xp:styleSheet href="/candidateStyles.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xp:this.afterPageLoad><![CDATA[#{javascript:if (currentDocument.isNewNote()==false){
+var doc:NotesDocument = sub.getDocument();
+sessionScope.candidateDocID = doc.getUniversalID();
+}}]]></xp:this.afterPageLoad>
+	<div id="topBar" class="topBar">
+		<div class="topBarDailogTitle">
+			<xp:image url="/burgerbar2.JPG" id="image1"
+				style="margin-left:24px">
+			</xp:image>
+			<xp:text escape="true" id="computedField1"
+				styleClass="titleName" tagName="div">
+
+
+
+				<xp:this.value><![CDATA[#{javascript:var doc = (sub.isNewNote()) ? apply : doc;
+doc.getItemValueString("CandidatesName");}]]></xp:this.value>
+			</xp:text>
+			<xp:text escape="true" id="computedField2"
+				styleClass="titleJobNum">
+
+				<xp:this.value><![CDATA[#{javascript:var doc = (sub.isNewNote()) ? apply : sub;
+var jo = doc.getItemValueString("JONumber");
+var comp = doc.getItemValueString("CompanyName");
+var title = doc.getItemValueString("JobTitle");
+return comp + " - " + title + "  ( " + jo + " )";}]]></xp:this.value>
+			</xp:text>
+			
+		</div>
+		<div class="topBarDialogNav">
+			<xc:ccFormDialogNav></xc:ccFormDialogNav>
+		</div>
+	</div>
+</xp:view>

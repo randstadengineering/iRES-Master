@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:viewPanel rows="30" id="viewPanel1">
+		<xp:this.facets>
+			<xp:pager partialRefresh="true" layout="Previous Group Next"
+				xp:key="headerPager" id="pager1">
+			</xp:pager>
+		</xp:this.facets>
+		<xp:this.data>
+			<xp:dominoView var="view1"
+				viewName="(PayChg)   -   PayChg">
+				<xp:this.databaseName><![CDATA[#{javascript:"!!ats\cand10.nsf"}]]></xp:this.databaseName>
+			</xp:dominoView>
+		</xp:this.data>
+		<xp:viewColumn columnName="Status" id="viewColumn1" style="width:10em">
+			<xp:viewColumnHeader value="Status"
+				id="viewColumnHeader1" style="width:5.0em">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$10" id="viewColumn2">
+			<xp:this.converter>
+				<xp:convertDateTime type="date" dateStyle="short"></xp:convertDateTime>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Effective Date"
+				id="viewColumnHeader2" sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="Employee_Name" id="viewColumn3">
+			<xp:viewColumnHeader value="Emp Name"
+				id="viewColumnHeader3" sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="Company" id="viewColumn4">
+			<xp:viewColumnHeader value="Company"
+				id="viewColumnHeader4" sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="ChangeType" id="viewColumn5">
+			<xp:viewColumnHeader value="Type" id="viewColumnHeader5" sortable="true"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$9" id="viewColumn6">
+			<xp:viewColumnHeader value="Created By"
+				id="viewColumnHeader6">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$7" id="viewColumn7">
+			<xp:this.converter>
+				<xp:convertDateTime type="date" dateStyle="short"></xp:convertDateTime>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Created Date"
+				id="viewColumnHeader7" sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="Completed_by" id="viewColumn8">
+			<xp:viewColumnHeader value="Completed By"
+				id="viewColumnHeader8">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$8" id="viewColumn9">
+			<xp:this.converter>
+				<xp:convertDateTime type="date" dateStyle="short"></xp:convertDateTime>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Completed Date"
+				id="viewColumnHeader9" sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+	</xp:viewPanel></xp:view>

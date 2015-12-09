@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xe:applicationLayout id="applicationLayout1">
+		<xp:callback facetName="facetMiddle" id="facetMiddle"></xp:callback>
+		<xp:callback facetName="View_Column" id="callback2"></xp:callback>
+		<xp:this.facets>
+			<xp:callback facetName="facet_3" id="callback3" xp:key="RightColumn"></xp:callback>
+			<xp:callback facetName="Left_Column" id="callback1"
+				xp:key="LeftColumn"></xp:callback>
+		</xp:this.facets>
+		<xe:this.configuration>
+			<xe:oneuiApplication>
+				<xe:this.footerLinks>
+					<xe:basicContainerNode label="Container 1">
+						<xe:this.children>
+							<xe:basicLeafNode label="Link 1" href="/"></xe:basicLeafNode>
+							<xe:basicLeafNode label="Link 2" href="/"></xe:basicLeafNode>
+						</xe:this.children>
+					</xe:basicContainerNode>
+					<xe:basicContainerNode label="Container 2">
+						<xe:this.children>
+							<xe:basicLeafNode label="Link 1" href="/"></xe:basicLeafNode>
+							<xe:basicLeafNode label="Link 2" href="/"></xe:basicLeafNode>
+						</xe:this.children>
+					</xe:basicContainerNode>
+				</xe:this.footerLinks>
+			</xe:oneuiApplication>
+		</xe:this.configuration>
+	</xe:applicationLayout>
+</xp:view>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:panel disableOutputTag="true">
+
+		<xp:repeat id="repeat1" rows="30" first="0" var="rowData"
+			indexVar="idx">
+
+			<xp:this.value><![CDATA[#{javascript:try {
+	var db:NotesDatabase = session.getDatabase(prof10[0],prof10[1]);
+	var doc:NotesDocument = db.getDocumentByUNID(compositeData.unid);
+	return doc.getItemValue("LastResult")
+} catch (e) {};}]]></xp:this.value>
+			<xp:table>
+
+				<xp:this.rendered><![CDATA[#{javascript:(rowData.indexOf("Apply from web site")>-1) ? false : true; }]]></xp:this.rendered>
+				<xp:tr>
+					<xp:td>
+						<xp:text escape="true" id="computedField1"
+							value="#{javascript:rowData}">
+
+						</xp:text>
+					</xp:td>
+				</xp:tr>
+
+			</xp:table>
+		</xp:repeat>
+	</xp:panel></xp:view>

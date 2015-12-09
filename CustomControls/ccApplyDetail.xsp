@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" 
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.resources>
+		<xp:script src="/generalSSJSUtilities.jss" clientSide="false"></xp:script>
+		<xp:styleSheet href="/waitTable.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xp:panel disableOutputTag="true">
+
+		<xp:table >
+			<xp:tr>
+				<xp:td style="width:95px">
+
+				</xp:td>
+				<xp:td>
+
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Pay Rate:     " id="label1"
+						style="width:70px">
+					</xp:label>
+				</xp:td>
+				<xp:td align="right">
+					<xp:text escape="true" id="computedField1"
+						value="#{compositeData.applyDoc.Payrate}">
+						<xp:this.converter>
+							<xp:convertNumber type="currency"
+								currencySymbol="$" currencyCode="USD">
+							</xp:convertNumber>
+						</xp:this.converter>
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOType1', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).toString().toUpperCase()  != "PERM"){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Desired Rate" id="label2"></xp:label>
+				</xp:td>
+				<xp:td align="right">
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOType1', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).toString().toUpperCase()  != "PERM"){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text escape="true" id="computedField2">
+						<xp:this.converter>
+							<xp:convertNumber type="currency"
+								currencySymbol="$" currencyCode="USD">
+							</xp:convertNumber>
+						</xp:this.converter>
+						<xp:this.value><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'DesiredRate', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	return parseFloat(iVector.elementAt(0).toString()) ;
+	}
+} return 0;}]]></xp:this.value>
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOType1', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).toString().toUpperCase()  != "PERM"){
+		return false;
+	}
+	}
+} return true;}]]></xp:this.rendered>
+					<xp:label value="Desired Salary" id="label3"></xp:label>
+				</xp:td>
+				<xp:td align="right">
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOType1', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).toString().toUpperCase()  != "PERM"){
+		return false;
+	}
+	}
+} return true;}]]></xp:this.rendered>
+					<xp:text escape="true" id="computedField3">
+						<xp:this.converter>
+							<xp:convertNumber type="currency"
+								currencySymbol="$" currencyCode="USD">
+							</xp:convertNumber>
+						</xp:this.converter>
+						<xp:this.value><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'DesiredSalary', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	return parseFloat(iVector.elementAt(0).toString()) ;
+	}
+} return 0;}]]></xp:this.value>
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+		</xp:table>
+
+		<xp:table>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion1', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Q1:" id="jOQuestion1_Label1"
+						for="jOQuestion11">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion1', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text
+						value="#{compositeData.applyDoc.JOQuestion1}" id="jOQuestion11">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion1', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer1_Label1"
+						for="answer11">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion1', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{compositeData.applyDoc.Answer1}"
+						id="answer11">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion2', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Q2:" id="jOQuestion2_Label1"
+						for="jOQuestion21">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion2', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text
+						value="#{compositeData.applyDoc.JOQuestion2}" id="jOQuestion21">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion2', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer2_Label1"
+						for="answer21">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion2', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{compositeData.applyDoc.Answer2}"
+						id="answer21">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+
+				<xp:td>
+
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion3', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Q3:" id="jOQuestion3_Label1"
+						for="jOQuestion31">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion3', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text
+						value="#{compositeData.applyDoc.JOQuestion3}" id="jOQuestion31">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion3', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer3_Label1"
+						for="answer31">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion3', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{compositeData.applyDoc.Answer3}"
+						id="answer31">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion4', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Q4:" id="jOQuestion4_Label1"
+						for="jOQuestion41">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion4', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text
+						value="#{compositeData.applyDoc.JOQuestion4}" id="jOQuestion41">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion4', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer4_Label1"
+						for="answer41">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion4', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{compositeData.applyDoc.Answer4}"
+						id="answer41">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion5', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label id="jOQuestion5_Label1" for="jOQuestion51"
+						value="Q5:">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion5', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text
+						value="#{compositeData.applyDoc.JOQuestion5}" id="jOQuestion51">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion5', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer5_Label1"
+						for="answer51">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion5', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{compositeData.applyDoc.Answer5}"
+						id="answer51">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion6', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Q6:" id="jOQuestion6_Label1"
+						for="jOQuestion61">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion6', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text
+						value="#{compositeData.applyDoc.JOQuestion6}" id="jOQuestion61">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion6', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer6_Label1"
+						for="answer61">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion6', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{compositeData.applyDoc.Answer6}"
+						id="answer61">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion7', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Q7:" id="jOQuestion7_Label1"
+						for="jOQuestion71">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion7', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text
+						value="#{compositeData.applyDoc.JOQuestion7}" id="jOQuestion71">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion7', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer7_Label1"
+						for="answer71">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion7', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{compositeData.applyDoc.Answer7}"
+						id="answer71">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion8', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Q8:" id="jOQuestion8_Label1"
+						for="jOQuestion81">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion8', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text
+						value="#{compositeData.applyDoc.JOQuestion8}" id="jOQuestion81">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion8', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer8_Label1"
+						for="answer81">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion8', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{compositeData.applyDoc.Answer8}"
+						id="answer81">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion9', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Q9:" id="jOQuestion9_Label1"
+						for="jOQuestion91">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion9', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text
+						value="#{compositeData.applyDoc.JOQuestion9}" id="jOQuestion91">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion9', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer9_Label1"
+						for="answer91">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(compositeData.applyDoc , 'JOQuestion9', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{compositeData.applyDoc.Answer9}"
+						id="answer91">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+		</xp:table>
+	</xp:panel>
+</xp:view>

@@ -1,0 +1,159 @@
+ /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+ .mastHead {
+    position: fixed;
+    z-index: 20;
+    top: 0px;
+    left: 0px;
+    padding-left: 210px;
+    height: 80px; 
+    width: 100%;
+    background: rgb(145,160,184); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(145,160,184,1) 0%, rgba(191,196,203,1) 44%, rgba(222,222,222,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(145,160,184,1)), color-stop(44%,rgba(191,196,203,1)), color-stop(100%,rgba(222,222,222,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(145,160,184,1) 0%,rgba(191,196,203,1) 44%,rgba(222,222,222,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(145,160,184,1) 0%,rgba(191,196,203,1) 44%,rgba(222,222,222,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(145,160,184,1) 0%,rgba(191,196,203,1) 44%,rgba(222,222,222,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(145,160,184,1) 0%,rgba(191,196,203,1) 44%,rgba(222,222,222,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#91a0b8', endColorstr='#dedede',GradientType=0 ); /* IE6-9 */
+   }    
+        
+        
+        
+    .round-button {
+    display:inline-block;
+    float: left;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    font-family: arial, sans-serif;
+    border-radius: 50%;
+    color:#f5f5f5;
+    text-align:center;
+    text-decoration:none;
+    background: #aaaabe;
+    box-shadow: 0 0 3px gray;
+    font-size:24px;
+    font-weight: 500em;
+}
+        
+.round-button:hover {
+    background: #9295D4 70%;
+}
+
+.pipeline, .candidate, .searchlight, .email, .utility {
+    display:inline-block;
+    float: left;
+    margin-top: 20px;
+    /* margin-left: 40px; */
+    margin-right: 40px;
+    width:157px;
+    height:40px;
+    line-height:40px;
+    font-family: arial, sans-serif;
+    border-radius: 20px;
+    color:#f5f5f5;
+    text-align:center;
+    text-decoration:none;
+    background: #aaaabe;
+    box-shadow: 0 0 3px gray;
+    font-size:24px;
+    font-weight: 500em;
+    letter-spacing: .2rem;
+            
+            
+        }   
+.mastHead > a:hover, .mastHead > a:active, .mastHead > a:visited, .mastHead > a:link {   
+	 text-decoration:none;
+	 color:#f5f5f5;
+}
+
+.sb-search {
+	position:fixed
+	margin-top: 20px;
+	width: 100px;
+	min-width: 100px;
+	height: 35px;
+	overflow: hidden;
+	transition: width 0.3s;
+	-webkit-backface-visibility: hidden;
+}
+
+.sb-search-input {
+    font-family: arial, sans-serif;
+	position: fixed;
+	top:20px;
+	left: 935px;
+	border: solid 1px #999;
+    border-radius: 8px;
+	background: #f9f9f9;
+	width: 300px;
+	height: 35px;
+	margin: 0;
+	z-index: 10;
+	font-family: inherit;
+	font-size: 20px;
+    -webkit-backface-visibility: hidden;
+}
+
+
+
+
+.sb-icon-search,
+.sb-search-submit  {
+background: url(images/SearchGlass.svg);
+	width: 35px;
+	height: 35px;
+	display: block;
+	position: fixed;
+	left: 890px;
+	top: 20px;
+	padding: 0;
+	margin: 0;
+	line-height:normal;
+	text-align: center;
+	cursor: pointer;
+}
+
+.sb-search-submit {
+	background: url(images/SearchGlass.svg);
+    opacity: 0;
+	color: white;
+	z-index: -1;
+}
+
+.sb-icon-search {
+	background: url(images/SearchGlass.svg);
+	z-index: 90;
+	font-size: 20px;
+	font-family: 'arial' sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+
+/* Open state */
+.sb-search.sb-search-open,
+.no-js .sb-search {
+	width: 100%;
+}
+
+.sb-search.sb-search-open .sb-icon-search,
+.no-js .sb-search .sb-icon-search {
+	background: url(images/SearchGlass.svg);
+	z-index: 11;
+}
+
+.sb-search.sb-search-open .sb-search-submit,
+.no-js .sb-search .sb-search-submit {
+	z-index: 90;
+}

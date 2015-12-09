@@ -1,0 +1,49 @@
+<!--
+	The default theme contents use theme inheritance.
+
+	Application themes can extend an existing global theme using the
+	extends attribute.  Existing themes include the following options:
+
+	1. webstandard 2. oneui 3. notes
+-->
+<theme extends="webstandard" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd" >
+	<!-- jQuery -->
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>bower_components/DataTables/media/js/jquery.js</href>
+	</resource>
+	
+	<!-- jQuery Datatables -->
+	<resource> 
+		<content-type>text/css</content-type>
+		<href>bower_components/DataTables/media/css/jquery.dataTables.min.css</href>
+	</resource>
+	 <resource>
+		<content-type>application/x-javascript</content-type>
+		<href>bower_components/DataTables/media/js/jquery.dataTables.min.js</href>
+	</resource>
+	
+	<!-- font Awesome -->
+	
+	<!-- iRES -->
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>core.js</href>
+	</resource>
+	<resource> 
+		<content-type>text/css</content-type>
+		<href>dojoStyles.css</href>
+	</resource>
+		<resource> 
+		<content-type>text/css</content-type>
+		<href>style.css</href>
+	</resource>
+			<resource> 
+		<content-type>text/css</content-type>
+		<href>core.css</href>
+	</resource>
+			<resource> 
+		<content-type>text/css</content-type>
+		<href>defaultTheme.css</href>
+	</resource>
+</theme>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="65e" sequence="83" unid="CCC93202CA548DDB85257EDD005758CB">
+<created><datetime dst="true">20151013T115403,63-04</datetime></created>
+<modified><datetime>20151208T230411,65-05</datetime></modified>
+<revised><datetime>20151208T230411,64-05</datetime></revised>
+<lastaccessed><datetime>20151208T230411,65-05</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20151013T151410,27-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
+<item name="$MimeType" sign="true"><text>text/css</text></item>
+<item name="$Flags"><text>34C=Q</text></item>
+<item name="$MimeCharSet" sign="true"><text>UTF-8</text></item>
+<item name="$TITLE" sign="true"><text>ires_master.css</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+
+<item name="$FileNames" sign="true"><text>ires_master.css</text></item></note>

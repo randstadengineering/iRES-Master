@@ -1,0 +1,53 @@
+
+html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr {
+	font-family: 'arial', 'tahoma', 'Helvetica', sans-serif;
+	font-weight: normal;
+	font-style:normal;
+    margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align:baseline;
+    
+    * {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+	
+
+.waitTable1 {
+	background-color:rgb(192,192,192);
+	border-color:rgb(0,0,160);
+	border-style:solid;
+	border-width:thin
+}
+
+.waitTable1 a:hover {
+	background-color:rgb(192,192,192);
+	border-color:rgb(0,0,160);
+	border-style:solid;
+	border-width:thin
+}
+
+ a:hover {
+	background-color:rgb(192,192,192);
+	border-color:rgb(0,0,160);
+	border-style:solid;
+	border-width:thin
+}
+
+tr:nth-child(odd) {
+  background:rgb(192,192,192);
+}
+
+tr:hover td
+ {
+	background-color:rgb(192,192,192);
+	border-color:rgb(0,0,160);
+	border-style:solid;
+	border-width:thin
+}

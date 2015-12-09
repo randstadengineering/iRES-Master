@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:xe="http://www.ibm.com/xsp/coreex" themeId="datatables"
+	style="width: 500px;">
+
+
+	<xp:this.resources>
+		<xp:styleSheet href="/jQueryDataTableCategory.css"></xp:styleSheet>
+
+	</xp:this.resources>
+	<xp:this.beforePageLoad><![CDATA[#{javascript:/*importPackage( ch.hasselba.xpages );
+var fc:ch.hasselba.xpages.ThemeSwitcherFacesContext = facesContext;
+fc.setStyleKitId( "datatables");
+fc.loadStyleKit();*/}]]></xp:this.beforePageLoad>
+	<xp:scriptBlock id="scriptBlock1" type="text/javascript">
+		<xp:this.value><![CDATA[// DataTables init
+$(document).ready( function() {
+var initials = "#{javascript:sessionScope.user_initials}";
+	 table = $("#jQDTPipeline").DataTable( {
+		"autoWidth" : false,
+	 	"row-border" : false,
+	 	"createdRow": function ( row, data, index ) {
+	 	},
+		stateSave : true,		
+		"language" : {
+			"infoEmpty" : "No records available",
+			"infoFiltered" : ""
+		},		
+		"keys": true,
+		 "fixedHeader" : {
+        "header": true,
+        "footer": false
+    },
+    	"sScrollY": "83vh",
+		 "ordering": false,
+		"pageLength": 500,
+		"lengthChange": false,
+		"ajax" : "RESTServiceProvider.xsp/individualPipeline?recruiterInitials=" + initials,
+		"rowCallback": function (row, data, index) {
+			$(row).attr('id', data.unid);
+			$(row).attr('cata', data.categoryA);
+			if ($(row).attr('role') == 'row') $(row).addClass('datarow');
+		},
+		"columns" : [
+		{
+			"data" : "docCreated",
+			"width" : "150px"
+		}, {
+			"data" : "CandidatesName",
+			"width" : "400px"
+		}, {
+			"data" : "categoryA",
+			"visible" : false
+		}, {
+			"data" : "categoryB",
+			"visible" : false
+		} , {
+			"data" : "config.consolidate",
+			"visible" : false
+		} , {
+			"data" : "unid",
+			"visible" : false
+		} , {
+			"data" : "rating",
+			"visible" : true
+		}],
+		"columnDefs": [
+		//{ "orderData": [[4, "desc"],[0, "desc"]] },
+	  	{ "orderData": [ 4, 2 ],    "targets": "_all"},
+     // { "visible": false,  "targets": [2, 3, 4, 5] },
+      { "width" : "30%", "targets": 0 }
+    ],
+    	"preDrawCallback": function ( settings ) {
+    		showBusy(true);
+    	},
+		     "drawCallback": function ( settings ) {
+		     showBusy(false);
+            var api = this.api();
+            var rows = api.rows( {page:'current'} ).nodes();
+            var last=null;
+             api.rows( {page:'current'} ).data().each( function (rowData, i) {
+            	// console.log(rowData);
+           // });
+            //api.column(4, {page:'current'} ).data().each( function ( group, i ) {
+           
+             var ima ='<img src="images/downbuttonOver.png" align="right" style="width:20px;height:20px;"></td>';
+             var jdover = '<div id="jobDetailOverlay_' + rowData.config.dataJobNum + '" class="jobDetailsOverlay">' + 
+             '<iframe id="jobDetailOverlayFrame_' + rowData.config.dataJobNum + '"' + 
+             'style="border:0px; height: 550px; width: 100%;"></iframe></div>';
+             //Left arrow is in the Java bean since that's where that part gets written
+             var group = rowData.config.consolidate;
+                if ( last !== group ) {
+                    $(rows).eq( i ).before(
+                         '<tr class="nohover"><td colspan="3"><table class="jobGroup" width="100%"><tr class ="group" >' + 
+                         group + ima + '</tr></table>' + jdover + '</td></tr>'
+                    );
+                    last = group;
+                }
+            } );
+        }
+	}	
+	);
+				
+	 $('#sortCat').keyup( function() {
+        table.draw();
+    } );
+		table.on("click", "td", function() {
+		//add this for td, not tr, it should work a bit 
+		
+		var data = table.cell(this).data();		
+		var classNameStr=this.className;
+		var row1=$(this).closest("tr");
+		try{
+		//this should intercept some "phantom clicks" that are coming in and not having a row class. It's acting like a 
+		//second click and that click has something undefinied. 
+		var rowClass = $(row1).get(0).className;
+		var catA = $(row1).attr('cata');			
+		} catch (err){
+			console.log("no class found");
+			var rowClass = "NOT FOUND";
+		}
+			if(rowClass.toUpperCase() == "GROUP"){		
+			
+	if(classNameStr.toUpperCase() == "TAKENOACTION"){
+	//do nothing here
+	} else if(classNameStr.toUpperCase()  == "ARROW") {
+			toggleJobDetailOverlay($(this).data("jobnumber"));		
+		} else if(classNameStr.toUpperCase() == "LEFTARROW") {
+			loadPipeline($(this).data("jobnumber"), initials);
+		} 
+		
+		else  if (classNameStr.toUpperCase() == "JONUMBER") {
+			alert($(this).data("jobnumber") + " Select Jobs Overlay");
+		} 
+		
+		} else {
+			try{
+				var table1 = $("#jQDTPipeline").DataTable(); 
+				var data = table1.row( table1.cell(this).index().row ).data();
+				selectPipelineRow(data.unid);
+				var sameUNIDFlag = ( (data.unid === readCookie("lastDoc")) && (readCookie("groupingPaneState") === "is-visible") ) ? false : true;
+				var cookieValue = "lastDoc=" + data.unid;
+				document.cookie=cookieValue;
+				if (catA === "Subs") {
+					var fnComplete = function(){ XSP.openDialog("#{id:submittalDialog}") };
+					var refreshID = '#{id:submittalDialog}';
+					var p = { "docUNID":data.unid, "docType":"sub" };
+					document.cookie="openSub=" + data.unid;
+				} else {
+					showViewResume(sameUNIDFlag);
+					var fnComplete = function(){ popResumeSlideout('keepstate'); }
+					var refreshID = '#{id:groupingPane}';
+					var p = { "docUNID":data.unid, "docType":"apply" };
+				}
+				//for reasons unknown can't access params from the dialog
+				XSP.partialRefreshGet( refreshID, {
+					params: p,
+					onComplete: fnComplete
+				});
+		} catch (err){
+				console.log(err);
+			}
+		} // end of else
+	});
+	
+	$('#search').keyup( function() {
+    	$("#jQDTPipeline").dataTable().fnFilter(this.value);
+    });
+    $('#search').click( function() {
+    	$("#jQDTPipeline").dataTable().fnFilter('');
+    });
+	
+	$.fn.DataTable.ext.search.push(
+    function( settings, data, dataIndex ) {
+    	if (settings.nTable != document.getElementById('jQDTPipeline')) {
+    		return true;
+    	} else {
+	  		if((typeof filterCatA === 'undefined' || filterCatA == null) && (typeof filterCatB === 'undefined' || filterCatB == null)){
+	    	//nothing is selected, so we set the first one as a default
+	    	filterCatB = "Sent for review";
+	    }
+	    
+	  	if(typeof filterCatA === 'undefined' || filterCatA == null){
+	    	var passCatAIn = "All";
+	    	} else {    
+	    	var passCatAIn = filterCatA;
+	    	}
+	    		if(typeof filterCatB === 'undefined' || filterCatB == null){
+	    		var passCatBIn ="All";
+	    		} else {    	
+	    	var passCatBIn = filterCatB;
+	    	}
+	        var catA = (data[2]).toString();
+	        var catB = (data[3]).toString();
+	        
+	        if(passCatAIn == "All"){           
+	        	if(passCatBIn == "All"){
+	        		return true;
+	        	} else if( catB == passCatBIn){
+	        		return true;
+	        	}
+	        	return false;
+	        } else {
+	        	if(catA == passCatAIn){
+	        		return true;
+	        	}
+	        	return false;
+	        }    
+	    }
+	    }
+);
+	    
+})]]></xp:this.value>
+	</xp:scriptBlock>
+	<table id="jQDTPipeline" class="" cellspacing="0">
+		<colgroup>
+			<col style="width:50px"></col>
+		</colgroup>
+		<thead>
+			<tr>
+				<th style="display:none"></th>
+				<th style="display:none"></th>
+				<th style="display:none"></th>
+				<th style="display:none"></th>
+				<th style="display:none">&#160;</th>
+				<th style="display:none">&#160;</th>
+				<th style="display:none"></th>
+			</tr>
+		</thead>
+	</table>
+
+</xp:view>

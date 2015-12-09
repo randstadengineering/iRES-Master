@@ -1,0 +1,109 @@
+.dataTables_wrapper {
+	width:1132px;
+	padding-left: 5px;
+}
+	
+#jQDTPipeline_wrapper > div.dataTables_scroll > div.dataTables_scrollBody {
+	overflow: auto;
+	height: 82vh;
+	width: 100%;
+	}
+#jQDTPipeline {
+	overflow: auto;
+	}
+tr.group.nohover {
+    background-color: #ddd !important;
+}
+.dataTable tr:not(.header):nth-child(odd) {
+  background: #E0E0E0;
+}
+.dataTable tbody tr {
+	background-color: #f9f9f9;
+}  
+	
+#jQDTPipeline td:not(.jobGroup) {
+	padding: 1px 0px 0px 0px;
+	height: 25px;
+	vertical-align: middle;
+}
+
+#jQDTPipeline > tbody > tr:nth-child(1) > td {
+	background-color: #f9f9f9;
+	}
+
+.dataTable tr:hover.datarow td {
+    background-image: -webkit-linear-gradient(90deg, rgb(129, 188, 247), rgb(205, 224, 243));
+    cursor: pointer;
+}
+
+#jQDTPipeline tbody tr.selected {
+	 background-image: -webkit-linear-gradient(90deg, rgb(129, 188, 247), rgb(205, 224, 243));
+	}
+
+#jQDTPipeline_filter, #jQDTPipeline_info, #jQDTPipeline_paginate {
+	display:none;
+}
+.datarow {
+	
+	}
+.datarow td:nth-child(1) {
+	width: 100px;
+	}
+.datarow td:nth-child(2) {
+	width: 250px;
+	}
+
+.jobGroup {
+	width: 100%;
+	height: 33px;
+    border-top: solid 1px #646464;
+    border-spacing: 0px;
+    border-collapse: separate;
+    margin-top: 0px;
+	}
+.jobGroup tbody tr td {
+	 background-image: -webkit-linear-gradient(-90deg, rgb(247, 240, 176), rgb(255, 244, 218));
+	}
+.jobGroup td div div {
+	flex-grow: 1;
+	display: inline;
+    color: #3b3b3b;
+	}
+	
+.jobNumber a:link, .jobNumber div a:visited {
+    font-weight: 500em;
+    color: #999999;
+    text-align: top;
+    text-decoration: none;
+     }
+
+.jobGroup td a:hover, a:active {
+    color: #454545;
+}
+.leftArrow > img {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	padding-left: 2px;
+	}
+.leftArrow > img:hover {
+	content: url('images/upbuttonon.png');
+	}
+.arrow > img:hover {
+	content: url('images/downbuttonon.png');
+	}
+.joNumber {
+	width: 70px;
+	text-align: left;
+	}
+
+.jobGroup > td1 {
+	
+	}
+.jobGroupRowParent {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+

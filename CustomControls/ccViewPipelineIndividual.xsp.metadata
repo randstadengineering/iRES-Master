@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="61a" sequence="506" unid="B32E1D90277845AD85257ED6006051D2">
+<created><datetime dst="true">20151006T133204,02-04</datetime></created>
+<modified><datetime>20151208T134621,68-05</datetime></modified>
+<revised><datetime>20151208T134621,67-05</datetime></revised>
+<lastaccessed><datetime>20151208T134621,68-05</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20151013T151403,71-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
+<item name="$TITLE"><text>ccViewPipelineIndividual.xsp</text></item>
+<item name="$Flags"><text>gC~4;</text></item>
+
+
+
+
+
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+<item name="$FileNames" sign="true"><text>ccViewPipelineIndividual.xsp</text></item>
+
+</note>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<!--
+		Width of this pane is 1332 pixels, but when we add the scroll bar in (which will be part of the content (view, doc, etc.) it will need 20 pixels for the scroll bar. This will 
+		be part of the element in the pane itself, not a seperate pane acting on this (or that would be how I expect it now).
+		So this panel is 1332 + 20 for the scroll bar, 1352 px  BMM 8/20/15
+	-->
+
+	<xp:panel id="mainWorkingPane" styleClass="workingPane">
+		<xp:panel id="parkingLot" styleClass="parkingLot"></xp:panel>
+		<xp:panel id="candidateWindow" styleClass="candidateWindow">
+			<xc:wpCandidate></xc:wpCandidate>
+		</xp:panel>
+		<xp:panel id="pipelineWindow" styleClass="pipelineWindow">
+			<xc:wpPipeline></xc:wpPipeline>
+		</xp:panel>
+		<xp:panel id="searchlightWindow"
+			styleClass="searchlightWindow">
+			<xc:wpSearchlight></xc:wpSearchlight>
+		</xp:panel>
+		<xp:panel id="emailWindow" styleClass="emailWindow"></xp:panel>
+		<xp:panel id="utilityWindow" styleClass="utilityWindow">
+			<xc:wpUtility></xc:wpUtility>
+		</xp:panel>
+	</xp:panel>
+	<xe:dialog id="submittalDialog" styleClass="formDialog"
+		keepComponents="false"
+		style="overflow:hidden;background: transparent;border:0px;-webkit-box-shadow:none">
+
+
+		<xe:dialogContent id="submittalDialogContent"
+			disableTheme="true" style="overflow:hidden;">
+			<xp:panel>
+
+				<xp:include pageName="/submittal.xsp" id="include1"></xp:include>
+			</xp:panel>
+		</xe:dialogContent>
+		<xp:eventHandler event="onShow" submit="false">
+			<xe:this.script><![CDATA[setDialogTitleBar('submittalDialog');]]></xe:this.script>
+		</xp:eventHandler>
+	</xe:dialog>
+
+
+
+</xp:view>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='85257EDD00698137'>
+<noteinfo noteid='1be' unid='B6350DA835DD2CA185257EBC004A2CEC' sequence='9'>
+<created><datetime dst='true'>20150910T093011,64-04</datetime></created>
+<modified><datetime>20151117T114940,14-05</datetime></modified>
+<revised><datetime>20151117T114940,13-05</datetime></revised>
+<lastaccessed><datetime>20151117T114940,14-05</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20151013T151233,50-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
+<item name='$TITLE'><text>$DBIcon</text></item>
+<item name='$Flags'><text>34Ci~Q</text></item>
+<item name='$ImagesWide' sign='true'><number>1</number></item>
+<item name='$ImagesHigh' sign='true'><number>1</number></item>
+<item name='$ImagesColorize' sign='true'><number>0</number></item>
+<item name='$FileSize' sign='true'><number>1928</number></item>
+<item name='$ImageData' sign='true'>
+<rawitemdata type='1'>
+mQAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAH0AHAAAAAEAAAAAAIgHAAABAAAAAAAAAAAAAAB8
+AJIHAACIB4gHR0lGODlhIAAgAIcAMcxSDOyqLOTWqMSqh9SOJNzCjOSaGbyWXPTuvPS+WvTCddRq
+FOTXzOSqd9yqXOSWWfTGnOx2FOy2efTiqNx+LNx2HPSqVPTOe9yKTPTWkOyaFORqGfTitNymVLyi
+f/S2dsSqlNySJfTWpOyWP9zGlPTKbNReGOS2XPTCjNxyFPS3RPS+ZPSsdPS2TfyuLPTOn+x+HPTi
+zOymV7yZdNRqJ+yqUOS2lNR2QPTOlMy2lPSuPfzy5OyiHPTeoOzSlNRmIOyqZPTKevTWt/SaVNSk
+XPS+dOzElNyydPzGXNyWbPSqaPzOdvzelPzqxOymSOyiJOzerMyzjOzKhPy+TuyyePzin9x+NNx2
+LNySbPzWh/zivMSigeyONPTSruymbLyedtxqJPz67fTevMxaFvSrKezYoryIROx6D+SSTORyIfy2
+eOyeRNxiFPzDkvTGa/yyduyyWOy+mMy3p/SybMyujOzGdNSWNPTChPzHnOy+hOSkb8yymuSMRPzW
+rPSaTNRhJOy2YOSeTLyQWOzKpNyeROyGJPzqzOSecdRyLORuLOzEqMSYYPzwzOR+HMSOTPSyTOyy
+bPS+huSSRPSmZPzen9xmGPzKdNRaDPR6HNxsGuysdOR4GuSMTMyunOTKmPyudvzQpPzm0Oy5j9x6
+RNS6lPzYtPyubPSmKOR4JMxWHOTEjOSYZOxyJOy6hPTQhPSeFPTixPS6hPTWrPzLbPS6XPyyPMSa
+dOysXOSabPzShPzCXPzirNx+RPzalPzmxMSmjPz+/PSsNOzarOzChOy6bMSabOSCLPSiGfSmbsSe
+ePzGZNxyKLyijOymZPTerPTKhOyyhOyORPzevOx6HOSSXMyypPSGJNRaHMSuifTCXPTGdfTKnuy6
+fPTmrNyOVPTakuRuHPTmvPS6fPTaoOyaQNzKnNRiFOS6ZPTGkvTCZvS6U/TSpOyCINRuJ9R6PPTS
+jcy6mfSyQ/z26+yuaPTatPSua/zSfOymKezOjPzCVPzmpNyCOfzmuMSmhNxuJ/z+9CwAAAAAIAAg
+AAcI/gCByRtIUF4YeQzkgBiALUcUOgNAyGFgsCBBYMBanAoW7JQOMiEW5ShQZ8WUKSqmpKujKsci
+O2Q4yownD5iOJ8eekNFgJge+KbXitaBFawWtR/F0TMFHypEBMk9O3Qu2A1i8Y/dAzhAwJRgtBdrC
+ig0SVh0ZdT6+hHBx71SAmjddENiS4dQjsdos5Q2iV2/YR6cyDCDANlhNwCE8ZHlFi2zfO9qKFFEQ
+hG/eZy1e5cJG+K1VAzMyHINj+ZkCSEqaIWs2ycucIq7CWgJ0LMMWAzpq1jLjI1iAdJaeBak3Sckn
+UyzeKPGyut4zV8/SnSJTxpFhYIT2uDkWT5srBUpY/iRnEQsPuvIflDdTkEtbvHu64NkJE8YWPjIB
+WjyzxLwNKDxtSNMFKKV0sY049dTTzB2uPKLDKT4UswMD2Chzjw4t4DAHMix8IE0fELwQCzrbcLNN
+Hx+Y0swcrrQQTwDxMVANCfEEE48KKzDXYSwfzPEBKOhQMUgkeWiixCGrKKCOCjrEo4ocv0hBRjzx
+qLMGhyzgEQkKKJRSiizbCPECNKsguQo56rSgQjD49ONBEMGo0II6FPihRj3bvIAOKPRwg04MeWwT
+AwRl3pBCNmnqUMIAAyiTX5oUbOJHPZFsg4c4gGwjCiR6aBKJEYeMMkY7tCSgjg5uRBGFLjWo42oF
+/mBMU8gH6KyDxyBCQICPF6K00go1Y/xBAy2IwpENPFGko4M6CaSDyA/LjDAHOpDIooURXXQBDTR6
+6OGNCcK6kU4CKmRDSj+zVJnABVb8kUkN4RRxhhMipPAAI4M8QM8LXGxiAiKuEJNNCyXQ4cEF8Zjq
+yipj0OBHBuIYI8M4FeyDwDCNKADHJoVc4k0W6Qx8QT/M4KNCAuvmESwFgDiRCR/qILJPEE6wUwcx
+Z7BjAhUZpJMOWv3sUUA2gNSRTQ+i/nCLExEAgY8xfBBDzjRz3MIOKu04E4S42ahSDQN02KNONm5k
+EAcANBihxyUNdNEOBmIoEQEOClizATRVaONG/gKu5MDAPzOUoU46bgTBTxKpyCBJKnzM84MVkIxw
+Rg0WYMLJOq5cUEcCZRRTkwN0ZKFOHUG4wg8vl5hjzg8L/FDJApmAkUYE0RgxDA6upJMFPET8A4wl
+ggggbhAX9DCIOyaY8AMYzCeSBitpcAINN4OMs7UwjswSxu8nCDJBNtpc8I4WgySBiDlsVLLBBplc
+wUkDNnQhxjtuVPHFCUFsr40uHXhQReEXyEA4QiEEUegBC95YBfwUQQ9Y7MIVJajCLxywte0FYQUl
+6N8ELuAdV3yDA00wBAIMYYgYNIEfE8hA6XYxACKUwA3a0N8KVqAMImyFCRdwhSvekYFvjGMccT7M
+wDt0WAVhfMEBFxie/lBGDCQAQhB0KAMlsrDDd1gxA67IQC+qUIYcCOIcs/BZOmIIjPZUpnT2OMIW
+sFGOMkyAEj1gwgS4WA46bOEIWcBi6YLwju1hBCO+w0gYGLCHLXyBDqoawBa20AkG/PGRfwwIADs=
+</rawitemdata></item>
+<item name='$MimeType' sign='true'><text>image/gif</text></item>
+<item name='$FileModDT' sign='true'><datetime>20110203T133600,00-05</datetime></item>
+<item name='$ImageNames' sign='true'><text>E:\NotesIcons\images\group32.gif</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item></note>
+

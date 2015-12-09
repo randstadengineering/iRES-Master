@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:comboBox id="comboBox1" style="width:20em" value="#{viewScope.viewName}" defaultValue="Atlanta Central 1">
+
+
+		<xp:eventHandler event="onchange" submit="true" refreshMode="partial" refreshId="viewPanel1">
+			<xp:this.action><![CDATA[#{javascript:sessionScope.user_branch=viewScope.viewName}]]></xp:this.action>
+		</xp:eventHandler>
+
+
+		<xp:selectItems>
+			<xp:this.value><![CDATA[#{javascript:var result = [];
+//var dbname = session.getServerName() + "!!" + "ats\\data10.nsf";
+    //return @DbColumn(dbname, "byCode", 0)
+//var dbname = new Array(@Subset(@DbName(), 1),"ats\data10.nsf");
+//var branch = @DbColumn("", "Branches", 1);
+var code=@DbColumn(["","ats/data10.nsf"], "Branches", 2);
+var branch = @DbColumn(["","ats/data10.nsf"], "(Branches)", 1);
+
+result.push("");
+for (var i = 0; i < branch.length; i++) {
+	 var eachName =branch[i]+'|jobsByBranch_'+code[i];
+	  result.push(eachName);
+}
+return result;
+}]]></xp:this.value>
+		</xp:selectItems>
+	</xp:comboBox><xp:viewPanel rows="30" id="viewPanel1" var="rowData"
+		showUnreadMarks="true">
+		<xp:this.facets>
+			<xp:pager partialRefresh="true" layout="Previous Group Next"
+				xp:key="headerPager" id="pager1">
+			</xp:pager>
+		</xp:this.facets>
+		<xp:this.data>
+			<xp:dominoView var="view1" expandLevel="1">
+				<xp:this.databaseName><![CDATA[#{javascript:"!!ats/jobs10.nsf"}]]></xp:this.databaseName>
+				<xp:this.viewName><![CDATA[#{javascript:(viewScope.viewName || "jobsByBranch_5301")}]]></xp:this.viewName>
+			</xp:dominoView>
+		</xp:this.data>
+		<xp:viewColumn id="viewColumn1" style="width:17.0px" columnName="$69">
+
+			
+			<xp:viewColumnHeader id="viewColumnHeader1"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		
+		<xp:viewColumn id="viewColumn3" columnName="$47">
+			
+			<xp:viewColumnHeader id="viewColumnHeader3"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		
+		<xp:viewColumn columnName="$55" id="viewColumn5">
+			<xp:viewColumnHeader value="Job Info" id="viewColumnHeader5">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$52" id="viewColumn6">
+			<xp:viewColumnHeader value="Company / Position / Location"
+				id="viewColumnHeader6" style="width:28em">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$67" id="viewColumn7">
+			<xp:this.converter>
+				<xp:convertNumber integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Old" id="viewColumnHeader7"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="nsub" id="viewColumn8">
+			<xp:this.converter>
+				<xp:convertNumber integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Subs" id="viewColumnHeader8"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumInterviews" id="viewColumn9">
+			<xp:this.converter>
+				<xp:convertNumber integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Int" id="viewColumnHeader9"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumCltFeedback" id="viewColumn10" style="width:2em">
+			<xp:this.converter>
+				<xp:convertNumber integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="C FB" id="viewColumnHeader10" style="width:4em"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="lastSubDate" id="viewColumn11">
+			<xp:this.converter>
+				<xp:convertDateTime dateStyle="short" type="both"></xp:convertDateTime>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Last Sub"
+				id="viewColumnHeader11" style="width:8em">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="Hours" id="viewColumn12">
+			<xp:this.converter>
+				<xp:convertNumber pattern="0.00"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Time" id="viewColumnHeader12"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumEmails" id="viewColumn13">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Email"
+				id="viewColumnHeader13">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumWebHits" id="viewColumn14">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Hits" id="viewColumnHeader14"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumWebApplies" id="viewColumn15">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Web" id="viewColumnHeader15"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumApplies" id="viewColumn16">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="App" id="viewColumnHeader16"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$66" id="viewColumn17">
+			<xp:viewColumnHeader value="Owners" id="viewColumnHeader17">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+	</xp:viewPanel>
+
+</xp:view>

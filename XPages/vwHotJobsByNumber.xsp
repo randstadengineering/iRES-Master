@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:viewPanel rows="30" id="viewPanel1" var="rowData">
+		<xp:this.facets>
+			<xp:pager partialRefresh="true" layout="Previous Group Next"
+				xp:key="headerPager" id="pager1">
+			</xp:pager>
+		</xp:this.facets>
+		<xp:this.data>
+			<xp:dominoView var="view1"
+				viewName="(Job Orders \ All Hot by Job Number)">
+				<xp:this.databaseName><![CDATA[#{javascript:"!!ats/jobs10.nsf"}]]></xp:this.databaseName>
+			</xp:dominoView>
+		</xp:this.data>
+		<xp:viewColumn columnName="Jonumber" id="viewColumn1">
+			<xp:viewColumnHeader value="JO#" id="viewColumnHeader1"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$27" id="viewColumn2"
+			displayAs="hidden">
+			<xp:this.iconSrc><![CDATA[#{javascript:if(rowData.getColumnValue("$27")!==''){
+return "/.ibmxspres/domino/icons/vwicn" + @Right("00"+@Text(rowData.getColumnValue("$27")),3) + ".gif";
+} 
+//var url:XSPUrl = new XSPUrl(database.getHttpURL());
+//var path = "/icons/vwicn";
+//var idx = rowData.getColumnValue('$27');
+//if (idx < 10){
+//	path += ("00"+idx).left(3);
+//}else if (idx < 100){
+	//path += ("0"+idx).left(3);
+//}else{
+//	path += idx.left(3);
+//}
+//path += ".gif";
+//url.setPath(path);
+//url.removeAllParameters();
+//if(idx!==''){
+//	return url.toString();
+//}
+}]]></xp:this.iconSrc>
+			<xp:viewColumnHeader id="viewColumnHeader2"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$20" id="viewColumn3" style="width:4em">
+			<xp:viewColumnHeader id="viewColumnHeader3"
+				sortable="true" style="width:4em">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		
+		
+		
+		<xp:viewColumn columnName="CompanyName" id="viewColumn7">
+			<xp:viewColumnHeader value="Company" id="viewColumnHeader7"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$31" id="viewColumn8"
+			displayAs="hidden">
+			<xp:viewColumnHeader id="viewColumnHeader8" rendered="false"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$6" id="viewColumn9">
+			<xp:viewColumnHeader value="Position" id="viewColumnHeader9"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumJODesc" id="viewColumn10">
+			<xp:this.converter>
+				<xp:convertNumber integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader id="viewColumnHeader10"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$7" id="viewColumn11"
+			displayAs="hidden">
+			<xp:this.iconSrc><![CDATA[#{javascript:if(rowData.getColumnValue("$7")!==''){
+return "/.ibmxspres/domino/icons/vwicn" + @Right("00"+@Text(rowData.getColumnValue("$7")),3) + ".gif";
+} 
+//var url:XSPUrl = new XSPUrl(database.getHttpURL());
+//var path = "/icons/vwicn";
+//var idx = rowData.getColumnValue('$7');
+//if (idx < 10){
+//	path += ("00"+idx).left(3);
+//}else if (idx < 100){
+//	path += ("0"+idx).left(3);
+//}else{
+//	path += idx.left(3);
+//}
+//path += ".gif";
+//url.setPath(path);
+//url.removeAllParameters();
+//return url.toString();}]]></xp:this.iconSrc>
+			<xp:viewColumnHeader value="QC" id="viewColumnHeader11"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="SalesPerson" id="viewColumn12">
+			<xp:viewColumnHeader value="Sal" id="viewColumnHeader12"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="Recruiter" id="viewColumn13">
+			<xp:viewColumnHeader value="Rec" id="viewColumnHeader13"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$2" id="viewColumn14">
+			<xp:this.converter>
+				<xp:convertDateTime dateStyle="short"></xp:convertDateTime>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Date" id="viewColumnHeader14"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumEmails" id="viewColumn15">
+			<xp:this.converter>
+				<xp:convertNumber integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Emails" id="viewColumnHeader15"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumWebHits" id="viewColumn16">
+			<xp:this.converter>
+				<xp:convertNumber integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Hits - Web"
+				id="viewColumnHeader16" sortable="true" style="width:10em">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumWebApplies" id="viewColumn17">
+			<xp:this.converter>
+				<xp:convertNumber integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Web Applies"
+				id="viewColumnHeader17" sortable="true" style="width:11em">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumSubmits" id="viewColumn18">
+			<xp:this.converter>
+				<xp:convertNumber integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Sub" id="viewColumnHeader18"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumInterviews" id="viewColumn19">
+			<xp:this.converter>
+				<xp:convertNumber integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Int" id="viewColumnHeader19"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumHitsFromUs" id="viewColumn20">
+			<xp:this.converter>
+				<xp:convertNumber integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Hts Lnk" id="viewColumnHeader20"
+				sortable="true" style="width:9em">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$21" id="viewColumn21">
+			<xp:this.converter>
+				<xp:convertNumber pattern="0.00%"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="RR%" id="viewColumnHeader21"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="SSCompanyType" id="viewColumn22">
+			<xp:viewColumnHeader value="SSCompanyType"
+				id="viewColumnHeader22" sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$24" id="viewColumn23">
+			<xp:viewColumnHeader value="City" id="viewColumnHeader23"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$25" id="viewColumn24">
+			<xp:viewColumnHeader value="State" id="viewColumnHeader24"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumPositions" id="viewColumn25">
+			<xp:this.converter>
+				<xp:convertNumber integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="# Positions"
+				id="viewColumnHeader25" sortable="true" style="width:11em">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$32" id="viewColumn26">
+			<xp:viewColumnHeader value="Rec #" id="viewColumnHeader26"
+				sortable="true" style="width:5em">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="finish_timestamp"
+			id="viewColumn27">
+			<xp:this.converter>
+				<xp:convertDateTime type="both" dateStyle="short"></xp:convertDateTime>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Finished Time"
+				id="viewColumnHeader27" sortable="true" style="width:13em">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+	</xp:viewPanel></xp:view>

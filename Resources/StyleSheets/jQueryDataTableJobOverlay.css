@@ -1,0 +1,25 @@
+tr.jobnothot td{
+	color: #585858;
+}	
+tr.jobhot td{
+	color: #0000FF;
+}	
+
+td.zeroRed {
+	color: #DF013A !important
+}
+
+td.textCtr {
+	 text-align: center;
+}
+
+.header th {
+	padding: 0px;
+	padding-left: 2px;
+}
+#jQDTSelectJO > thead {
+	display: none;
+}
+#jQDTSelectJO_wrapper {
+	display: inline;
+}

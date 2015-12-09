@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:panel style="height:38px;width:1400px;background-color:rgb(0,128,128);z-index:1">
+		<xp:label value="iRES Table Titlebar Menu Bar" id="label1" style="color:rgb(255,255,255);font-weight:bold"></xp:label></xp:panel></xp:view>

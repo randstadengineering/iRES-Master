@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:panel styleClass="searchlightView">
+			<iframe id="searchlightViewFrame" src="http://webapp2a.thinkresources.com/ats/rec.nsf/ires_wrapper.xsp" style="border:0px; height: 80vh; width: 100%; overflow:none;"></iframe></xp:panel>
+</xp:view>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:this.data>
+		
+		<xp:dominoView var="view1">
+			<xp:this.databaseName><![CDATA[#{javascript:"JFS\\jobs10.nsf"}]]></xp:this.databaseName>
+			<xp:this.viewName><![CDATA[#{javascript:"CandidateApplies&SubsByUniqueIS2"}]]></xp:this.viewName>
+
+			<xp:this.keys><![CDATA[#{javascript:var str = sessionScope.get("candidateFilter");
+if (str !== null) {
+	if (str.constructor === Array) {
+		str[0] + "-Subsheet";
+	} else {
+		str + "-Subsheet";
+	}
+}}]]></xp:this.keys>
+		</xp:dominoView>
+		<xp:dominoView var="view2">
+			<xp:this.databaseName><![CDATA[#{javascript:"JFS\\jobs10.nsf"}]]></xp:this.databaseName>
+			<xp:this.viewName><![CDATA[#{javascript:"CandidateApplies&SubsByUniqueIS2"}]]></xp:this.viewName>
+			<xp:this.keys><![CDATA[#{javascript:var str = sessionScope.get("candidateFilter");
+if (str !== null) {
+	if (str.constructor === Array) {
+		str[0] + "-Apply";
+	} else {
+		str + "-Apply";
+	}
+}}]]></xp:this.keys>
+		</xp:dominoView>
+	</xp:this.data>
+	<xp:this.resources>
+		<xp:script src="/handler.js" clientSide="true"></xp:script>
+	</xp:this.resources>
+	<xp:this.afterPageLoad><![CDATA[#{javascript:sessionScope.candidateFilter = document1.getItemValue("UniqueID2");
+sessionScope.empName = document1.getItemValue("Employee_Name");}]]></xp:this.afterPageLoad>
+
+	<xp:section id="section1" header="ACTIVITY COUNTER"
+		initClosed="True" style="width:550.0px">
+		<xp:table>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="# Last Results:" id="label4"></xp:label>
+					<xp:text escape="true" id="computedField11"
+						value="#{document1.LastResults}">
+					</xp:text>
+				</xp:td>
+				<xp:td>
+					<xp:label value="# Submits:" id="label5"></xp:label>
+					<xp:text escape="true" id="computedField12"
+						value="#{document1.Submit}">
+					</xp:text>
+				</xp:td>
+				<xp:td>
+					<xp:label value="# Searches:" id="label6"></xp:label>
+					<xp:text escape="true" id="computedField13"
+						value="#{document1.Searches}">
+					</xp:text>
+				</xp:td>
+				<xp:td>
+					<xp:label value="# Calls:" id="label7"></xp:label>
+					<xp:text escape="true" id="computedField14"
+						value="#{document1.Calls}">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="# Starts:" id="label8"></xp:label>
+					<xp:text escape="true" id="computedField15"
+						value="#{document1.Starts}">
+					</xp:text>
+				</xp:td>
+				<xp:td>
+					<xp:label value="# Emails:" id="label9"></xp:label>
+					<xp:text escape="true" id="computedField18"
+						value="#{document1.Emails}">
+					</xp:text>
+				</xp:td>
+				<xp:td>
+					<xp:label value="# Interviews:" id="label10"></xp:label>
+					<xp:text escape="true" id="computedField19"
+						value="#{document1.Interviews}">
+					</xp:text>
+				</xp:td>
+				<xp:td>
+
+				</xp:td>
+			</xp:tr>
+
+		</xp:table>
+	</xp:section>
+	<xp:section id="section2" header="LAST RESULTS" initClosed="True" style="width:550px">
+
+		<xp:inputTextarea readonly="true" id="inputTextArea2">
+			<xp:this.value><![CDATA[#{javascript:function cleanArray(actual){
+	var newArray = new Array();
+	for(var i = 0; i<actual.length; i++){
+	      if (actual[i]){
+	        newArray.push(actual[i]);
+	      }
+	}
+	return newArray;
+}
+
+function removeDups(a) {
+    var seen = {};
+    var out = [];
+    var len = a.length;
+    var j = 0;
+    for(var i = 0; i < len; i++) {
+         var item = a[i];
+         if(seen[item] !== 1) {
+               seen[item] = 1;
+               out[j++] = item;
+         }
+    }
+    return out;
+}
+
+var arrLastResult = document1.getItemValueArray('LastResult');
+var newResults = new Array(arrLastResult.length);
+for (index = 0; index < arrLastResult.length; index++) {
+     if ((!~arrLastResult[index].indexOf('Apply from web site')) && (!~arrLastResult[index].indexOf('Submitted:')))  {
+         //newResults = newResults + arrLastResult[index] + "\n";
+         newResults[index] = arrLastResult[index];
+     }
+ }
+//newResults = remove_duplicates(newResults);
+
+newResults = cleanArray(newResults);
+newResults = removeDups(newResults);
+newResults;}]]></xp:this.value>
+			<xp:this.multipleSeparator><![CDATA[#{javascript:"\n"}]]></xp:this.multipleSeparator>
+		</xp:inputTextarea>
+	</xp:section>
+	<xp:section id="section3" header="SUBMITTALS" initClosed="True" style="width:550px">
+		<xp:dataTable id="dataTable1" rows="30" var="rowData" value="#{view1}">
+			
+			<xp:column id="column1">
+				<xp:this.facets>
+					<xp:label value="Description" id="label24" xp:key="header">
+					</xp:label>
+				</xp:this.facets>
+				<xp:link escape="true" id="link1">
+					<xp:this.text><![CDATA[#{javascript:var str1 = rowData.getColumnValue("Composed");
+var str2 = "Submittal";
+var str3 = rowData.getColumnValue("JONumber");
+var str4 = rowData.getColumnValue("Company");
+var str5 = "by";
+var str6 = rowData.getColumnValue("createdBy");
+str1 + " -> " + str2 + " -> " + str3 + " ( " + str4 + " ) " + str5 + " " + str6;}]]></xp:this.text>
+				</xp:link>
+			</xp:column>
+		</xp:dataTable>
+	</xp:section>
+	<xp:section id="section4" header="WEB APPLIES" initClosed="True" style="width:550px">
+		<xp:dataTable id="dataTable2" rows="30" var="rowData" value="#{view2}">
+			
+			<xp:column id="column2">
+				<xp:this.facets>
+					<xp:label value="Description" id="label25" xp:key="header">
+					</xp:label>
+				</xp:this.facets>
+				<xp:link escape="true" id="link2">
+					<xp:this.text><![CDATA[#{javascript:var str1 = rowData.getColumnValue("Composed");
+var str2 = "Apply";
+var str3 = rowData.getColumnValue("WhereFromWeb1");
+var str4 = rowData.getColumnValue("JONumber");
+str1 + " -> " + str2 + ": " + str3 + " -> " + str4;}]]></xp:this.text>
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[alert("hey!")]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:link></xp:column>s
+		</xp:dataTable>
+	</xp:section>
+	<xp:section id="section5" header="AUTO EMAIL SETTINGS"
+		initClosed="True" style="width:550px">
+		<xp:label value="Auto Email:" id="label11"></xp:label>
+		<xp:comboBox id="comboBox1" value="#{document1.CreateAgent}" styleClass="cpComboBox">
+			<xp:selectItem itemLabel="Yes"></xp:selectItem>
+			<xp:selectItem itemLabel="No"></xp:selectItem>
+		</xp:comboBox>
+		<xp:br></xp:br>
+		<xp:label value="Days  Between Email:" id="label12"></xp:label>
+		<xp:inputText id="inputText10"
+			value="#{document1.email_interval}" styleClass="cpInput">
+			<xp:this.converter>
+				<xp:convertNumber type="number"></xp:convertNumber>
+			</xp:this.converter>
+		</xp:inputText>
+		<xp:br></xp:br>
+		<xp:label value="Do Not Email:" id="label13"></xp:label>
+		<xp:inputText id="inputText11" value="#{document1.Mail1}"
+			styleClass="cpInput">
+		</xp:inputText>
+	</xp:section>
+
+	<xp:section id="section6" header="LAST EDITED" initClosed="True" style="width:550px">
+		<xp:label value="Last Edited By:" id="label14"></xp:label>
+		<xp:text escape="true" id="computedField1"
+			value="#{document1.Lasteditby}">
+		</xp:text>
+		<xp:br></xp:br>
+		<xp:label value="Last Edited On:" id="label15"></xp:label>
+		<xp:text escape="true" id="computedField2"
+			value="#{document1.LastEditedOn}">
+			<xp:this.converter>
+				<xp:convertDateTime type="both" dateStyle="short"
+					timeStyle="short">
+				</xp:convertDateTime>
+			</xp:this.converter>
+		</xp:text>
+		<xp:br></xp:br>
+		<xp:label value="Coded by:" id="label16"></xp:label>
+		<xp:text escape="true" id="computedField3"
+			value="#{document1.CodedBy}">
+		</xp:text>
+		<xp:br></xp:br>
+		<xp:label value="Created By:" id="label17"></xp:label>
+		<xp:text escape="true" id="computedField4"
+			value="#{document1.Createdby}">
+		</xp:text>
+		<xp:br></xp:br>
+		<xp:label value="Refered By:" id="label18"></xp:label>
+		<xp:text escape="true" id="computedField5"
+			value="#{document1.RefferedBy}">
+		</xp:text>
+		<xp:br></xp:br>
+		<xp:label value="Date Created:" id="label19"></xp:label>
+		<xp:text escape="true" id="computedField6"
+			value="#{document1.DateCreated}">
+		</xp:text>
+		<xp:br></xp:br>
+		<xp:label value="Last Resume:" id="label20"></xp:label>
+		<xp:text escape="true" id="computedField7"
+			value="#{document1.LastResume}">
+			<xp:this.converter>
+				<xp:convertDateTime type="both" dateStyle="short"
+					timeStyle="short">
+				</xp:convertDateTime>
+			</xp:this.converter>
+		</xp:text>
+		<xp:br></xp:br>
+		<xp:label value="Date Last Email:" id="label21"></xp:label>
+		<xp:text escape="true" id="computedField8"></xp:text>
+		<xp:br></xp:br>
+		<xp:label value="Date Last Called:" id="label22"></xp:label>
+		<xp:text escape="true" id="computedField9"
+			value="#{document1.dateLastCalled}">
+			<xp:this.converter>
+				<xp:convertDateTime type="date" dateStyle="short"></xp:convertDateTime>
+			</xp:this.converter>
+		</xp:text>
+		<xp:br></xp:br>
+		<xp:label value="Last Called by:" id="label23"></xp:label>
+		<xp:text escape="true" id="computedField10"
+			value="#{document1.lastcalledby}">
+		</xp:text>
+	</xp:section>
+
+</xp:view>

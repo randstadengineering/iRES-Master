@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="186" sequence="15" unid="216E2C2058D94B9185257EBC0048FCA1">
+<created><datetime dst="true">20150910T091712,65-04</datetime></created>
+<modified><datetime>20151117T114652,32-05</datetime></modified>
+<revised><datetime>20151117T114652,31-05</datetime></revised>
+<lastaccessed><datetime>20151117T114652,32-05</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20151015T144502,89-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
+<item name="$TITLE"><text>sort_both.png</text></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt"><text>D</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$FileModDT" sign="true"><datetime dst="true">20150901T094208,78-04</datetime></item>
+<item name="$ImageNames" sign="true"><text>sort_both.png</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

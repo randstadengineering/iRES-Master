@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:viewPanel rows="30" id="viewPanel1" var="rowData">
+		<xp:this.facets>
+			<xp:pager partialRefresh="true" layout="Previous Group Next"
+				xp:key="headerPager" id="pager1">
+			</xp:pager>
+		</xp:this.facets>
+		<xp:this.data>
+			<xp:dominoView var="view1"
+				viewName="(InternetReq)   -   InternetReq">
+				<xp:this.databaseName><![CDATA[#{javascript:"!!ats\cand10.nsf"}]]></xp:this.databaseName>
+			</xp:dominoView>
+		</xp:this.data>
+		<xp:viewColumn columnName="$1" id="viewColumn1" style="width:10em">
+			<xp:this.converter>
+				<xp:convertDateTime type="date" dateStyle="short"></xp:convertDateTime>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Date" id="viewColumnHeader1"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$3" id="viewColumn2"
+			displayAs="hidden">
+
+			<xp:this.iconSrc><![CDATA[#{javascript:if(rowData.getColumnValue("$3")!==0){
+return "/.ibmxspres/domino/icons/vwicn" + @Right("00"+@Text(rowData.getColumnValue("$3")),3) + ".gif";
+} 
+//var url:XSPUrl = new XSPUrl(database.getHttpURL());
+//var path = "/icons/vwicn";
+//var idx = rowData.getColumnValue('$3');
+//if (idx < 10){
+//	path += ("00"+idx).left(3);
+//}else if (idx < 100){
+//	path += ("0"+idx).left(3);
+//}else{
+//	path += idx;
+//}
+//path += ".gif";
+//url.setPath(path);
+//url.removeAllParameters();
+//if(idx!==0){
+//	return url.toString();
+//}
+}]]></xp:this.iconSrc>
+			<xp:viewColumnHeader id="viewColumnHeader2"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$5" id="viewColumn3" displayAs="hidden">
+
+			<xp:this.iconSrc><![CDATA[#{javascript:if(rowData.getColumnValue("$5")!==0){
+return "/.ibmxspres/domino/icons/vwicn" + @Right("00"+@Text(rowData.getColumnValue("$5")),3) + ".gif";
+} 
+//var url:XSPUrl = new XSPUrl(database.getHttpURL());
+//var path = "/icons/vwicn";
+//var idx = rowData.getColumnValue('$5');
+//if (idx < 10){
+//	path += ("00"+idx).left(3);
+//}else if (idx < 100){
+//	path += ("0"+idx).left(3);
+//}else{
+//	path += idx;
+//}
+//path += ".gif";
+//url.setPath(path);
+//url.removeAllParameters();
+//if(idx!==0){
+//	return url.toString();
+//}
+}]]></xp:this.iconSrc>
+			<xp:viewColumnHeader id="viewColumnHeader3"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="JobNumber" id="viewColumn4">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Job Number"
+				id="viewColumnHeader4">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="RequestedBy" id="viewColumn5">
+			<xp:viewColumnHeader value="Requested By"
+				id="viewColumnHeader5">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="SearchBy" id="viewColumn6">
+			<xp:viewColumnHeader value="Completed By"
+				id="viewColumnHeader6">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="DateCompleted" id="viewColumn7">
+			<xp:this.converter>
+				<xp:convertDateTime type="date" dateStyle="short"></xp:convertDateTime>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Date Completed"
+				id="viewColumnHeader7">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+	</xp:viewPanel></xp:view>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="14a6" sequence="15" unid="8727567B29F266AD85257F0E0054ECB3">
+<created><datetime>20151201T102736,19-05</datetime></created>
+<modified><datetime>20151201T130854,47-05</datetime></modified>
+<revised><datetime>20151201T130854,46-05</datetime></revised>
+<lastaccessed><datetime>20151201T130854,47-05</datetime></lastaccessed>
+<addedtofile><datetime>20151201T102736,20-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>de/esg/weiterbildung/HTMLHelper.java</text></item>
+
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>de/esg/weiterbildung/HTMLHelper.java</text></item>
+
+</note>

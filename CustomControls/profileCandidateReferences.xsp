@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.data>
+		
+		<xp:dominoView var="view1">
+		<xp:this.viewName><![CDATA[#{javascript:"ReferencesByParentID"}]]></xp:this.viewName>
+		<xp:this.keys><![CDATA[#{javascript:sessionScope.get("referenceFilter")}]]></xp:this.keys>
+		</xp:dominoView>
+	</xp:this.data>
+	<xp:this.afterPageLoad>
+		<![CDATA[#{javascript:sessionScope.showNewReference = "no";
+sessionScope.referenceFilter = document1.getItemValue("UniqueID2");}]]>
+	</xp:this.afterPageLoad>
+
+	<xp:table>
+		<xp:tr>
+			<xp:td>
+			<xp:label value="Supplied Supervisory References" id="label4" styleClass="cpLabel"></xp:label>
+			</xp:td>
+			<xp:td>
+			<xp:button value="Add Reference" id="button1" styleClass="cpButtonLong2">
+		<xp:this.rendered><![CDATA[#{javascript:if(document1.isEditable()){
+return true;
+}else{
+return false;
+}}]]></xp:this.rendered><xp:eventHandler event="onclick" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:if (sessionScope.showNewReference == "no") {
+    sessionScope.showNewReference = "yes";
+} else {
+	sessionScope.showNewReference = "no";
+}
+}]]></xp:this.action>
+		</xp:eventHandler></xp:button>
+			</xp:td>
+		</xp:tr>
+	</xp:table>
+	
+	<xp:br></xp:br>
+	<xc:profileReferenceNew><xc:this.rendered><![CDATA[#{javascript:if (sessionScope.showNewReference == "yes") {
+    true
+} else {
+	false
+}}]]></xc:this.rendered></xc:profileReferenceNew>
+	<xp:repeat id="repeat1" rows="30" value="#{view1}" var="rowData"
+		indexVar="rowIndex" repeatControls="false">
+		<xp:this.rendered><![CDATA[#{javascript:if (currentDocument.isEditable()) {
+   return true;
+} else {
+	return false;
+}}]]></xp:this.rendered>
+		<xp:section id="section1" initClosed="True">
+
+			<xp:this.header><![CDATA[#{javascript:"REFERENCE" + " " + (rowIndex + 1) + " " + rowData.getColumnValue("ReferenceName")}]]>
+			</xp:this.header>
+			<xc:profileReference></xc:profileReference>
+			<xp:table>
+				<xp:tr>
+					<xp:td>
+						<xp:button value="Delete" id="button2"
+							styleClass="cpButton">
+						</xp:button>
+					</xp:td>
+					<xp:td>
+						<xp:button value="Cancel" id="button3"
+							styleClass="cpButton">
+						</xp:button>
+					</xp:td>
+					<xp:td>
+						<xp:button value="Save" id="button4"
+							styleClass="cpButton">
+							<xp:eventHandler event="onclick"
+								submit="true" refreshMode="complete">
+								<xp:this.action><![CDATA[#{javascript:var docUNID = rowData.getDocument().getUniversalID();
+var doc = database.getDocumentByUNID(docUNID);
+doc.replaceItemValue( 'ReferenceName', getComponent('ReferenceName').getValue());
+doc.replaceItemValue( 'Company', getComponent('Company').getValue());
+doc.replaceItemValue( 'Title', getComponent('Title').getValue());
+doc.replaceItemValue( 'Phone', getComponent('Phone').getValue());
+doc.replaceItemValue( 'Email', getComponent('Email').getValue());
+//doc.replaceItemValue( 'DateEmployedFrom', getComponent('DateEmployedFrom').getValue());
+//doc.replaceItemValue( 'DateEmployedTo', getComponent('DateEmployedTo').getValue());
+doc.replaceItemValue( 'RefTakenBy', getComponent('RefTakenBy').getValue());
+//doc.replaceItemValue( 'DateRef', getComponent('DateRef').getValue());
+doc.replaceItemValue( 'RefContext', getComponent('RefContext').getValue());
+doc.replaceItemValue( 'RefAccomplishments', getComponent('RefAccomplishments').getValue());
+doc.replaceItemValue( 'RefWeakness', getComponent('RefWeakness').getValue());
+doc.replaceItemValue( 'RefScale', getComponent('RefScale').getValue());
+doc.replaceItemValue( 'RefScaleWhy', getComponent('RefScaleWhy').getValue());
+doc.replaceItemValue( 'RefResponsible', getComponent('RefResponsible').getValue());
+doc.replaceItemValue( 'RefGetAlong', getComponent('RefGetAlong').getValue());
+doc.replaceItemValue( 'RefAttendance', getComponent('RefAttendance').getValue());
+doc.replaceItemValue( 'RefRehire', getComponent('RefRehire').getValue());
+doc.replaceItemValue( 'RefManageAdvice', getComponent('RefManageAdvice').getValue());
+doc.replaceItemValue( 'RefNotes', getComponent('RefNotes').getValue());
+doc.save();}]]></xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+					</xp:td>
+				</xp:tr>
+			</xp:table>
+
+		</xp:section>
+	</xp:repeat>
+
+</xp:view>

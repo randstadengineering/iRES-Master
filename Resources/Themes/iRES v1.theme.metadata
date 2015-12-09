@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="13ca" sequence="80" unid="3A14256A27FCE24B85257F00006948D3">
+<created><datetime>20151117T140959,23-05</datetime></created>
+<modified><datetime>20151129T105904,48-05</datetime></modified>
+<revised><datetime>20151129T105904,47-05</datetime></revised>
+<lastaccessed><datetime>20151129T105904,48-05</datetime></lastaccessed>
+<addedtofile><datetime>20151117T140959,33-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
+<item name="$TITLE"><text>iRES v1.theme</text></item>
+<item name="$Flags"><text>34567Cg~`</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>iRES v1.theme</text></item>
+<item name="$CSSFiles"><textlist><text>bower_components/DataTables/media/css/jquery.dataTables.min.css</text><text>dojoStyles.css</text><text>style.css</text><text>core.css</text><text>defaultTheme.css</text></textlist></item></note>

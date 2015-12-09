@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	
+	
+	<xp:br></xp:br>
+	<xp:text escape="true" id="computedField1" value="#{job.JOQuestion1}"></xp:text>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:inputTextarea id="inputTextarea1" cols="70" rows="4" value="#{sub.Question1}"><xp:this.defaultValue><![CDATA[#{javascript:try { apply.getItemValueString("Answer1") } catch(e) {}}]]></xp:this.defaultValue></xp:inputTextarea>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:text escape="true" id="computedField2" value="#{job.JOQuestion2}"></xp:text>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:inputTextarea id="inputTextarea2" cols="70" rows="4" value="#{sub.Question2}"><xp:this.defaultValue><![CDATA[#{javascript:try { apply.getItemValueString("Answer2") } catch(e) {}}]]></xp:this.defaultValue></xp:inputTextarea>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:text escape="true" id="computedField3" value="#{job.JOQuestion3}"><xp:this.rendered><![CDATA[#{javascript:(!@Trim(job.getItemValueString("JOQuestion3"))=="")}]]></xp:this.rendered></xp:text>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:inputTextarea id="inputTextarea3" cols="70" rows="4" value="#{sub.Question3}"><xp:this.defaultValue><![CDATA[#{javascript:try { apply.getItemValueString("Answer3") } catch(e) {}}]]></xp:this.defaultValue><xp:this.rendered><![CDATA[#{javascript:(!@Trim(job.getItemValueString("JOQuestion3"))=="")}]]></xp:this.rendered></xp:inputTextarea>
+	
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:text escape="true" id="computedField4" value="#{job.JOQuestion4}"><xp:this.rendered><![CDATA[#{javascript:(!@Trim(job.getItemValueString("JOQuestion4"))=="")}]]></xp:this.rendered></xp:text>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:inputTextarea id="inputTextarea4" cols="70" rows="4" value="#{sub.Question4}"><xp:this.defaultValue><![CDATA[#{javascript:try { apply.getItemValueString("Answer4") } catch(e) {}}]]></xp:this.defaultValue><xp:this.rendered><![CDATA[#{javascript:(!@Trim(job.getItemValueString("JOQuestion4"))=="")}]]></xp:this.rendered></xp:inputTextarea>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:text escape="true" id="computedField5" value="#{job.JOQuestion5}"><xp:this.rendered><![CDATA[#{javascript:(!@Trim(job.getItemValueString("JOQuestion5"))=="")}]]></xp:this.rendered></xp:text>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:inputTextarea id="inputTextarea5" cols="70" rows="4" value="#{sub.Question5}"><xp:this.defaultValue><![CDATA[#{javascript:try { apply.getItemValueString("Answer5") } catch(e) {}}]]></xp:this.defaultValue><xp:this.rendered><![CDATA[#{javascript:(!@Trim(job.getItemValueString("JOQuestion5"))=="")}]]></xp:this.rendered></xp:inputTextarea>
+</xp:view>

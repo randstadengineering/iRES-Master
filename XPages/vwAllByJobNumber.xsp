@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">&#160;
+
+	<xp:viewPanel rows="30" id="viewPanel1">
+		<xp:this.facets>
+			<xp:pager partialRefresh="true" layout="Previous Group Next"
+				xp:key="headerPager" id="pager1">
+			</xp:pager>
+		</xp:this.facets>
+		<xp:this.data>
+			<xp:dominoView var="view1" viewName="AllJobNum">
+				<xp:this.databaseName><![CDATA[#{javascript:"!!ats/jobs10.nsf"}]]></xp:this.databaseName>
+			</xp:dominoView>
+		</xp:this.data>
+		<xp:viewColumn columnName="JONumber" id="viewColumn1">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="JO#" id="viewColumnHeader1"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="CompanyName" id="viewColumn2">
+			<xp:viewColumnHeader value="Company" id="viewColumnHeader2"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$6" id="viewColumn3">
+			<xp:viewColumnHeader value="Position" id="viewColumnHeader3"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="SalesPerson" id="viewColumn4">
+			<xp:viewColumnHeader value="Sal" id="viewColumnHeader4"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="Recruiter" id="viewColumn5">
+			<xp:viewColumnHeader value="Rec" id="viewColumnHeader5"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$31" id="viewColumn6">
+			<xp:this.converter>
+				<xp:convertDateTime type="date" dateStyle="short"></xp:convertDateTime>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Date" id="viewColumnHeader6"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumHitsFromUs" id="viewColumn7">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader id="viewColumnHeader7" sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="SaleRating" id="viewColumn8">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Rating"
+				id="viewColumnHeader8">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="UpperPay" id="viewColumn9">
+			<xp:this.converter>
+				<xp:convertNumber pattern="0.00"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Upperpay" id="viewColumnHeader9"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="UpperSalary" id="viewColumn10">
+			<xp:this.converter>
+				<xp:convertNumber pattern="0.00"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Uppersalary"
+				id="viewColumnHeader10" sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="Payrate" id="viewColumn11">
+			<xp:this.converter>
+				<xp:convertNumber pattern="0.00"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Pay" id="viewColumnHeader11"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="Salary" id="viewColumn12">
+			<xp:this.converter>
+				<xp:convertNumber pattern="0.00"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Salary" id="viewColumnHeader12"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="eMailAddress" id="viewColumn13">
+			<xp:viewColumnHeader value="Email"
+				id="viewColumnHeader13">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="Firsttimerun" id="viewColumn14">
+			<xp:viewColumnHeader value="FTR" id="viewColumnHeader14"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumStarts" id="viewColumn15">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Starts" id="viewColumnHeader15"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumSubmits" id="viewColumn16">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Subs" id="viewColumnHeader16"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumInterviews" id="viewColumn17">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Ints" id="viewColumnHeader17"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumWebApplies" id="viewColumn18">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Num Web Applies"
+				id="viewColumnHeader18" sortable="true" style="width:15.0em">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$24" id="viewColumn19">
+			<xp:viewColumnHeader value="City" id="viewColumnHeader19"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$25" id="viewColumn20">
+			<xp:viewColumnHeader value="State" id="viewColumnHeader20"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="Country2" id="viewColumn21">
+			<xp:viewColumnHeader value="Country2"
+				id="viewColumnHeader21" sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="Continent" id="viewColumn22">
+			<xp:viewColumnHeader value="Continent"
+				id="viewColumnHeader22" sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumFeedback" id="viewColumn23">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="FB" id="viewColumnHeader23"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="NumCltFeedback" id="viewColumn24">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Client FB"
+				id="viewColumnHeader24" sortable="true" style="width:9em">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="JOStatus" id="viewColumn25">
+			<xp:viewColumnHeader value="Status" id="viewColumnHeader25"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$2" id="viewColumn26">
+			<xp:this.converter>
+				<xp:convertDateTime type="date" dateStyle="short"></xp:convertDateTime>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Finished Date"
+				id="viewColumnHeader26" sortable="true" style="width:13em">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="JOType" id="viewColumn27">
+			<xp:viewColumnHeader value="Type" id="viewColumnHeader27"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$32" id="viewColumn28">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Rec #" id="viewColumnHeader28"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="rewrite" id="viewColumn29">
+			<xp:viewColumnHeader value="Rewrite" id="viewColumnHeader29"
+				sortable="true">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="OldJO" id="viewColumn30">
+			<xp:viewColumnHeader value="Old JO#" id="viewColumnHeader30"
+				sortable="true" style="width:7em">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="FirstSubmitDate" id="viewColumn31">
+			<xp:this.converter>
+				<xp:convertDateTime type="both" dateStyle="short"></xp:convertDateTime>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="1st Sub Time"
+				id="viewColumnHeader31" sortable="true" style="width:12em">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+	</xp:viewPanel></xp:view>

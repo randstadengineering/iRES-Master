@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<div class="pipelineView is-visible">
+	<xp:panel id="resumeSlideout">
+		<xp:this.styleClass><![CDATA[#{javascript:var baseClass = (getCookie("notesPaneState") == "is-visible") ? 'resumeSlideout ' : 'resumeSlideout notesPaneHidden ';
+baseClass + getCookie("groupingPaneState");}]]></xp:this.styleClass>
+
+
+		<xc:utilViewResume></xc:utilViewResume>
+	</xp:panel>
+	<xp:panel  id="pipelineView">
+		<xc:ccViewPipelineIndividual></xc:ccViewPipelineIndividual>
+		</xp:panel>
+		</div>
+</xp:view>

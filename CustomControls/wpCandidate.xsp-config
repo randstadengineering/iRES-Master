@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+    <default-prefix>xc</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>wpCandidate</component-type>
+    <composite-name>wpCandidate</composite-name>
+    <composite-file>/wpCandidate.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xd;
+&lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&#xd;
+	xmlns:xc="http://www.ibm.com/xsp/custom"&gt;&#xd;
+&lt;xp:label id="label8" style="font-size:12pt;font-weight:bold;color:rgb(255,0,128)" value="wpUtility"&gt;&lt;/xp:label&gt;&#xd;
+&lt;/xp:view&gt;</render-markup>
+      </designer-extension>
+    </composite-extension>
+  </composite-component>
+</faces-config>

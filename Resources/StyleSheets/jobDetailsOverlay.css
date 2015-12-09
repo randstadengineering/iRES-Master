@@ -1,0 +1,32 @@
+form {
+	height: 550px;
+	overflow-y: auto;
+	}
+html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr {
+	font-family: 'arial', 'tahoma', 'Helvetica', sans-serif;
+}
+.domino-richtext {
+    background-color: transparent;
+}
+.jobDetailsOverlayContent {
+	margin-left: 5px;
+	overflow: hidden;
+	height: 550px;
+	width: 90%;
+}
+
+.dijitAccordionTitle {
+    /* height: 30px; */
+    background-color: #ccc;
+    font-size: 1.1em;
+    padding: 5px;
+    border: 1px solid #888;
+}
+.dijitAccordionTitle:hover {
+    background-image: -webkit-linear-gradient(90deg, rgb(129, 188, 247), rgb(205, 224, 243));
+	cursor: pointer;
+	}
+.dijitContentPane {
+	overflow-x: hidden;
+	margin: 15px 25px;
+}

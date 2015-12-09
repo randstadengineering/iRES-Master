@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view
+	xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex"
+	dojoForm="true"
+	dojoParseOnLoad="true"
+	dojoTheme="true">
+	<xp:this.resources>
+		<xp:dojoModule name="dijit.layout.TabContainer"></xp:dojoModule>
+		<xp:dojoModule name="dijit.layout.ContentPane"></xp:dojoModule>
+	</xp:this.resources>
+	v1
+
+	<xp:viewPanel
+		rows="30"
+		id="viewPanel1" pageName="/xpDocJobDetails.xsp">
+		<xp:this.facets>
+			<xp:pager
+				partialRefresh="true"
+				layout="Previous Group Next"
+				xp:key="headerPager"
+				id="pager1">
+			</xp:pager>
+		</xp:this.facets>
+		<xp:this.data>
+			<xp:dominoView
+				var="view1"
+				viewName="JsonAllJOs"
+				databaseName="DominoDev/ATS!!ats\jobs10.nsf">
+			</xp:dominoView>
+		</xp:this.data>
+		<xp:viewColumn
+			columnName="$10"
+			id="viewColumn1" displayAs="link">
+			<xp:viewColumnHeader
+				value="$10"
+				id="viewColumnHeader1">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn
+			columnName="Duplicate"
+			id="viewColumn2">
+			<xp:viewColumnHeader
+				value="Duplicate"
+				id="viewColumnHeader2">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn
+			columnName="$9"
+			id="viewColumn3" displayAs="link">
+			<xp:viewColumnHeader
+				value="modified"
+				id="viewColumnHeader3">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+	</xp:viewPanel></xp:view>

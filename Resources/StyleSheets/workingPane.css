@@ -1,0 +1,66 @@
+form {
+	display: inline-block;
+	
+	}
+
+
+.wpOverlay{
+	position: relative;
+	top: -51vh;
+	width: 1142px;
+	height: 51vh;
+	z-index: 15;
+	background-color: #f9f9f9;
+	border-radius: 0px 0px 10px 10px;
+	-moz-border-radius: 0px 0px 10px 10px;
+	-webkit-border-radius: 0px 0px 10px 10px;
+	border: 1px solid #ccc;
+	-webkit-transition-duration: .4s;
+    -moz-transition-duration: .4s;
+    -o-transition-duration: .4s;
+    transition-duration: .4s;
+}
+.wpOverlay.is-visible {
+    top: 0vh;
+	-webkit-transition-duration: .4s;
+    -moz-transition-duration: .4s;
+    -o-transition-duration: .4s;
+    transition-duration: .4s;
+	}
+	
+.pipelineView { /* Minimum Resolution 1366 x 768 */
+	display: none;
+	position: absolute;
+	left: 0;
+	height: 64vh;
+  }
+.utilityView, .candidateView, .searchlightView {
+	display: none;
+    position: relative;
+    width: 100%;
+	left: 0;
+	height: 80vh;
+}
+
+.pipelineView.is-visible, .utilityView.is-visible, .candidateView.is-visible, .searchlightView.is-visible {
+	display: inline-block;
+	}
+
+#iresForm > form {
+	width: 1170px;
+	display: inline-block;
+	position: relative;
+	}
+	
+.jobDetailsOverlay {
+	display: none;
+	position:relative;
+	overflow-x:none;
+	width:98%;
+	height:300px;
+}
+	
+.jobDetailsOverlay.is-visible {
+	display: inline-block;	
+}
+

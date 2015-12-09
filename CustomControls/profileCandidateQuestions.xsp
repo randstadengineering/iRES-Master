@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	
+	<xp:label
+		value="Q1 How much hands on plant engineering, start-up and commissioning experience do you have within a petrochemical, process or refinery environment?"
+		id="label1">
+	</xp:label>
+	<xp:br></xp:br>
+	<xp:inputTextarea id="inputTextarea1" cols="70" rows="4" value="#{document1.Question1}"></xp:inputTextarea>
+	<xp:br></xp:br>
+	<xp:label
+		value="Q2 Please give specific examples of chemical process  or gas/oil projects that you have commissioned?"
+		id="label2">
+	</xp:label>
+	<xp:br></xp:br>
+	<xp:inputTextarea id="inputTextarea2" cols="70" rows="4" value="#{document1.Question2}"></xp:inputTextarea>
+	<xp:br></xp:br>
+	<xp:label
+		value="Q3 Please give specific years of experience in engineering in starting a refinery for the production of petrochemical products?"
+		id="label3">
+	</xp:label>
+	<xp:br></xp:br>
+	<xp:inputTextarea id="inputTextarea3" cols="70" rows="4" value="#{document1.Question3}"></xp:inputTextarea>
+	
+	<xp:br></xp:br>
+	<xp:label
+		value="Q4 How much hands-on plant engineering, start-up and commissioning experience do you have within a petrochemical, process or refinery environment?"
+		id="label4">
+	</xp:label>
+	<xp:br></xp:br>
+	<xp:inputTextarea id="inputTextarea4" cols="70" rows="4" value="#{document1.Question4}"></xp:inputTextarea>
+	<xp:br></xp:br>
+	<xp:label value="Q5 What is your project management experience?"
+		id="label5">
+	</xp:label>
+	<xp:br></xp:br>
+	<xp:inputTextarea id="inputTextarea5" cols="70" rows="4" value="#{document1.Question5}"></xp:inputTextarea>
+</xp:view>

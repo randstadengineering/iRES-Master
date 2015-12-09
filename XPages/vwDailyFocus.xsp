@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:comboBox id="comboBox1" style="width:20em" value="#{viewScope.viewName}">
+
+
+		<xp:eventHandler event="onchange" submit="true" refreshMode="partial" refreshId="viewPanel1">
+			<xp:this.action><![CDATA[#{javascript:sessionScope.user_branch=viewScope.viewName}]]></xp:this.action>
+		</xp:eventHandler>
+
+
+		<xp:selectItems>
+			<xp:this.value><![CDATA[#{javascript:var result = [];
+//var dbname = session.getServerName() + "!!" + "ats\\data10.nsf";
+    //return @DbColumn(dbname, "byCode", 0)
+//var dbname = new Array(@Subset(@DbName(), 1),"ats\data10.nsf");
+//var branch = @DbColumn("", "Branches", 1);
+var code=@DbColumn(["","ats/data10.nsf"], "Branches", 2);
+var branch = @DbColumn(["","ats/data10.nsf"], "(Branches)", 1);
+
+result.push("");
+for (var i = 0; i < branch.length; i++) {
+	 var eachName =branch[i]+'|dailyFocus_'+code[i];
+	  result.push(eachName);
+}
+return result;
+}]]></xp:this.value>
+		</xp:selectItems>
+	</xp:comboBox><xp:br></xp:br>
+	<xp:viewPanel id="viewPanel1" var="rowData" rows="30">
+		<xp:this.facets>
+			<xp:pager partialRefresh="true" layout="Previous Group Next"
+				xp:key="headerPager" id="pager1">
+			</xp:pager>
+		</xp:this.facets>
+		<xp:this.data>
+			<xp:dominoView var="view1" expandLevel="1">
+				<xp:this.databaseName><![CDATA[#{javascript:"!!ats/jobs10.nsf"}]]></xp:this.databaseName>
+				<xp:this.viewName><![CDATA[#{javascript:(viewScope.viewName || "dailyFocus_5301")}]]></xp:this.viewName>
+			</xp:dominoView>
+		</xp:this.data>
+		<xp:viewColumn id="viewColumn1" columnName="$44">
+			
+			<xp:viewColumnHeader id="viewColumnHeader1"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		
+		<xp:viewColumn columnName="$47" id="viewColumn3">
+			<xp:viewColumnHeader id="viewColumnHeader3"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		
+		<xp:viewColumn columnName="$58" id="viewColumn5"
+			style="width:20em">
+			<xp:viewColumnHeader value="Company"
+				id="viewColumnHeader5">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$50" id="viewColumn6">
+			<xp:viewColumnHeader value="Candidate / Position"
+				id="viewColumnHeader6">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="jonumber" id="viewColumn7">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="JO #" id="viewColumnHeader7"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$46" id="viewColumn8">
+			<xp:this.converter>
+				<xp:convertDateTime type="date" dateStyle="short"></xp:convertDateTime>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Date" id="viewColumnHeader8"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$52" id="viewColumn9">
+			<xp:viewColumnHeader value="Status"
+				id="viewColumnHeader9">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$56" id="viewColumn10">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Subs" id="viewColumnHeader10"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$55" id="viewColumn11">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="CFb" id="viewColumnHeader11"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$54" id="viewColumn12">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Int" id="viewColumnHeader12"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$68" id="viewColumn13">
+			<xp:viewColumnHeader value="AM / Rec"
+				id="viewColumnHeader13">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+	</xp:viewPanel></xp:view>

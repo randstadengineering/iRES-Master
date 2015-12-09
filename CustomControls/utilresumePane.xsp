@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex"
+	xmlns:xc="http://www.ibm.com/xsp/custom" dojoParseOnLoad="false"
+	dojoTheme="false">
+
+
+	<xp:this.resources>
+		<xp:script src="/generalSSJSUtilities.jss" clientSide="false"></xp:script>
+		<xp:script src="/jQueryAssistance.js" clientSide="true"></xp:script>
+		<xp:styleSheet href="/resumeNavigator.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xp:panel id="resumePane" styleClass="resumeWindow">
+		<xc:ccViewResumeNav></xc:ccViewResumeNav>
+		<xp:panel styleClass="resumeHeader">
+			<div id="l1">
+				<xp:label value="#{compositeData.applyDoc.candidatesName}" id="label1"></xp:label>
+				<xp:eventHandler event="onclick" submit="false">
+					<xp:this.script><![CDATA[
+loadCandidate("#{javascript:try{compositeData.applyDoc.getItemValueString('CandidateUniqueID2')} catch (e) {}}");
+]]></xp:this.script>
+				</xp:eventHandler>
+			</div>
+			<div id="l2">
+				<xp:label
+					value="#{compositeData.applyDoc.CandidatesHomePhone}">
+				</xp:label>
+				<xp:eventHandler event="onclick"
+							submit="false">
+							<xp:this.script><![CDATA[
+dialPhone("#{javascript:sessionScope.user_tn}","#{javascript:sessionScope.user_m5pass}",$('#l2 > span').html());
+]]></xp:this.script>
+						</xp:eventHandler>
+			</div>
+			<div id="l3">
+				<xp:label
+					value="#{compositeData.applyDoc.CandidatesEmail}">					
+				</xp:label>
+				<xp:eventHandler event="onclick" submit="false">
+					<xp:this.script><![CDATA[XSP.openDialog("#{id:dialog1}");]]></xp:this.script>
+					</xp:eventHandler>
+			</div>
+			<div id="l4">
+				<div id='zoomin'>
+						<xp:eventHandler event="onclick" submit="false">
+							<xp:this.script><![CDATA[zoomResume(1)]]></xp:this.script>
+						</xp:eventHandler>
+
+				</div>
+				<div id='zoomout'>
+						<xp:eventHandler event="onclick" submit="false">
+							<xp:this.script><![CDATA[zoomResume(-1);]]></xp:this.script>
+						</xp:eventHandler>
+				</div>
+				<div id='pop'>
+						<xp:eventHandler event="onclick" submit="false">
+							<xp:this.script><![CDATA[popResumeSlideout();]]></xp:this.script>
+						</xp:eventHandler>
+						</div>
+			</div>
+		</xp:panel>
+		<xp:inputRichText id="inputRichText1" readonly="false"
+		multipleTrim="false" styleClass="resumeViewer">
+		<xp:this.rendered><![CDATA[#{javascript:/*try{
+if(document1 != null){
+	if(document1.hasItem('OCRText')){
+		var rtItem:NotesItem = document1.getDocument().getFirstItem('OCRText');
+		if(rtItem.getText().length() > 15){
+			//if we have more than 15, we'll consider this a field to display.
+			return true;
+		}
+	}
+}
+} catch (e) {
+	return false;
+}
+return false;
+*/
+return true;}]]></xp:this.rendered>
+
+
+
+
+
+	<xp:this.value><![CDATA[#{javascript:try {
+	if (!compositeData.applyDoc.hasItem('OCRText')) {
+		var db = session.getDatabase(prof10[0],prof10[1]);
+		var doc = db.getDocumentByUNID(compositeData.applyDoc.getItemValueString('CandidateUniqueID2'));
+		var wDoc = com.ibm.xsp.model.domino.wrapped.DominoDocument.wrap(doc.getParentDatabase().getFilePath(), doc, null, null, false, null);
+		return wDoc.getValue('OCRText');
+	} else {
+		var doc = compositeData.applyDoc;
+	    var wDoc = com.ibm.xsp.model.domino.wrapped.DominoDocument.wrap(doc.getParentDatabase().getFilePath(), doc, null, null, false, null);
+		//return compositeData.applyDoc.getFirstItem('OCRText').getFormattedText();
+		return wDoc.getValue('OCRText');
+	}
+} catch (e) {return e};}]]></xp:this.value></xp:inputRichText>
+		<xe:dialog id="dialog1" title="Choose Template"
+			styleClass="emailTemplateDialog">
+			<xe:dialogContent id="dialogContent1">
+				<xp:panel>
+					<xp:viewPanel rows="30" id="viewPanel1"
+						rowClasses="emailTemplateDialogRow" indexVar="idx"
+						var="rowdata">
+						>
+						<xp:this.facets>
+							<xp:pager partialRefresh="true"
+								layout="Previous Group Next" xp:key="headerPager" id="pager1">
+							</xp:pager>
+						</xp:this.facets>
+						<xp:this.data>
+							<xp:dominoView var="view1"
+								databaseName="ires\mailTemp.nsf" viewName="templatesByUser">
+								<xp:this.categoryFilter><![CDATA[#{javascript:var unm = @Name("[CN]",session.getEffectiveUserName());
+unm;}]]></xp:this.categoryFilter>
+							</xp:dominoView>
+						</xp:this.data>
+
+						<xp:this.rowAttrs>
+
+							<xp:attr name="template"
+								value="#{javascript:rowdata.getDocument().getUniversalID();}">
+							</xp:attr>
+							<xp:attr name="onClick"
+								value="sendEmailFromTemplate(this)">
+							</xp:attr>
+							<xp:attr name="doc">
+								<xp:this.value><![CDATA[#{javascript:getCookie("lastDoc")}]]></xp:this.value>
+							</xp:attr>
+							<xp:attr name="db"
+								value="#{javascript:java.net.URLEncoder.encode(compositeData.applyDoc.getParentDatabase().getFilePath());}">
+							</xp:attr>
+						</xp:this.rowAttrs>
+						<xp:viewColumn columnName="Title"
+							id="viewColumn2" style="width:300px">
+							<xp:viewColumnHeader value="Template Name"
+								id="viewColumnHeader2">
+							</xp:viewColumnHeader>
+
+							<xp:eventHandler event="onclick"
+								submit="false">
+								<xp:this.script><![CDATA[XSP.closeDialog("#{id:dialog1}");]]></xp:this.script>
+							</xp:eventHandler>
+						</xp:viewColumn>
+						<xp:viewColumn columnName="$4" id="viewColumn3"
+							style="width:100px">
+							<xp:viewColumnHeader value="Date Created"
+								id="viewColumnHeader3">
+							</xp:viewColumnHeader>
+							<xp:eventHandler event="onclick"
+								submit="false">
+								<xp:this.script><![CDATA[XSP.closeDialog("#{id:dialog1}");]]></xp:this.script>
+							</xp:eventHandler>
+						</xp:viewColumn>
+					</xp:viewPanel>
+				</xp:panel>
+			</xe:dialogContent>
+		</xe:dialog>
+	</xp:panel>
+</xp:view>

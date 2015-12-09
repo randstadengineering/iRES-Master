@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.resources>
+		<xp:script src="/gDriveAPI.js" clientSide="true"></xp:script>
+		<xp:script
+			src="https://apis.google.com/js/client.js?onload=checkAuth"
+			clientSide="true">
+		</xp:script>
+	</xp:this.resources>
+
+	<xp:this.data>
+		<xp:dominoDocument var="sub" formName="Subsheet">
+			<xp:this.action><![CDATA[#{javascript:var unid = getCookie("openSub");
+var mode = (unid) ? "editDocument" : "createDocument";}]]></xp:this.action>
+			<xp:this.documentId><![CDATA[#{javascript:var unid = getCookie("openSub");
+eraseCookie("openSub");
+print(unid);
+return unid;}]]></xp:this.documentId>
+
+			<xp:this.databaseName><![CDATA[#{javascript:"!!ats/jobs10.nsf"}]]></xp:this.databaseName>
+		</xp:dominoDocument>
+		<xp:dominoDocument var="apply" action="openDocument">
+			<xp:this.databaseName><![CDATA[#{javascript:"!!ats/jobs10.nsf"}]]></xp:this.databaseName>
+			<xp:this.documentId><![CDATA[#{javascript:if (sub.isNewNote()) {
+ 	return viewScope.submitApplyUNID;
+} else {
+	var applyUNID = sub.getItemValueString("ApplyUNID");
+	//check for apply
+	try { session.getDatabase("","ats/jobs10.nsf").getDocumentByUNID(applyUNID) } catch (e) { return null };
+	return applyUNID;
+}}]]></xp:this.documentId>
+		</xp:dominoDocument>
+		<xp:dominoDocument var="job" action="openDocument">
+			<xp:this.databaseName><![CDATA[#{javascript:"!!ats/jobs10.nsf"}]]></xp:this.databaseName>
+			<xp:this.documentId><![CDATA[#{javascript:var jobunid = @DbLookup(["","ats/jobs10.nsf"],"AllJobNum",apply.getItemValueString("JONumber"),1,"[RETURNDOCUMENTUNIQUEID]");
+return (jobunid) ? jobunid : null;}]]></xp:this.documentId>
+		</xp:dominoDocument>
+		<xp:dominoDocument var="profile" action="openDocument">
+			<xp:this.documentId><![CDATA[#{javascript:if (sub.isNewNote()) {
+	var candUNID = apply.getItemValueString("CandidateUniqueID2");
+} else {
+	var candUNID = sub.getItemValueString("CandidateUniqueID2");
+}
+//check for profile
+var pdb = session.getDatabase("","ats/prof10.nsf");
+try {
+	pdb.getDocumentByUNID(candUNID);
+	return candUNID;
+} catch (e) {
+	var v = pdb.getView("(UniqueID2)");
+	var doc = v.getDocumentByKey(candUNID);
+	return (doc) ? doc.getUniversalID() : null;
+}}]]></xp:this.documentId>
+			<xp:this.databaseName><![CDATA[#{javascript:"!!ats/prof10.nsf"}]]></xp:this.databaseName>
+		</xp:dominoDocument>
+
+	</xp:this.data>
+
+
+
+
+
+	<xc:subCandidateSubmitProfile rendered="true"></xc:subCandidateSubmitProfile>
+</xp:view>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	    <iframe id="resumeFrame" title="" width="100%" height="100%" style="overflow-x: none;" frameborder="0" allowtransparency="true" class="igm" 
+    src=""></iframe>
+</xp:view>

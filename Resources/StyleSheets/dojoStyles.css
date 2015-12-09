@@ -1,0 +1,48 @@
+ul.lotusList{clear:both;overflow:hidden;margin:0;padding:0;list-style-type:none}
+ul.lotusList *{list-style-type:none} /*makes sure all nested lists don't have bullets, even though we don't typically nest these straight lists*/
+ul.lotusList li {margin:1px 0;padding:3px 2px;clear:both;zoom:1}
+ul.lotusEditable li{text-align:right;overflow:hidden} /*use this class in combination with list class - allows you to put a delete button on a list item*/
+.lotusList a, ul.lotusList li.lotusSelected a{border-bottom-width:1px;border-bottom-style:dotted}/*to keep links for jumping on hover*/
+ul.lotusList li.lotusSelected a{text-decoration:none;}
+ul.lotusList img.lotusLeft{margin-right:3px}
+ul.lotusList div p{margin-top:3px;margin-bottom:0}/*second line of data*/
+.lotusImagesOff .lotusEditable .lotusDelete img{display:none}
+
+.lotusFilters .lotusClose (line 1){
+	padding-top: 0pt;
+	padding-right: 4px;
+	padding-bottom: 0pt;
+	padding-left: 4px;
+}
+
+.lotusui a (line 1)
+
+{
+
+color: #105cb6;
+
+}
+
+.lotusui a:hover, .lotusui a:focus, .lotusui a:active (line 1)
+
+{
+
+color: #05386b;
+
+}
+
+.lotusFilters a .lotusClose (line 1)
+
+{
+
+color: #c4d8f2;
+
+}
+
+.lotusFilters a:hover .lotusClose (line 1)
+
+{
+
+color: #999999;
+
+}

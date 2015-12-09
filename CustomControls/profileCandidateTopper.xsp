@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xp:label value="Candidate:" id="label1"></xp:label>
+	<xp:text escape="true" id="Employee_Name"
+		value="#{document1.Employee_Name}">
+	</xp:text>
+	<xp:br></xp:br>
+	<xp:label value="Phone:" id="label2"></xp:label>
+	<xp:comboBox id="comboBox2">
+
+		<xp:selectItems>
+			<xp:this.value><![CDATA[#{javascript:var str = document1.getItemValue("EmpPhone");
+if (!str.isEmpty()) {
+	str[0] + " " + "Home";
+}
+}]]></xp:this.value>
+		</xp:selectItems>
+		<xp:selectItems>
+			<xp:this.value><![CDATA[#{javascript:var str = document1.getItemValue("Pager");
+if (!str.isEmpty()) {
+	str[0] + " " + "Cell";
+}
+}]]></xp:this.value>
+		</xp:selectItems>
+		<xp:selectItems>
+			<xp:this.value><![CDATA[#{javascript:var str = document1.getItemValue("WorkPhone");
+if (!str.isEmpty()) {
+	str[0] + " " + "Work";
+}
+}]]></xp:this.value>
+		</xp:selectItems>
+	</xp:comboBox>
+	<xp:button value="Add Phone" id="button1">
+		<xp:eventHandler event="onclick" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:// put up dialog allowing user to enter number
+// and select number type
+getComponent("dialog1").show()}]]></xp:this.action>
+		</xp:eventHandler>
+	</xp:button>
+	<xp:br></xp:br>
+	<xp:label value="Email:" id="label3"></xp:label>
+	<xp:comboBox id="comboBox3">
+
+		<xp:selectItems>
+			<xp:this.value><![CDATA[#{javascript:var str = document1.getItemValue("EMail");
+if (!str.isEmpty()) {
+	str[0] + " " + "Primary";
+}}]]></xp:this.value>
+		</xp:selectItems>
+		<xp:selectItems>
+			<xp:this.value><![CDATA[#{javascript:var str = document1.getItemValue("EmailNum2");
+if (!str.isEmpty()) {
+	str[0] + " " + "Secondary";
+}}]]></xp:this.value>
+		</xp:selectItems>
+	</xp:comboBox>
+	<xp:button value="Add Email" id="button4">
+		<xp:eventHandler event="onclick" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:// put up dialog allowing user to enter number
+// and select number type
+getComponent("dialog2").show()}]]></xp:this.action>
+		</xp:eventHandler>
+	</xp:button>
+	<xp:br></xp:br>
+
+
+
+
+
+	<xe:dialog id="dialog1"><xp:table border="0">
+						<xp:tr>
+							<xp:td>
+							<xp:inputText id="inputText1" size="1"></xp:inputText>
+							<xp:inputText id="inputText2" size="1"></xp:inputText>
+							<xp:inputText id="inputText3" size="3"></xp:inputText>
+							</xp:td>
+							<xp:td>
+							<xp:comboBox id="comboBox4">
+								<xp:selectItem itemLabel="Home Phone" itemValue="home">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Cell Phone" itemValue="cell">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Work Phone" itemValue="work">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Other Phone" itemValue="other"></xp:selectItem>
+							</xp:comboBox>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+							<xp:inputText id="inputText4" size="1"></xp:inputText>
+							<xp:inputText id="inputText5" size="1"></xp:inputText>
+							<xp:inputText id="inputText6" size="3"></xp:inputText>
+							</xp:td>
+							<xp:td>
+							<xp:comboBox id="comboBox5">
+								<xp:selectItem itemLabel="Home Phone" itemValue="home">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Cell Phone" itemValue="cell">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Work Phone" itemValue="work">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Other Phone" itemValue="other"></xp:selectItem>
+							</xp:comboBox>
+							</xp:td>
+						</xp:tr>
+					</xp:table>
+		<xe:dialogButtonBar id="dialogButtonBar1"><xp:button value="SAVE" id="button2">
+							<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+								<xp:this.action><![CDATA[#{javascript:var dialFlg = false;
+
+var iText7 = getComponent("inputText7").getValue();
+var iText8 = getComponent("inputText8").getValue();
+
+var icombo1 = getComponent("comboBox1").getValue();
+var icombo6 = getComponent("comboBox6").getValue();
+
+//view.postScript("alert('icombo4: " + icombo4 + "')");
+
+if ( !iText7.isEmpty() ) {
+	if ( icombo1 == "primary" ) {
+		document1.setValue( "Email", iText7 );
+	} else if ( icombo1 == "secondary" ) {
+		document1.setValue( "EmailNum2", iText7 );
+	} else if ( icombo1 == "work" ) {
+		document1.setValue( "Email1", iText7 );
+	} else if ( icombo1 == "other" ) {
+		document1.setValue( "AltEmail", iText7 );
+	}
+	document1.save();
+	dialFlg = true;
+}
+
+if ( !iText8.isEmpty() ) {
+	if ( icombo6 == "primary" ) {
+		document1.setValue( "Email", iText8 );
+	} else if ( icombo6 == "secondary" ) {
+		document1.setValue( "EmailNum2", iText8 );
+	} else if ( icombo6 == "work" ) {
+		document1.setValue( "Email1", iText8 );
+	} else if ( icombo6 == "other" ) {
+		document1.setValue( "AltEmail", iText8 );
+	}
+	document1.save();
+	dialFlg = true;
+}
+
+if (dialFlg) {
+	//view.postScript("alert('dialFlg is " + dialFlg + "')");
+	getComponent("dialog2").hide();
+}}]]></xp:this.action>
+							</xp:eventHandler>
+						</xp:button><xp:button value="Cancel" id="button3">
+							<xp:eventHandler event="onclick" submit="false">
+								<xp:this.script><![CDATA[XSP.closeDialog('#{id:dialog2}')]]></xp:this.script>
+							</xp:eventHandler>
+						</xp:button></xe:dialogButtonBar></xe:dialog>
+	<xp:br></xp:br>
+	<xe:dialog id="dialog2"><xp:table border="0">
+						<xp:tr>
+							<xp:td>
+							<xp:inputText id="inputText7"></xp:inputText>
+							</xp:td>
+							<xp:td>
+							<xp:comboBox id="comboBox1">
+								<xp:selectItem itemLabel="Primary" itemValue="primary">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Secondary" itemValue="secondary">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Work" itemValue="work">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Other" itemValue="other">
+								</xp:selectItem>
+							</xp:comboBox>
+							</xp:td>
+						</xp:tr>
+						<xp:tr>
+							<xp:td>
+							<xp:inputText id="inputText8"></xp:inputText>
+							</xp:td>
+							<xp:td>
+							<xp:comboBox id="comboBox6">
+								<xp:selectItem itemLabel="Primary" itemValue="primary">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Secondary" itemValue="secondary">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Work" itemValue="work">
+								</xp:selectItem>
+								<xp:selectItem itemLabel="Other" itemValue="other">
+								</xp:selectItem>
+							</xp:comboBox>
+							</xp:td>
+						</xp:tr>
+					</xp:table>
+		<xe:dialogButtonBar id="dialogButtonBar2"><xp:button value="SAVE" id="button5">
+							<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+								<xp:this.action><![CDATA[#{javascript:var dialFlg = false;
+
+var iText7 = getComponent("inputText7").getValue();
+var iText8 = getComponent("inputText8").getValue();
+
+var icombo1 = getComponent("comboBox1").getValue();
+var icombo6 = getComponent("comboBox6").getValue();
+
+//view.postScript("alert('icombo4: " + icombo4 + "')");
+
+if ( !iText7.isEmpty() ) {
+	if ( icombo1 == "primary" ) {
+		document1.setValue( "Email", iText7 );
+	} else if ( icombo1 == "secondary" ) {
+		document1.setValue( "EmailNum2", iText7 );
+	} else if ( icombo1 == "work" ) {
+		document1.setValue( "Email1", iText7 );
+	} else if ( icombo1 == "other" ) {
+		document1.setValue( "AltEmail", iText7 );
+	}
+	document1.save();
+	dialFlg = true;
+}
+
+if ( !iText8.isEmpty() ) {
+	if ( icombo6 == "primary" ) {
+		document1.setValue( "Email", iText8 );
+	} else if ( icombo6 == "secondary" ) {
+		document1.setValue( "EmailNum2", iText8 );
+	} else if ( icombo6 == "work" ) {
+		document1.setValue( "Email1", iText8 );
+	} else if ( icombo6 == "other" ) {
+		document1.setValue( "AltEmail", iText8 );
+	}
+	document1.save();
+	dialFlg = true;
+}
+
+if (dialFlg) {
+	//view.postScript("alert('dialFlg is " + dialFlg + "')");
+	getComponent("dialog2").hide();
+}}]]></xp:this.action>
+							</xp:eventHandler>
+						</xp:button><xp:button value="Cancel" id="button6">
+							<xp:eventHandler event="onclick" submit="false">
+								<xp:this.script><![CDATA[XSP.closeDialog('#{id:dialog2}')]]></xp:this.script>
+							</xp:eventHandler>
+						</xp:button></xe:dialogButtonBar></xe:dialog></xp:view>

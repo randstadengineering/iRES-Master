@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="626" sequence="17" unid="4A3AE5639B9B195585257EDC00500078">
+<created><datetime dst="true">20151012T103350,00-04</datetime></created>
+<modified><datetime>20151117T115543,48-05</datetime></modified>
+<revised><datetime>20151117T115543,47-05</datetime></revised>
+<lastaccessed><datetime>20151117T115543,48-05</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20151013T151404,44-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>com/randstadusa/generalUtils.java</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>com/randstadusa/generalUtils.java</text></item>
+
+
+</note>

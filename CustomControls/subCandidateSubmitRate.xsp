@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	
+
+	<xp:inputHidden id="inputHidden1" value="#{sub.rateinfo}"
+		defaultValue="Yes">
+	</xp:inputHidden>
+	<xp:this.resources>
+		<xp:styleSheet href="/FormStyles.css"></xp:styleSheet>
+		<xp:styleSheet href="/candidateStyles.css"></xp:styleSheet>
+	</xp:this.resources>
+	
+	<xp:table style="width:550.0px;overflow:auto" cellpadding="5">
+		
+		<xp:tr style="padding-top:10.0px">
+			<xp:td>
+				</xp:td>
+			<xp:td>
+				</xp:td>
+			<xp:td style="padding-top:10.0px">
+				<xp:label value="Pay Rate" id="label3"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td style="padding-top:10.0px">
+				<xp:label value="Bill Markup" id="label4"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td style="padding-top:10.0px">
+				<xp:label value="Bill Rate" id="label5"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td style="padding-top:0.0px">
+				Contract Rate:
+
+			</xp:td>
+			<xp:td>
+				<xp:link escape="true" id="link3"
+					style="padding-left:5.0px" rel="nofollow"
+					value="http://10.100.1.121/gmestimator/v1.2.xlsm" target="_self">
+					<xp:image id="image2" url="/Calculator.gif">
+					</xp:image>
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[//url="dialog_GMCalculator.xsp";
+/*
+function openExcelFile(strFilePath) {
+    if (window.ActiveXObject) {
+        try {
+            var objExcel;
+            objExcel = new ActiveXObject("Excel.Application");
+            objExcel.Visible = true;
+            objExcel.Workbooks.Open(strFilePath);
+        }
+        catch (e) {
+            alert (e.message);
+        }
+    }
+    else {
+     downloadFile("http://10.100.1.121/gmestimator/v1.2.xlsm","temp");
+    }
+}
+
+function moveFileToTemp(strFilePath) {
+	if (window.ActiveXObject) {
+		try {
+			var fso = new ActiveXObject("Scripting.FileSystemObject"); 
+			var folder = fso.GetSpecialFolder(2); 
+			var fname = folder + "/regmest.xlsm";
+			fso.CopyFile(strFilePath, fname, true); 
+			return fname;
+		} catch (e) {
+			alert (e.message);
+		} 
+	}
+}
+
+function downloadFile(sUrl,name) {
+    var link = document.createElement("a");
+    link.download = name;
+    link.href = sUrl;
+    link.click();
+}
+ 
+
+
+var fname = moveFileToTemp("http://10.100.1.121/gmestimator/v1.2.xlsm");
+openExcelFile(fname);
+*/
+]]></xp:this.script>
+					</xp:eventHandler>
+
+				</xp:link></xp:td>
+			<xp:td>
+				<xp:inputText value="#{sub.Desired}" id="desired1"
+					style="width:60.0px">
+					<xp:this.converter>
+						<xp:convertNumber type="currency"></xp:convertNumber>
+					</xp:this.converter>
+				</xp:inputText>
+				<xp:label value=" /hr" id="label8"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText value="#{sub.Markup}" id="markup1"
+					style="width:60.0px">
+					<xp:this.converter>
+						<xp:convertNumber type="currency"></xp:convertNumber>
+					</xp:this.converter>
+				</xp:inputText>
+			<xp:label value=" /hr" id="label17"></xp:label></xp:td>
+			<xp:td>
+				<xp:inputText value="#{sub.RateInfo1}"
+					id="rateInfo11" style="width:60.0px">
+					<xp:this.converter>
+						<xp:convertNumber type="currency"></xp:convertNumber>
+					</xp:this.converter>
+				</xp:inputText>
+			<xp:label value=" /hr" id="label19"></xp:label></xp:td>
+		</xp:tr>
+
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Overtime Rate? " id="label7"></xp:label>
+				
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox2" value="#{sub.OTInfo}"
+					defaultValue="No">
+					<xp:selectItem itemLabel="Yes" id="selectItem3"></xp:selectItem>
+					<xp:selectItem itemLabel="No" id="selectItem4"></xp:selectItem>
+				</xp:comboBox></xp:td>
+			<xp:td>
+				<xp:inputText value="#{sub.pay_ot}" id="pay_ot1"
+					style="width:60.0px">
+					<xp:this.converter>
+						<xp:convertNumber type="currency"></xp:convertNumber>
+					</xp:this.converter>
+				</xp:inputText>
+				<xp:label value=" /hr" id="label9"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText value="#{sub.OTMarkup}"
+					id="oTMarkup1" style="width:60.0px">
+					<xp:this.converter>
+						<xp:convertNumber type="currency"></xp:convertNumber>
+					</xp:this.converter>
+				</xp:inputText>
+			<xp:label value=" /hr" id="label18"></xp:label></xp:td>
+			<xp:td>
+				<xp:inputText value="#{sub.OTBillRate}"
+					id="oTBillRate1" style="width:60.0px">
+					<xp:this.converter>
+						<xp:convertNumber type="currency"></xp:convertNumber>
+					</xp:this.converter>
+				</xp:inputText>
+			<xp:label value=" /hr" id="label20"></xp:label></xp:td>
+		</xp:tr>
+
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Per Diem? " id="label10"
+					styleClass="cpLabel">
+				</xp:label>
+				
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox3"
+					value="#{sub.PerDiemInfo}" defaultValue="No">
+					<xp:selectItem itemLabel="Yes" id="selectItem5"></xp:selectItem>
+					<xp:selectItem itemLabel="No" id="selectItem6"></xp:selectItem>
+				</xp:comboBox></xp:td>
+			<xp:td colspan="2">
+				<xp:label value="Comment: " id="label11"
+					styleClass="cpLabel">
+				</xp:label>
+				<xp:inputText value="#{sub.PerDiemComment}"
+					id="perDiemComment1">
+				</xp:inputText>
+			</xp:td>
+
+			<xp:td>
+				<xp:inputText value="#{sub.PerDiemAmt}"
+					id="perDiemAmt1" style="width:60.0px">
+					<xp:this.converter>
+						<xp:convertNumber type="number"></xp:convertNumber>
+					</xp:this.converter>
+				</xp:inputText>
+				<xp:label value=" /day" id="label12"></xp:label>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Mobilization?" id="label13"
+					styleClass="cpLabel">
+				</xp:label>
+				
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox4" value="#{sub.MobInfo}"
+					defaultValue="No">
+					<xp:selectItem itemLabel="Yes" id="selectItem7"></xp:selectItem>
+					<xp:selectItem itemLabel="No" id="selectItem8"></xp:selectItem>
+				</xp:comboBox></xp:td>
+			<xp:td colspan="3">
+				<xp:inputText value="#{sub.MobComment}"
+					id="mobComment1" style="width:232.0px">
+				</xp:inputText>
+			</xp:td>
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label id="label14" styleClass="cpLabel">
+					<xp:this.value><![CDATA[R & R? ]]></xp:this.value>
+				</xp:label>
+				
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox5" value="#{sub.RRInfo}"
+					defaultValue="No">
+					<xp:selectItem itemLabel="Yes" id="selectItem9"></xp:selectItem>
+					<xp:selectItem itemLabel="No" id="selectItem10"></xp:selectItem>
+				</xp:comboBox></xp:td>
+			<xp:td colspan="3">
+				<xp:inputText value="#{sub.RRComment}"
+					id="rRComment1" style="width:232.0px">
+				</xp:inputText>
+			</xp:td>
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label id="label15" value="Other Billable?"
+					styleClass="cpLabel">
+				</xp:label>
+				
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox6"
+					value="#{sub.OtherInfo}" defaultValue="No">
+					<xp:selectItem itemLabel="Yes" id="selectItem11"></xp:selectItem>
+					<xp:selectItem itemLabel="No" id="selectItem12"></xp:selectItem>
+				</xp:comboBox></xp:td>
+			<xp:td colspan="3">
+				<xp:inputText value="#{sub.OtherComment}"
+					id="otherComment1" style="width:232.0px">
+				</xp:inputText>
+			</xp:td>
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td colspan="5">
+				<xp:label id="label16"
+					value="Where Did you Find This Candidate? " styleClass="cpLabel">
+				</xp:label>
+				<xp:comboBox id="comboBox7"
+					value="#{sub.CandidateSource}">
+					<xp:selectItem itemLabel="Careerbuilder" id="selectItem13"></xp:selectItem>
+					<xp:selectItem itemLabel="Other" id="selectItem14"></xp:selectItem>
+				</xp:comboBox>
+			</xp:td>
+
+
+
+		</xp:tr>
+	</xp:table>
+	
+	</xp:view>

@@ -1,0 +1,207 @@
+.cmOverlay{
+	position: relative;
+	top: 39px;
+	width: 1142px;
+	height: 0;
+	z-index: -1;
+	background-color: #f9f9f9;
+	border-radius: 0px 0px 10px 10px;
+	-moz-border-radius: 0px 0px 10px 10px;
+	-webkit-border-radius: 0px 0px 10px 10px;
+	border: 1px solid #ccc;
+	-webkit-transition-duration: .4s;
+    -moz-transition-duration: .4s;
+    -o-transition-duration: .4s;
+    transition-duration: .4s;
+}
+.cmOverlay.is-visible {
+	z-index: 1500;
+    top: 39px;
+    height: 51vh;
+	-webkit-transition-duration: .4s;
+    -moz-transition-duration: .4s;
+    -o-transition-duration: .4s;
+    transition-duration: .4s;
+	}
+.joSelectTable.is-visible {
+	display: inline-block;
+    width:100%;
+    padding-left: 5px;
+	}
+.joSelectTable {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+	width: 0px;
+	}	
+.pipelineMenu {
+	display: none;
+	width: 100%;
+	height: 40px;
+	}
+.pipelineMenu.is-visible {
+	display: inline-block;
+	}
+.utilityMenu {
+	display: none;
+	width: 100%;
+	height: 40px;
+	}
+.utilityMenu.is-visible {
+	display: inline-block;
+	}
+.progressBar {
+	position: absolute;
+	top: 80px;
+	left: 200px;
+	z-index: 30;
+	background-color: transparent;
+	}
+progress[value] {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 100%;
+	height: 2px;
+	}	
+progress[value]::-webit-progress-bar {
+	background-color: transparent;
+	border-radius: 2px;
+	}
+progress[value]::-webit-progress-value {
+	background-color: #2eaafc;
+	}
+	
+.contextualMenuBar { 
+    position: fixed;
+    top: 80px;
+    left: 200px;
+    width: 100%;
+    height: 40px;
+    background-image: -webkit-linear-gradient(-90deg, rgb(247, 240, 176), rgb(255, 244, 218));
+    border-top: 1px solid;
+    border-color: rgb(243,165,54);
+    }
+    
+   
+.menuBox { 
+    float: left;
+	border:1px solid #999999;
+	display:inline-block;
+    width: 265px;
+    height: 30px;
+	/*color:#999999;*/
+	font-family:Arial;
+	font-size:16px;
+    font-weight: 500;
+	padding: 0;
+    margin: 4px;
+    border-radius: 8px;
+	text-decoration:none;
+}
+
+.btnUtilityMenu {
+    float: left;
+	border:1px solid #999999;
+	display:inline-block;
+    width: 145px;
+    height: 30px;
+    margin: 4px;
+    border-radius: 8px;
+	background-image: url('images/RightbuttonOver.png');
+	background-repeat: no-repeat;
+	background-position: 115px 2px;
+	background-size: 25px 25px;
+	}
+.btnUtilityMenu > div {
+	padding-left: 4px;
+    padding-top: 6px;
+    color: #3b3b3b;
+    font-weight: 500;
+    font-size: 11pt;
+    width: 100%;
+    height: 100%;
+	}
+.btnUtilityMenu:hover, .btnUtilityMenu.open {
+	background-image: url('images/RightbuttonOn.png');
+	color: #2EAAFC;
+	cursor: pointer;
+	}
+.btnUtilityMenu > div:hover, .btnUtilityMenu.open > div {
+	color: #2EAAFC;
+	}
+
+.btnAlljobs {
+	width: 118px;
+	height: 26px;    
+	background-image: url('images/AllJobs.svg');
+	background-repeat: no-repeat;
+	background-position: 3px 0;
+	margin-top: 2px;
+	display:inline-block;
+}
+
+.btnAlljobs.inactive {
+	width: 118px;
+	height: 26px;    
+	background-image: url('images/selectJob.svg');
+	background-repeat: no-repeat;
+	background-position: 3px -1px;
+	margin-top: 2px;
+	display:inline-block;
+	cursor: none;
+}
+    
+.btnAlljobs:hover { 
+ background-position: 3px 100%;
+    display:inline-block;
+}
+
+.btnSelectjob {
+	width: 142px;
+	height: 26px;    
+	background-image: url('images/selectJob.svg');
+	background-repeat: no-repeat;
+	background-position: -118px 0;
+	margin-top: 2px;
+	display:inline-block;
+}
+    
+.btnSelectjob:hover, .btnSelectjob.open { 
+ 	background-position: -118px -30px;
+    display:inline-block;
+}
+
+#contextMenuJobGrouping {
+	float: left;
+	width: 857px;
+	}
+	
+#contextMenuJobGrouping > table {
+	margin-top: 5px;
+	border: 0px;
+	}
+#cmSelectJobOverlay {
+	display: none;
+	}
+#cmSelectJobOverlay.is-visible {
+	display: block;
+	}
+#cmUtilityMenu {
+	display: none;
+}
+#cmUtiltiyMenu.is-visible {
+	display: block;
+}
+.utilityMenuTable {
+	display: none;
+	padding-left: 5px;
+	padding-top: 5px;
+	}
+.utilityMenuTable.is-visible {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	}
+

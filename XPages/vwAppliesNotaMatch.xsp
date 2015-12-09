@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:viewPanel rows="30" id="viewPanel1" var="rowData">
+		<xp:this.facets>
+			<xp:pager partialRefresh="true" layout="Previous Group Next"
+				xp:key="headerPager" id="pager1">
+			</xp:pager>
+		</xp:this.facets>
+		<xp:this.data>
+			<xp:dominoView var="view1" viewName="NotaMatch">
+				<xp:this.databaseName><![CDATA[#{javascript:"!!ats/jobs10.nsf"}]]></xp:this.databaseName>
+			</xp:dominoView>
+		</xp:this.data>
+		<xp:viewColumn id="viewColumn1" columnName="JONumber">
+			<xp:viewColumnHeader id="viewColumnHeader1">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="CandidatesName" id="viewColumn2" displayAs="link" openDocAsReadonly="true">
+			<xp:viewColumnHeader value="Candidate"
+				id="viewColumnHeader2">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="score" id="viewColumn3">
+			<xp:this.converter>
+				<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="score" id="viewColumnHeader3"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$0" id="viewColumn4">
+			<xp:this.converter>
+				<xp:convertDateTime type="date" dateStyle="short"></xp:convertDateTime>
+			</xp:this.converter>
+			<xp:viewColumnHeader value="Date" id="viewColumnHeader4"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="$2" id="viewColumn5">
+			<xp:viewColumnHeader value="Customer"
+				id="viewColumnHeader5">
+			</xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="Recruiter" id="viewColumn6">
+			<xp:viewColumnHeader value="Rec" id="viewColumnHeader6"></xp:viewColumnHeader>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="SalesPerson" id="viewColumn7">
+			<xp:viewColumnHeader value="Sales" id="viewColumnHeader7"></xp:viewColumnHeader>
+		</xp:viewColumn>
+	</xp:viewPanel></xp:view>

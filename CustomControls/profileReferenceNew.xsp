@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:table style="width:550px">
+		<xp:this.rendered><![CDATA[#{javascript:if (currentDocument.isEditable()) {
+   return true;
+} else {
+	return false;
+}}]]></xp:this.rendered>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Name:" id="referenceName_Label1"
+					for="referenceName1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="ReferenceName" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Company:" id="company_Label1"
+					for="company1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="Company" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Title:" id="title_Label1" for="title1"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="Title" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Phone:" id="phone_Label1" for="phone1"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="Phone" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Email:" id="email_Label1" for="email1"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="Email" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Date employed from:"
+					id="dateEmployedFrom_Label1" for="dateEmployedFrom1"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="DateEmployedFrom"
+					styleClass="cpInput">
+					<xp:dateTimeHelper id="dateTimeHelper1"></xp:dateTimeHelper>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"
+							dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Date employed to:"
+					id="dateEmployedTo_Label1" for="dateEmployedTo1"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="DateEmployedTo"
+					styleClass="cpInput">
+					<xp:dateTimeHelper id="dateTimeHelper2"></xp:dateTimeHelper>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"
+							dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Reference Taken By:"
+					id="refTakenBy_Label1" for="refTakenBy1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefTakenBy" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Reference Taken:" id="dateRef_Label1"
+					for="dateRef1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="DateRef" styleClass="cpInput">
+					<xp:dateTimeHelper id="dateTimeHelper3"></xp:dateTimeHelper>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"
+							dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label
+					value="In what context did you work with the candidate?"
+					id="refContext_Label1" for="refContext1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefContext" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label
+					value="When working with this individual what did you feel were his/her biggest strengths?"
+					id="refAccomplishments_Label1" for="refAccomplishments1"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefAccomplishments"
+					styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label
+					value="What about a weaker point or area for an improvement?"
+					id="refWeakness_Label1" for="refWeakness1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefWeakness" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label
+					value="On a scale of 1-10, how would you rate his/her overall performance?"
+					id="refScale_Label1" for="refScale1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefScale" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="WHY?" id="refScaleWhy_Label1"
+					for="refScaleWhy1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefScaleWhy" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label
+					value="This candidate will be responsible for the following: —Discuss key hiring indicators"
+					id="refResponsible_Label1" for="refResponsible1"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefResponsible"
+					styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label
+					value="How did this person get along with their peers?"
+					id="refGetAlong_Label1" for="refGetAlong1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefGetAlong" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Attendance / Punctuality?"
+					id="refAttendance_Label1" for="refAttendance1"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefAttendance" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Would you rehire them?"
+					id="refRehire_Label1" for="refRehire1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefRehire" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label
+					value="Do you have any advice on how to best manage this individual?"
+					id="refManageAdvice_Label1" for="refManageAdvice1"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="RefManageAdvice"
+					styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="NOTES / ATTACHMENTS:"
+					id="refNotes_Label1" for="refNotes1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputRichText id="RefNotes"></xp:inputRichText>
+			</xp:td>
+		</xp:tr>
+	</xp:table>
+	<xp:table>
+		<xp:tr>
+			<xp:td>
+				<xp:button value="Save" id="button1" styleClass="cpButton">
+		<xp:eventHandler event="onclick" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:var RefNotes:com.ibm.xsp.component.xp.XspInputRichText = getComponent("RefNotes");
+var doc = database.createDocument();
+doc.replaceItemValue( 'Form', 'Reference');
+doc.replaceItemValue( 'UniqueID2', doc.getUniversalID());
+doc.replaceItemValue( 'Employee_Name', document1.getItemValue("Employee_Name"));
+doc.replaceItemValue( 'ParentUniqueID2', document1.getItemValue("UniqueID2"));
+doc.replaceItemValue( 'ReferenceName', getComponent('ReferenceName').getValue());
+doc.replaceItemValue( 'Company', getComponent('Company').getValue());
+doc.replaceItemValue( 'Title', getComponent('Title').getValue());
+doc.replaceItemValue( 'Phone', getComponent('Phone').getValue());
+doc.replaceItemValue( 'Email', getComponent('Email').getValue());
+//doc.replaceItemValue( 'DateEmployedFrom', getComponent('DateEmployedFrom').getValue());
+//doc.replaceItemValue( 'DateEmployedTo', getComponent('DateEmployedTo').getValue());
+doc.replaceItemValue( 'RefTakenBy', getComponent('RefTakenBy').getValue());
+//doc.replaceItemValue( 'DateRef', getComponent('DateRef').getValue());
+doc.replaceItemValue( 'RefContext', getComponent('RefContext').getValue());
+doc.replaceItemValue( 'RefAccomplishments', getComponent('RefAccomplishments').getValue());
+doc.replaceItemValue( 'RefWeakness', getComponent('RefWeakness').getValue());
+doc.replaceItemValue( 'RefScale', getComponent('RefScale').getValue());
+doc.replaceItemValue( 'RefScaleWhy', getComponent('RefScaleWhy').getValue());
+doc.replaceItemValue( 'RefResponsible', getComponent('RefResponsible').getValue());
+doc.replaceItemValue( 'RefGetAlong', getComponent('RefGetAlong').getValue());
+doc.replaceItemValue( 'RefAttendance', getComponent('RefAttendance').getValue());
+doc.replaceItemValue( 'RefRehire', getComponent('RefRehire').getValue());
+doc.replaceItemValue( 'RefManageAdvice', getComponent('RefManageAdvice').getValue());
+doc.replaceItemValue( 'RefNotes', RefNotes.getValueAsString());
+doc.save();
+sessionScope.showNewReference = "no";}]]></xp:this.action>
+		</xp:eventHandler></xp:button>
+			</xp:td>
+			<xp:td>
+			<xp:button value="Cancel" id="button2" styleClass="cpButton">
+		</xp:button>
+			</xp:td>
+		</xp:tr>
+	</xp:table>
+</xp:view>

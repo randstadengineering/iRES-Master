@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	
+	<xp:panel styleClass="utilityMenuTable"><xp:table style="width:100%">
+		<xp:tr>
+			<xp:td>
+				<xp:link escape="true" text="Manage Email Templates"
+					id="link1" value="#">
+					
+				<xp:eventHandler event="onclick" submit="false">
+					<xp:this.script><![CDATA[loadUtility("/ires/mailtemp.nsf/appStart.xsp");]]></xp:this.script>
+				</xp:eventHandler></xp:link></xp:td>
+			<xp:td style="width:20px"></xp:td>
+			<xp:td>
+				<xp:link escape="true"
+					text="Configure Pipeline Job Row Details" id="link2">
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[loadUtility('UserBase.xsp');]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:link></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				&#160;</xp:td>
+			<xp:td></xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:link escape="true" text="All Jobs By Number"
+					id="link4" value="#">
+
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[loadUtility("vwAllByJobNumber.xsp");]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:link></xp:td>
+			<xp:td></xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:link escape="true" text="Hot Jobs By Number"
+					id="link9" value="#">
+
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[loadUtility("vwHotJobsByNumber.xsp");]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:link></xp:td>
+			<xp:td></xp:td>
+			<xp:td>
+				</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:link escape="true" text="Jobs By Branch" id="link7"
+					value="#">
+
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[loadUtility("vwJobsByBranch.xsp");]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:link></xp:td>
+			<xp:td></xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:link escape="true" text="Daily Focus" id="link5"
+					value="#">
+
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[loadUtility("vwDailyFocus.xsp");]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:link></xp:td>
+			<xp:td></xp:td>
+			<xp:td>
+				</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				&#160;</xp:td>
+			<xp:td></xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:link escape="true" text="Applies - Not A Match"
+					id="link6" value="#">
+
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[loadUtility("vwAppliesNotaMatch.xsp");]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:link></xp:td>
+			<xp:td></xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:link escape="true" text="Search Requests" id="link8"
+					value="#">
+
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[loadUtility("vwInternetReq.xsp");]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:link></xp:td>
+			<xp:td></xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:link escape="true" text="Payroll Change Notices"
+					id="link3" value="#">
+
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[loadUtility("vwPayChg.xsp");]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:link></xp:td>
+			<xp:td></xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+	</xp:table></xp:panel></xp:view>

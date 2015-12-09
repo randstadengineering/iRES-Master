@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" rendered="true">
+
+
+
+	<xp:inputTextarea id="inputTextarea1"
+		style="width:100%;height:250px;overflow:auto" value="#{compositeData.applyDoc.recruiterNotes}">
+	<xp:eventHandler event="onchange" submit="true"
+		refreshMode="partial" refreshId="inputTextarea1" execMode="partial" execId="inputTextarea1">
+	</xp:eventHandler></xp:inputTextarea>
+</xp:view>

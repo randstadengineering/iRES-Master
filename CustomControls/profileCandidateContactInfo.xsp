@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	
+	
+	<xp:table style="overflow:auto">
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Nickname:" id="label4"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="inputText1" value="#{document1.MI}"
+					styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Street Address:" id="label5"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="inputText2"
+					value="#{document1.Address1}" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Street Address 2:" id="label6"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="inputText3"
+					value="#{document1.Address2}" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="ZipCode:" id="label7"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="inputText4" value="#{document1.Zip}"
+					styleClass="cpInput">
+					<xp:this.required><![CDATA[#{javascript:if(sessionScope.get("isnewdoc")=="Yes"){
+return true;
+} else {
+return false;
+}
+}]]></xp:this.required>
+
+					<xp:this.validators>
+						<xp:validateRequired message="Required"></xp:validateRequired>
+					</xp:this.validators>
+				</xp:inputText>
+			</xp:td>
+			<xp:td>
+				<xp:message id="message1" for="inputText4"></xp:message>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="City:" id="label8"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="inputText5" value="#{document1.City}"
+					styleClass="cpInput">
+					<xp:this.required><![CDATA[#{javascript:if(sessionScope.get("isnewdoc")=="Yes"){
+return true;
+} else {
+return false;
+}}]]></xp:this.required>
+
+					<xp:this.validators>
+						<xp:validateRequired message="Required"></xp:validateRequired>
+					</xp:this.validators>
+				</xp:inputText>
+			</xp:td>
+			<xp:td>
+				<xp:message id="message2" for="inputText5"></xp:message>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="State:" id="label9"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox1" value="#{document1.State}"
+					styleClass="cpComboBox">
+					<xp:selectItem itemLabel="AL" id="selectItem1"></xp:selectItem>
+					<xp:selectItem itemLabel="AK" id="selectItem2"></xp:selectItem>
+					<xp:selectItem itemLabel="AZ" id="selectItem3"></xp:selectItem>
+					<xp:selectItem itemLabel="AR" id="selectItem4"></xp:selectItem>
+					<xp:selectItem itemLabel="CA" id="selectItem5"></xp:selectItem>
+					<xp:selectItem itemLabel="CO" id="selectItem6"></xp:selectItem>
+					<xp:selectItem itemLabel="CT" id="selectItem7"></xp:selectItem>
+					<xp:selectItem itemLabel="DE" id="selectItem8"></xp:selectItem>
+					<xp:selectItem itemLabel="FL" id="selectItem9"></xp:selectItem>
+					<xp:selectItem itemLabel="GA" id="selectItem10"></xp:selectItem>
+					<xp:selectItem itemLabel="HI" id="selectItem11"></xp:selectItem>
+					<xp:selectItem itemLabel="ID" id="selectItem12"></xp:selectItem>
+					<xp:selectItem itemLabel="IL" id="selectItem13"></xp:selectItem>
+					<xp:selectItem itemLabel="IN" id="selectItem14"></xp:selectItem>
+					<xp:selectItem itemLabel="IA" id="selectItem15"></xp:selectItem>
+					<xp:selectItem itemLabel="KS" id="selectItem16"></xp:selectItem>
+					<xp:selectItem itemLabel="KY" id="selectItem17"></xp:selectItem>
+					<xp:selectItem itemLabel="LA" id="selectItem18"></xp:selectItem>
+					<xp:selectItem itemLabel="ME" id="selectItem19"></xp:selectItem>
+					<xp:selectItem itemLabel="MD" id="selectItem20"></xp:selectItem>
+					<xp:selectItem itemLabel="MA" id="selectItem21"></xp:selectItem>
+					<xp:selectItem itemLabel="MI" id="selectItem22"></xp:selectItem>
+					<xp:selectItem itemLabel="MN" id="selectItem23"></xp:selectItem>
+					<xp:selectItem itemLabel="MS" id="selectItem24"></xp:selectItem>
+					<xp:selectItem itemLabel="MO" id="selectItem25"></xp:selectItem>
+					<xp:selectItem itemLabel="MT" id="selectItem26"></xp:selectItem>
+					<xp:selectItem itemLabel="NE" id="selectItem27"></xp:selectItem>
+					<xp:selectItem itemLabel="NV" id="selectItem28"></xp:selectItem>
+					<xp:selectItem itemLabel="NH" id="selectItem29"></xp:selectItem>
+					<xp:selectItem itemLabel="NJ" id="selectItem30"></xp:selectItem>
+					<xp:selectItem itemLabel="NM" id="selectItem31"></xp:selectItem>
+					<xp:selectItem itemLabel="NY" id="selectItem32"></xp:selectItem>
+					<xp:selectItem itemLabel="NC" id="selectItem33"></xp:selectItem>
+					<xp:selectItem itemLabel="ND" id="selectItem34"></xp:selectItem>
+					<xp:selectItem itemLabel="OH" id="selectItem35"></xp:selectItem>
+					<xp:selectItem itemLabel="OK" id="selectItem36"></xp:selectItem>
+					<xp:selectItem itemLabel="OR" id="selectItem37"></xp:selectItem>
+					<xp:selectItem itemLabel="PA" id="selectItem38"></xp:selectItem>
+					<xp:selectItem itemLabel="RI" id="selectItem39"></xp:selectItem>
+					<xp:selectItem itemLabel="SC" id="selectItem40"></xp:selectItem>
+					<xp:selectItem itemLabel="SD" id="selectItem41"></xp:selectItem>
+					<xp:selectItem itemLabel="TN" id="selectItem42"></xp:selectItem>
+					<xp:selectItem itemLabel="TX" id="selectItem43"></xp:selectItem>
+					<xp:selectItem itemLabel="UT" id="selectItem44"></xp:selectItem>
+					<xp:selectItem itemLabel="VT" id="selectItem45"></xp:selectItem>
+					<xp:selectItem itemLabel="VA" id="selectItem46"></xp:selectItem>
+					<xp:selectItem itemLabel="WA" id="selectItem47"></xp:selectItem>
+					<xp:selectItem itemLabel="WV" id="selectItem48"></xp:selectItem>
+					<xp:selectItem itemLabel="WI" id="selectItem49"></xp:selectItem>
+					<xp:selectItem itemLabel="WY" id="selectItem50"></xp:selectItem>
+				</xp:comboBox>
+			</xp:td>
+			<xp:td></xp:td>
+		</xp:tr>
+		
+	</xp:table>
+
+
+
+</xp:view>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.beforePageLoad><![CDATA[#{javascript:if(@UserName().toUpperCase() =='ANONYMOUS'){
+	context.redirectToPage("\start.xsp");
+}
+//This sets the user ID for testing
+initializeUserEnvironment();}]]></xp:this.beforePageLoad>
+	<xp:this.resources>
+		<xp:script src="/generalSSJSUtilities.jss" clientSide="false"></xp:script>
+		<xp:script src="/userEnvironment.jss" clientSide="false"></xp:script>
+	</xp:this.resources>
+	<xp:panel>
+		<xp:table>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="#{javascript:sessionScope.user_name;}" id="label1" style="font-family:Verdana;color:rgb(0,128,255);font-weight:bold"></xp:label>
+					&#160;&#160; &#160;
+					<xp:label value="#{javascript:sessionScope.user_initials}" id="label2" style="color:rgb(0,128,255);font-family:Verdana;font-weight:bold"></xp:label>
+					&#160;&#160;
+					<xp:br></xp:br></xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:tabbedPanel id="tabbedPanel1">
+						<xp:tabPanel label="Pipeline Group Options" id="tabPanel1">
+							<xc:ccFormPipelineOptions></xc:ccFormPipelineOptions></xp:tabPanel>
+						<xp:tabPanel
+							label="JSON"
+							id="tabPanel2"
+							rendered="false">
+						</xp:tabPanel>
+					</xp:tabbedPanel>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td></xp:td>
+			</xp:tr>
+		</xp:table>
+	</xp:panel>
+</xp:view>

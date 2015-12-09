@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" 	xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xp:this.resources>
+		<xp:script src="/generalSSJSUtilities.jss" clientSide="false"></xp:script>
+		<xp:dojoModule name="dojo.dnd.Source"></xp:dojoModule>
+		<xp:styleSheet href="/.ibmxspres/dojoroot/dojo/resources/dnd.css"></xp:styleSheet>
+		<xp:styleSheet href="/dragndrop.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xp:this.data>
+		<xp:dominoDocument var="document1" formName="iRESProfile" action="editDocument">
+			<xp:this.documentId><![CDATA[#{javascript:var nView:NotesView=database.getView('Admin\\User Profile');
+var nDoc:NotesDocument=nView.getDocumentByKey(sessionScope.user_initials, true);
+if(nDoc != null){
+	//nothing needed
+} else {
+	var nDoc:NotesDocument=database.createDocument();
+	nDoc.replaceItemValue('Form', 'iRESProfile');
+	nDoc.replaceItemValue('userInitials', sessionScope.user_initials);
+	nDoc.save();
+}
+
+return nDoc.getUniversalID();}]]></xp:this.documentId>
+		</xp:dominoDocument>
+	</xp:this.data>
+	<xp:scriptBlock>
+		<xp:this.value><![CDATA[XSP.addOnLoad(init);
+
+var divList;
+
+function init() {
+	//console.log("init");
+	divList = new dojo.dnd.Target("#{id:divList}");
+	dojo.connect(divList, "onDndDrop", targetDrop); // Connect the onDndDrop event to target
+}
+
+function targetDrop(source, nodes, copy, target) {
+	//console.log("targetDrop");
+	// To verify that this is the right handler for drop event
+	if (dojo.dnd.manager().target !== this) {
+		//console.log("targetDrop terminating...");
+		return;
+	}
+
+	// Get all the note IDs and put them in an array
+	var notesIDs = new Array();
+	dojo.forEach(nodes, function (node, i) {
+		notesIDs.push(dojo.attr(node, "chosenOption"));
+		//console.log("noteID is: " + dojo.attr(node, "chosenOption") );
+		myRPC.myMethod(dojo.attr(node, "chosenOption")).addCallback(function(response) {
+});
+	});
+
+
+}]]></xp:this.value>
+	</xp:scriptBlock>
+	<xe:jsonRpcService
+		id="jsonRpcService1"
+		serviceName="myRPC"
+		state="true">
+		<xe:this.methods>
+			<xe:remoteMethod name="myMethod">
+				<xe:this.arguments>
+					<xe:remoteMethodArg name="myArg" type="string"></xe:remoteMethodArg>
+				</xe:this.arguments>
+				<xe:this.script>
+					<![CDATA[viewScope.invokedBy = myArg;
+var curr=sessionScope.loop;
+sessionScope.put("loop", curr + "," + viewScope.invokedBy);
+document1.replaceItemValue("pipelineGroupSelections", @Explode(sessionScope.loop, ",", false));
+document1.save();
+XSP.partialRefreshGet("dataTable");
+return sessionScope.loop;
+          ]]>
+				</xe:this.script>
+			</xe:remoteMethod>
+		</xe:this.methods>
+	</xe:jsonRpcService>
+	<xp:panel>
+
+
+		<xp:dataTable
+		id="dataTable"
+		rows="30"
+		var="rowData">
+		<xp:this.attrs>
+			<xp:attr
+				name="dojotype"
+				value="dojo.dnd.Source">
+			</xp:attr>
+		</xp:this.attrs>
+		<xp:this.rowAttrs>
+			<xp:attr
+				name="class"
+				value="dojoDndItem">
+			</xp:attr>
+			<xp:attr
+				name="chosenOption"
+				value="#{javascript:rowData;}">
+			</xp:attr>
+		</xp:this.rowAttrs>
+		<xp:this.value><![CDATA[#{javascript:var selOptions = ["Address", "Applies", "Client Job Title", "Company", "Contact Name", "Contact Phone", "Email", "Emails Sent", "Feedback", "Interviews", "Job Status", "Job Type", "Proper Job Title", "Requirement Number",  "Submits", "Web Applies"];
+return selOptions;}]]></xp:this.value><xp:column id="column1">
+			<xp:this.facets>
+			
+			<xp:label id="label1" xp:key="footer" style="font-style:italic;font-size:8pt"><xp:this.value><![CDATA[#{javascript:return "Drag your selected options to the target below";}]]></xp:this.value></xp:label>
+				<xp:span xp:key="header"><xp:span style="font-weight:bold;font-style:italic">Option</xp:span></xp:span>
+			</xp:this.facets>
+			<xp:text
+				escape="true"
+				 value="#{javascript:rowData;}">
+			</xp:text></xp:column>
+	</xp:dataTable>
+	<xp:br></xp:br>
+	<xp:div dojoType="dojo.dnd.Target" style="width:94px;height:94px;background-color:rgb(248,200,33)" id="divList">
+
+	</xp:div>
+	
+	<xp:button value="Clear Selection" id="button1">
+	<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+		<xp:this.action><![CDATA[#{javascript:sessionScope.loop=null;}]]></xp:this.action>
+	</xp:eventHandler></xp:button>
+	</xp:panel>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:button value="Save" id="button2">
+		<xp:eventHandler event="onclick" submit="true"
+			refreshMode="complete">
+			<xp:this.action><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), "pipelineGroupSelections", iVector);
+
+document1.getDocument().removeItem("pipelineGroupSelFieldNames");
+
+if(iVector != null){
+	for(i=0;i<iVector.size();i++){
+		if(iVector.elementAt(i )!= null){
+		switch(iVector.elementAt(i )){
+			case "0":
+				//I'm not sure why 0 is showing up, but it's easier to just do this. 
+			break;
+			case "Contact Name":
+			SSJSnewOrAppendItemValue("pipelineGroupSelFieldNames", "contactname", document1.getDocument());
+			break;
+			case "Contact Phone":
+			SSJSnewOrAppendItemValue("pipelineGroupSelFieldNames", "contactPhone_1", document1.getDocument());
+			break;
+			case "Email":
+			SSJSnewOrAppendItemValue("pipelineGroupSelFieldNames", "eMailAddress", document1.getDocument());
+			break;
+			case "Address":
+			//address is actually 2 fields. We'll use the first one for consistancy
+			SSJSnewOrAppendItemValue("pipelineGroupSelFieldNames", "city1", document1.getDocument());
+			break;
+			case "Job Type":
+			SSJSnewOrAppendItemValue("pipelineGroupSelFieldNames", "jotype", document1.getDocument());
+			break;
+			case "Proper Job Title":
+			SSJSnewOrAppendItemValue("pipelineGroupSelFieldNames", "properjt", document1.getDocument());
+			break;
+			case "Client Job Title":
+			SSJSnewOrAppendItemValue("pipelineGroupSelFieldNames", "clientjt", document1.getDocument());
+			break;
+			case "Company":
+			SSJSnewOrAppendItemValue("pipelineGroupSelFieldNames", "CompanyName", document1.getDocument());
+			break;
+			case "Requirement Number":
+			SSJSnewOrAppendItemValue("pipelineGroupSelFieldNames", "requirement_number", document1.getDocument());
+			break;
+			case "Applies":
+			SSJSnewOrAppendItemValue("pipelineGroupSelFieldNames", "NumApplies", document1.getDocument());
+			break;
+			case "Feedback":
+			SSJSnewOrAppendItemValue("pipelineGroupSelFieldNames", "NumCltFeedback", document1.getDocument());
+			break;
+			case "Interviews":
+			SSJSnewOrAppendItemValue("pipelineGroupSelFieldNames", "NumInterviews", document1.getDocument());
+			break;
+			case "Submits":
+			SSJSnewOrAppendItemValue("pipelineGroupSelFieldNames", "NumSubmits", document1.getDocument());
+			break;
+			case "Web Applies":
+			SSJSnewOrAppendItemValue("pipelineGroupSelFieldNames", "NumWebApplies", document1.getDocument());
+			break;
+			case "Emails Sent":
+			SSJSnewOrAppendItemValue("pipelineGroupSelFieldNames", "NumEmailsSent", document1.getDocument());
+			break;
+			case "Job Status":
+			SSJSnewOrAppendItemValue("pipelineGroupSelFieldNames", "jostatus", document1.getDocument());
+			break;	
+		}		
+}
+}
+document1.getDocument().save();
+sessionScope.loop=null;
+}}]]></xp:this.action>
+		</xp:eventHandler></xp:button>
+	<xp:br></xp:br>
+	
+	<xp:br></xp:br></xp:view>

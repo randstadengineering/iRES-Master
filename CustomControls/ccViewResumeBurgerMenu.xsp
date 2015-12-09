@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	     
+	     <div id="viewResumeBurgerMenu" class="main-nav">
+	     	<xp:link escape="true" text="Action Pending" id="link1">
+	     		<xp:eventHandler event="onclick" submit="true"
+	     			refreshMode="partial" refreshId="link1">
+	     			<xp:this.script><![CDATA[navSetStatus('Applies', 'Action Pending');]]></xp:this.script>
+	     			<xp:this.action><![CDATA[#{javascript:var selDoc = getCookie("lastDoc");
+
+fwUtils.changeSubStatus(selDoc, "Status = Action Pending", "SubmittalStatus");
+
+//we need to set the cookie here, since this executes after the client
+var nextDocUNID = getCookie("nextDoc");
+setCookie("lastDoc", nextDocUNID);
+
+return selDoc;}]]></xp:this.action>
+<xp:this.onComplete><![CDATA[var wkUNID = getCookie("lastDoc");
+XSP.partialRefreshGet( '#{id:groupingPane}', {
+    params: { 'docUNID': wkUNID }
+});]]></xp:this.onComplete>
+	     		</xp:eventHandler></xp:link>
+	     	
+	     	<xp:link escape="true" text="Called Left Message"
+	     		id="link3">
+	     	<xp:eventHandler event="onclick" submit="true"
+	     		refreshMode="partial" refreshId="link3">
+	     		<xp:this.action><![CDATA[#{javascript:var selDoc = getCookie("lastDoc");
+
+fwUtils.changeSubStatus(selDoc, "Status = Called Left Message", "SubmittalStatus");
+
+//we need to set the cookie here, since this executes after the client
+var nextDocUNID = getCookie("nextDoc");
+setCookie("lastDoc", nextDocUNID);
+
+return selDoc;}]]></xp:this.action>
+	     		<xp:this.script><![CDATA[navSetStatus('Applies', 'Called Left Message');]]></xp:this.script>
+	     		<xp:this.onComplete><![CDATA[var wkUNID = getCookie("lastDoc");
+XSP.partialRefreshGet( '#{id:groupingPane}', {
+    params: { 'docUNID': wkUNID }
+});]]></xp:this.onComplete>
+	     	</xp:eventHandler></xp:link>
+	     	<xp:link escape="true" text="Called Not a match"
+	     		id="link4">
+	     	<xp:eventHandler event="onclick" submit="true"
+	     		refreshMode="partial" refreshId="link4">
+	     		<xp:this.action><![CDATA[#{javascript:var selDoc = getCookie("lastDoc");
+
+fwUtils.changeSubStatus(selDoc, "Status = Called Not a match", "SubmittalStatus");
+
+//we need to set the cookie here, since this executes after the client
+var nextDocUNID = getCookie("nextDoc");
+setCookie("lastDoc", nextDocUNID);
+
+return selDoc;}]]></xp:this.action>
+	     		<xp:this.script><![CDATA[navSetStatus('Applies', 'Called Not a match');]]></xp:this.script>
+	     		<xp:this.onComplete><![CDATA[var wkUNID = getCookie("lastDoc");
+XSP.partialRefreshGet( '#{id:groupingPane}', {
+    params: { 'docUNID': wkUNID }
+});]]></xp:this.onComplete>
+	     	</xp:eventHandler></xp:link>
+	     	<xp:link escape="true" text="Duplicate Apply" id="link5">
+	     		<xp:eventHandler event="onclick" submit="true"
+	     			refreshMode="partial" refreshId="link5">
+	     			<xp:this.action><![CDATA[#{javascript:var selDoc = getCookie("lastDoc");
+
+fwUtils.changeSubStatus(selDoc, "Status = Duplicate Apply", "SubmittalStatus");
+
+//we need to set the cookie here, since this executes after the client
+var nextDocUNID = getCookie("nextDoc");
+setCookie("lastDoc", nextDocUNID);
+
+return selDoc;}]]></xp:this.action>
+	     			<xp:this.script><![CDATA[navSetStatus('Applies', 'Duplicate Apply');]]></xp:this.script>
+	     			<xp:this.onComplete><![CDATA[var wkUNID = getCookie("lastDoc");
+XSP.partialRefreshGet( '#{id:groupingPane}', {
+    params: { 'docUNID': wkUNID }
+});]]></xp:this.onComplete>
+	     		</xp:eventHandler></xp:link>
+	     	
+	     	<xp:link escape="true" text="Resume Not Found"
+	     		id="link7">
+	     	<xp:eventHandler event="onclick" submit="true"
+	     		refreshMode="partial" refreshId="link7">
+	     		<xp:this.action><![CDATA[#{javascript:var selDoc = getCookie("lastDoc");
+
+fwUtils.changeSubStatus(selDoc, "Status = Resume Not Found", "SubmittalStatus");
+
+//we need to set the cookie here, since this executes after the client
+var nextDocUNID = getCookie("nextDoc");
+setCookie("lastDoc", nextDocUNID);
+
+return selDoc;}]]></xp:this.action>
+	     		<xp:this.script><![CDATA[navSetStatus('Applies', 'Resume Not Found');]]></xp:this.script>
+	     		<xp:this.onComplete><![CDATA[var wkUNID = getCookie("lastDoc");
+XSP.partialRefreshGet( '#{id:groupingPane}', {
+    params: { 'docUNID': wkUNID }
+});]]></xp:this.onComplete>
+	     	</xp:eventHandler></xp:link>
+	     	<xp:link escape="true" text="Under Consideration"
+	     		id="link8">
+	     	<xp:eventHandler event="onclick" submit="true"
+	     		refreshMode="partial" refreshId="link8">
+	     		<xp:this.action><![CDATA[#{javascript:var selDoc = getCookie("lastDoc");
+
+fwUtils.changeSubStatus(selDoc, "Status = Under Consideration", "SubmittalStatus");
+
+//we need to set the cookie here, since this executes after the client
+var nextDocUNID = getCookie("nextDoc");
+setCookie("lastDoc", nextDocUNID);
+
+return selDoc;}]]></xp:this.action>
+	     		<xp:this.script><![CDATA[navSetStatus('Applies', 'Under Consideration');]]></xp:this.script>
+	     		<xp:this.onComplete><![CDATA[var wkUNID = getCookie("lastDoc");
+XSP.partialRefreshGet( '#{id:groupingPane}', {
+    params: { 'docUNID': wkUNID }
+});]]></xp:this.onComplete>
+	     	</xp:eventHandler></xp:link>
+	     	<xp:span>#</xp:span>
+	     	
+	     	<xp:link escape="true" text="Batch Change Status" id="link9">
+	     	
+	     	</xp:link>
+	     	<xp:link escape="true" text="Add to Hotsheet" id="link10">
+	     	
+	     	</xp:link>
+	     	<xp:link escape="true" text="Close Resume View" id="link6">
+	     		<xp:eventHandler event="onclick" submit="false">
+	     			<xp:this.script><![CDATA[showViewResume(false);]]></xp:this.script>
+	     			<xp:this.onComplete><![CDATA[var wkUNID = getCookie("lastDoc");
+XSP.partialRefreshGet( '#{id:groupingPane}', {
+    params: { 'docUNID': wkUNID }
+});]]></xp:this.onComplete>
+	     		</xp:eventHandler></xp:link></div></xp:view>

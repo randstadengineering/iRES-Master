@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+
+
+	<xp:section id="section1" header="NOTES" initClosed="true">
+	<xp:inputTextarea id="inputTextarea1" value="#{sub.Notes2}" cols="70" rows="4">
+		<xp:this.defaultValue><![CDATA[#{javascript:"Add notes here"}]]></xp:this.defaultValue>
+	</xp:inputTextarea>
+	</xp:section>
+	<xp:section id="section2" header="MOATS" initClosed="true">
+	<xp:table>
+		<xp:tr>
+			<xp:td>
+			<xp:label value="Current Comp:" id="label6" styleClass="cpLabel"></xp:label>
+			<xp:inputText id="inputText8" value="#{sub.CurrentComp}" styleClass="cpInput"></xp:inputText>
+			</xp:td>
+			<xp:td>
+			<xp:label value="Most Comp made:" id="label7" styleClass="cpLabel"></xp:label>
+			<xp:inputText id="inputText4" value="#{sub.MostCompMade}" styleClass="cpInput"></xp:inputText>
+			</xp:td>
+		</xp:tr>
+	</xp:table>
+	<xp:label value="What salary range is acceptable?" id="label4" styleClass="cpLabel"></xp:label>
+	<xp:inputText id="inputText1" value="#{sub.AcceptSalaryRange}" styleClass="cpInput"></xp:inputText>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:label value="How far will you be willing to travel?" id="label5" styleClass="cpLabel"></xp:label>
+	<xp:inputText id="inputText2" value="#{sub.FarWillTravel}" styleClass="cpInput"></xp:inputText><xp:br></xp:br>
+		<xp:br></xp:br>
+		<xp:label value="Anywhere you will not go?" id="label8" styleClass="cpLabel"></xp:label>
+	<xp:inputText id="inputText3" value="#{sub.NotGo}" styleClass="cpInput"></xp:inputText><xp:br></xp:br>
+		<xp:br></xp:br>
+		<xp:label value="What percent of time are you willing to travel?" id="label9" styleClass="cpLabel"></xp:label>
+	<xp:comboBox id="comboBox1"
+		value="#{sub.PercentWillTravel}" styleClass="cpComboBox">
+		<xp:selectItem itemLabel="0 - Zero" itemValue="0 - Zero"></xp:selectItem>
+		<xp:selectItem itemLabel="1 to 10%" itemValue="1 to 10%"></xp:selectItem>
+		<xp:selectItem itemLabel="11 to 25%" itemValue="11 to 25%"></xp:selectItem>
+		<xp:selectItem itemLabel="26% or greater" itemValue="26% or greater"></xp:selectItem>
+	</xp:comboBox>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:label value="Have discussion regarding Counter-offers:" id="label10" styleClass="cpLabel"></xp:label>
+	<xp:br></xp:br>
+	
+	<xp:br></xp:br>
+	<xp:label value="What other positions are you entertaining at this time? Have you been submitted, interviewed, extended an offer?" id="label11" styleClass="cpLabel"></xp:label>
+	<xp:br></xp:br>
+	<xp:table style="width:390.0px">
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Role/Company:" id="label12"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="inputText5"
+					value="#{sub.RoleCompany_1}" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox3"
+					value="#{sub.Submitted_1}" styleClass="cpComboBox">
+					<xp:selectItem itemLabel="Submitted"
+						itemValue="Submitted">
+					</xp:selectItem>
+					<xp:selectItem itemLabel="Interview"
+						itemValue="Interview">
+					</xp:selectItem>
+					<xp:selectItem itemLabel="Offer"
+						itemValue="Offer">
+					</xp:selectItem>
+				</xp:comboBox>
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox2" value="#{sub.Rank_1}"
+					styleClass="cpComboBox">
+					<xp:selectItem itemLabel="1" itemValue="1"></xp:selectItem>
+					<xp:selectItem itemLabel="2" itemValue="2"></xp:selectItem>
+					<xp:selectItem itemLabel="3" itemValue="3"></xp:selectItem>
+				</xp:comboBox>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Role/Company:" id="label13"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="inputText9"
+					value="#{sub.RoleCompany_2}" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox4"
+					value="#{sub.Submitted_2}" styleClass="cpComboBox">
+					<xp:selectItem itemLabel="Submitted"
+						itemValue="Submitted">
+					</xp:selectItem>
+					<xp:selectItem itemLabel="Interview"
+						itemValue="Interview">
+					</xp:selectItem>
+					<xp:selectItem itemLabel="Offer"
+						itemValue="Offer">
+					</xp:selectItem>
+				</xp:comboBox>
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox5" value="#{sub.Rank_2}"
+					styleClass="cpComboBox">
+					<xp:selectItem itemLabel="1" itemValue="1"></xp:selectItem>
+					<xp:selectItem itemLabel="2" itemValue="2"></xp:selectItem>
+					<xp:selectItem itemLabel="3" itemValue="3"></xp:selectItem>
+				</xp:comboBox>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Role/Company:" id="label14"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText id="inputText10"
+					value="#{sub.RoleCompany_3}" styleClass="cpInput">
+				</xp:inputText>
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox6"
+					value="#{sub.Submitted_3}" styleClass="cpComboBox">
+					<xp:selectItem itemLabel="Submitted"
+						itemValue="Submitted">
+					</xp:selectItem>
+					<xp:selectItem itemLabel="Interview"
+						itemValue="Interview">
+					</xp:selectItem>
+					<xp:selectItem itemLabel="Offer"
+						itemValue="Offer">
+					</xp:selectItem>
+				</xp:comboBox>
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox7" value="#{sub.Rank_3}"
+					styleClass="cpComboBox">
+					<xp:selectItem itemLabel="1" itemValue="1"></xp:selectItem>
+					<xp:selectItem itemLabel="2" itemValue="2"></xp:selectItem>
+					<xp:selectItem itemLabel="3" itemValue="3"></xp:selectItem>
+				</xp:comboBox>
+			</xp:td>
+		</xp:tr>
+	</xp:table>
+	<xp:label value="What is your availability to interview?" id="label15" styleClass="cpLabel"></xp:label>
+	<xp:inputText id="inputText11" value="#{sub.AvailInterview}" styleClass="cpInput"></xp:inputText><xp:br></xp:br>
+		<xp:br></xp:br>
+		<xp:label value="When are you available to start if offered job?" id="label16" styleClass="cpLabel"></xp:label>
+	<xp:inputText id="inputText12" value="#{sub.AvailWhen}" styleClass="cpInput"></xp:inputText><xp:br></xp:br>
+	</xp:section>
+	<xp:section id="section3" header="MOTIVATORS" initClosed="true">
+
+		<xp:label value="Why are you looking for a new position?"
+			id="label17" styleClass="cpLabel">
+		</xp:label>
+		<xp:br></xp:br>
+		<xp:inputTextarea id="inputTextarea2" rows="4" cols="70"
+			value="#{sub.WhyNewPostion}">
+		</xp:inputTextarea>
+		<xp:br></xp:br>
+		<xp:label
+			value="What challenges are you facing in your current job?"
+			id="label18" styleClass="cpLabel">
+		</xp:label>
+		<xp:br></xp:br>
+		<xp:inputTextarea id="inputTextarea3" rows="4" cols="70"
+			value="#{sub.CurrChallenges}" styleClass="cpLabel">
+		</xp:inputTextarea>
+		<xp:br></xp:br>
+		<xp:label
+			value="What would keep you in your current job? Have you discussed options with current manager?"
+			id="label19" styleClass="cpLabel">
+		</xp:label>
+		<xp:br></xp:br>
+		<xp:inputTextarea id="inputTextarea4" rows="4" cols="70"
+			value="#{sub.CurrKeep}">
+		</xp:inputTextarea>
+		<xp:br></xp:br>
+		<xp:label
+			value="How would you handle a counter offer if/when approached?"
+			id="label20" styleClass="cpLabel">
+		</xp:label>
+		<xp:br></xp:br>
+		<xp:inputTextarea id="inputTextarea5" rows="4" cols="70"
+			value="#{sub.CounterOffer}">
+		</xp:inputTextarea>
+		<xp:br></xp:br>
+	</xp:section>
+
+</xp:view>

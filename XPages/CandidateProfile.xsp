@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"><xp:this.data>
+		<xp:dominoDocument var="document1" formName="Candidate"
+			computeWithForm="both">
+			<xp:this.postSaveDocument><![CDATA[#{javascript:context.redirectToPrevious();}]]></xp:this.postSaveDocument>
+			<xp:this.databaseName><![CDATA[#{javascript:session.getCurrentDatabase().getServer() + "!!" + "ats/prof10.nsf"}]]></xp:this.databaseName>
+		</xp:dominoDocument>
+</xp:this.data>
+	<xp:this.afterPageLoad><![CDATA[#{javascript:if(document1.isNewNote()){
+	document1.save();
+	viewScope.candidateDocID = document1.getDocument(true).getUniversalID();
+	sessionScope.candidateCC = "ContactInfo";
+	context.redirectToPage('CandidateProfile.xsp?documentId='+viewScope.get("candidateDocID")+
+	'&candidateCC=contactInfo' + '&action=' + viewScope.profileDocMode);
+}else{
+	viewScope.candidateDocID = document1.getNoteID();
+		document1.setValue('Firstname',@Right(document1.getValue('Employee_Name'),', '));
+		document1.setValue('Lastname',@Left(document1.getValue('Employee_Name'),','));
+		document1.save();
+		if(document1.getValue('Firstname')=='XXX'){
+			document1.setValue('Firstname','');
+		}
+		if(document1.getValue('Lastname')=='XXX'){
+			document1.setValue('Lastname','');
+		}
+		document1.save();
+}
+}]]></xp:this.afterPageLoad>
+	<xp:this.beforePageLoad><![CDATA[#{javascript:if(document1.isNewNote()){
+sessionScope.isnewdoc="Yes";
+}
+sessionScope.defaulturl=context.getUrl();}]]></xp:this.beforePageLoad>
+	
+	<xc:profileCandidateProfile></xc:profileCandidateProfile></xp:view>

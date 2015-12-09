@@ -1,0 +1,82 @@
+.leftNavContainer {
+  background-color:rgb(224,224,224);
+  margin: 0px auto;
+  width: 200px;
+  position: fixed;
+    left: 0px; top: 80px;
+    height: 100%;
+    
+}
+
+
+.CatA {
+  border-radius: 0px;
+  box-shadow: 0 0 0px rgba(0,0,0,.15);
+  overflow: hidden;
+  text-align: center;
+}
+
+  
+/* This is the main nav titles below */
+      .CatA > a {
+      
+        background-image: -webkit-linear-gradient(135deg, rgb(153, 153, 153), rgb(224, 224, 224));
+        background-image: -moz-linear-gradient(135deg, rgb(153, 153, 153), rgb(224, 224, 224));
+        background-image: -o-linear-gradient(135deg, rgb(153, 153, 153), rgb(224, 224, 224));
+        background-image: linear-gradient(135deg, rgb(153, 153, 153), rgb(224, 224, 224));
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.1);
+        color: rgb(255,255,255);
+        display: block;
+        font-size: .95rem;
+        font-weight: 600;
+        height: 40px;
+        letter-spacing: .3rem;
+        line-height: 40px;
+        text-shadow: 0 1px 1px rgba(0,0,0,.1);
+        text-transform: uppercase;
+        transition: all .1s ease;
+        text-decoration: none;
+      }
+/* These are the hover style attributes for the main nav tabs */
+        .CatA >  a:hover {
+         background-color: rgb(153, 153, 153);
+            background-image: -webkit-linear-gradient(135deg, rgb(153, 153, 153), rgb(117, 117, 117));
+         cursor: pointer;
+        }
+        
+          div.CatB {
+            background-color: rgb(255,255,255);
+          }
+ 
+          div.CatB > a {
+            list-style-type: none;
+          }
+
+            .CatB > a {
+             background-color: rgb(224,224,224);
+             border-bottom: 1px solid rgba(0,0,0,.05);
+             color: #333331;
+             display: block;
+             font-size: .8rem;
+             padding: 10px 0 10px 10px;
+             text-decoration: none;
+             transition: all 0.15s linear;
+            }
+
+             .CatB > a:hover  {
+               background-color: rgb(224,224,224);
+                background-image: -webkit-linear-gradient(135deg, rgb(153, 153, 153), rgb(224, 224, 224));
+                color: rgb(255,255,255);
+                padding: 10px 0 10px 50px;
+                cursor: pointer;
+              }
+             .CatB.selected, .CatA.selected {
+             	border: 1px solid gray;
+             	font-weight: bold;
+             }
+             
+             .recordCount {
+             	float: left;
+             }
+         

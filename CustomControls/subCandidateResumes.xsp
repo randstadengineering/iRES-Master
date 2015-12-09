@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">	
+	<xp:this.data>
+
+		<xp:dominoView var="view1" keysExactMatch="true">
+
+			<xp:this.viewName><![CDATA[#{javascript:"vwAttachmentsByParentUNID"}]]></xp:this.viewName>
+
+			<xp:this.databaseName><![CDATA[#{javascript:"!!ats/cand_file_archive.nsf"}]]></xp:this.databaseName>
+			<xp:this.keys><![CDATA[${javascript:var profileUNID = profile.getItemValueString("UniqueID2");
+print("Candidate Profile: " + profileUNID);
+return profileUNID;}]]></xp:this.keys>
+		</xp:dominoView>
+	</xp:this.data>
+	<xp:this.afterPageLoad>
+		<![CDATA[#{javascript:sessionScope.showNewReference = "no";
+sessionScope.resumeFilter = sub.getItemValue("UniqueID2");
+sessionScope.empName = sub.getItemValue("Employee_Name");}]]>
+	</xp:this.afterPageLoad>
+	<!--<xp:text escape="true" id="computedField10"
+		value="#{javascript:sessionScope.resumeFilter}">
+		</xp:text>-->
+
+	<xp:table style="width:auto" rendered="#{javascript:(!sub)}">
+		<xp:tr>
+			<xp:td>
+				<xp:button value="Parse Resume" id="button1"
+					styleClass="cpButton">
+					<xp:this.rendered><![CDATA[#{javascript:if(sub.isEditable()){
+return true;
+}else{
+return false;
+}}]]></xp:this.rendered>
+				</xp:button>
+			</xp:td>
+			<xp:td>
+				<xp:button value="Upload File" id="button2"
+					styleClass="cpButton">
+					<xp:this.rendered><![CDATA[#{javascript:if(sub.isEditable()){
+return true;
+}else{
+return false;
+}}]]></xp:this.rendered>
+				</xp:button>
+			</xp:td>
+		</xp:tr>
+	</xp:table>
+
+	<xp:section id="section1" header="RESUMES" initClosed="true">
+		<xp:dataTable id="dataTable1" rows="30" var="rowData"
+			value="#{view1}" style="margin-top:10px">
+			<xp:column id="column1">
+				<xp:this.facets>
+					<xp:label value="Description" id="label4"
+						xp:key="header" styleClass="cpLabel">
+					</xp:label>
+				</xp:this.facets>
+				<xp:link escape="true" id="link1">
+					<xp:this.text><![CDATA[#{javascript:rowData.getColumnValue("Description")}]]></xp:this.text>
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      //document.getElementById("demo").innerHTML = xhttp.responseText;
+      console.log('here we go');
+      loadResume(xhttp.responseText, '#{javascript:rowData.getDocument().getItemValueString("filename");}', function(fileID) {
+	    	   document.getElementById("#{id:fileID}").value = fileID;
+	       });
+    };
+};
+xhttp.open("GET", "RESTServiceProvider.xsp/getResume?docid=#{javascript:rowData.getDocument().getNoteID()};", true);
+xhttp.send();]]></xp:this.script>
+
+					</xp:eventHandler>
+				</xp:link>
+			</xp:column>
+			<xp:column id="column2">
+				<xp:this.facets>
+					<xp:label value="Created" id="label5"
+						xp:key="header" styleClass="cpLabel">
+					</xp:label>
+				</xp:this.facets>
+				<xp:text escape="true" id="computedField2">
+					<xp:this.value><![CDATA[#{javascript:// create Date object from valid string inputs
+var datetime = new Date(rowData.getColumnValue("CreatedDate"));
+
+// format the output
+var month = datetime.getMonth()+1;
+var day = datetime.getDate();
+var year = datetime.getFullYear();
+
+var hour = datetime.getHours();
+if (hour < 10)
+    hour = "0"+hour;
+
+var min = datetime.getMinutes();
+if (min < 10)
+    min = "0"+min;
+
+var sec = datetime.getSeconds();
+if (sec < 10)
+    sec = "0"+sec;
+
+
+// put it all togeter
+month+'/'+day+'/'+year+' '+hour+':'+min+':'+sec+' '+rowData.getColumnValue("$7"); }]]></xp:this.value>
+				</xp:text>
+			</xp:column>
+		</xp:dataTable>
+	</xp:section>
+	<xp:scriptBlock id="scriptBlock1">
+		<xp:this.value><![CDATA[function readSingleFile(f) {
+    //Retrieve the first (and only!) File from the FileList object
+    //var f = evt.target.files[0]; 
+    alert(f);
+ loadResume(f, function(fileID) {
+	    	   document.getElementById("#{id:fileID}").value = fileID;
+	       });
+    /*if (f) {
+      var r = new FileReader();
+      r.onload = function(e) { 
+	      var contents = e.target.result;
+	      alert( "Got the file.n" 
+              +"name: " + f.name + "n"
+              +"type: " + f.type + "n"
+              +"size: " + f.size + " bytesn"
+              + "starts with: " + contents.substr(1, contents.indexOf("n"))      
+	      ); 
+	      
+      } 
+      r.readAsText(f);
+    } else { 
+      alert("Failed to load file");
+    }
+*/
+  }
+  //document.getElementById('#{id:fileinput}').addEventListener('change', readSingleFile, false);]]></xp:this.value>
+	</xp:scriptBlock>
+	<xp:inputHidden id="fileID"></xp:inputHidden></xp:view>

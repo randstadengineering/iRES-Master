@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="14d6" sequence="18" unid="9792FF485FDA30BF85257F160043450B">
+<created><datetime>20151209T071445,87-05</datetime></created>
+<modified><datetime>20151209T074759,62-05</datetime></modified>
+<revised><datetime>20151209T074759,61-05</datetime></revised>
+<lastaccessed><datetime>20151209T074759,62-05</datetime></lastaccessed>
+<addedtofile><datetime>20151209T071445,89-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
+<item name="$TITLE"><text>vwJobsByBranch.xsp</text></item>
+<item name="$Flags"><text>gC~4K</text></item>
+
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+
+<item name="$FileNames" sign="true"><text>vwJobsByBranch.xsp</text></item>
+
+</note>

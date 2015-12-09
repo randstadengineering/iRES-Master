@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	fileID:&#160;<xp:inputText id="fileID"></xp:inputText>
+
+	<xp:this.resources>
+		<xp:script src="/gDriveAPI.js" clientSide="true"></xp:script>
+		<xp:script
+			src="https://apis.google.com/js/client.js?onload=checkAuth"
+			clientSide="true">
+		</xp:script>
+	
+	</xp:this.resources>
+	
+	<xp:br></xp:br>
+	<xp:button value="Set Title:" id="button2">
+		<xp:eventHandler event="onclick" submit="false">
+			<xp:this.script><![CDATA[var id = document.getElementById('#{id:fileID}').value;
+var name = document.getElementById('#{id:newTitle}').value;
+renameFile(id,name);]]></xp:this.script>
+		</xp:eventHandler></xp:button>
+	<xp:inputText id="newTitle"></xp:inputText>
+	<xp:br></xp:br>
+	<xp:button value="Set Mime" id="button3">
+		<xp:eventHandler event="onclick" submit="false">
+			<xp:this.script><![CDATA[var id = document.getElementById('#{id:fileID}').value;
+var mime = document.getElementById('#{id:mimeType}').value;
+updateMimeType(id,mime);]]></xp:this.script>
+		</xp:eventHandler></xp:button>
+	<xp:inputText id="mimeType"></xp:inputText>
+	<xp:br></xp:br>
+	<div id="authorize-div" style="display: none">
+      <span>Authorize access to Drive API</span>
+      <!--Button for the user to click to initiate auth sequence -->
+      <button id="authorize-button" onclick="handleAuthClick(event)">
+        Authorize
+      </button>
+    </div>
+    <pre id="output">
+    	<xp:fileUpload id="fileinput"></xp:fileUpload></pre>
+    <xp:button value="Copy File" id="button1">
+    	<xp:eventHandler event="onclick" submit="false">
+    		<xp:this.script><![CDATA[var id = document.getElementById('#{id:fileID}').value;
+var name = document.getElementById('#{id:newTitle}').value;
+copyFile(id,name);]]></xp:this.script>
+    	</xp:eventHandler></xp:button>
+    <xp:scriptBlock id="scriptBlock1">
+    	<xp:this.value><![CDATA[function readSingleFile(evt) {
+    //Retrieve the first (and only!) File from the FileList object
+    var f = evt.target.files[0]; 
+   // alert(f);
+ //loadResume(f, function(fileID) {
+//	    	   document.getElementById("#{id:fileID}").value = fileID; });
+insertFile(f, function(result) {
+	console.log(result);
+});
+	   
+    /*if (f) {
+      var r = new FileReader();
+      r.onload = function(e) { 
+	      var contents = e.target.result;
+	      alert( "Got the file.n" 
+              +"name: " + f.name + "n"
+              +"type: " + f.type + "n"
+              +"size: " + f.size + " bytesn"
+              + "starts with: " + contents.substr(1, contents.indexOf("n"))      
+	      ); 
+	      
+      } 
+      r.readAsText(f);
+    } else { 
+      alert("Failed to load file");
+    }
+*/
+  }
+  document.getElementById('#{id:fileinput}').addEventListener('change', readSingleFile, false);]]></xp:this.value>
+    </xp:scriptBlock>
+    <xp:br></xp:br>
+    <xp:button id="button4" value="Print File">
+    	<xp:eventHandler event="onclick" submit="false">
+    		<xp:this.script><![CDATA[var fileID = document.getElementById("#{id:fileID}").value;
+printFile(fileID);]]></xp:this.script>
+    	</xp:eventHandler></xp:button>
+    <xp:br></xp:br>
+    <xp:button value="Download File" id="button5">
+    	<xp:eventHandler event="onclick" submit="false">
+    		<xp:this.script><![CDATA[var fileID = document.getElementById("#{id:fileID}").value;
+getFile(fileID, function(file) {
+	downloadFile(file, function(resp){
+		console.log(resp);
+		document.getElementById("fileDownload").innerHTML=resp;
+	});
+});]]></xp:this.script>
+    	</xp:eventHandler></xp:button>
+    <iframe id="resumeFrame" title="Include gadget (iframe)" width="100%" height="1650" scrolling="auto" frameborder="0" allowtransparency="true" class="igm" 
+    src=""></iframe>
+    </xp:view>

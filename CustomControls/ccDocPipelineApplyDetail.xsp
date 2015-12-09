@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" 
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.resources>
+		<xp:script src="/generalSSJSUtilities.jss" clientSide="false"></xp:script>
+		<xp:styleSheet href="/waitTable.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xp:panel style="height:500px;overflow:auto;">
+		<xp:this.data>
+			<xp:dominoDocument var="document1" formName="(New 4. Apply)   -   Apply" action="openDocument">
+				<xp:this.documentId><![CDATA[#{javascript:if(!param.isEmpty()){
+	return param.docUNID;
+} else {
+	return null;
+}}]]></xp:this.documentId>
+				<xp:this.databaseName><![CDATA[#{javascript:jobs10[0] + "!!" + jobs10[1]}]]></xp:this.databaseName>
+			</xp:dominoDocument>
+		</xp:this.data><xp:table >
+			<xp:tr>
+				<xp:td style="width:95px">
+
+				</xp:td>
+				<xp:td>
+
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:label value="Pay Rate:     " id="label1"
+						style="width:70px">
+					</xp:label>
+				</xp:td>
+				<xp:td align="right">
+					<xp:text escape="true" id="computedField1"
+						value="#{document1.Payrate}">
+						<xp:this.converter>
+							<xp:convertNumber type="currency"
+								currencySymbol="$" currencyCode="USD">
+							</xp:convertNumber>
+						</xp:this.converter>
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOType1', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).toString().toUpperCase()  != "PERM"){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Desired Rate" id="label2"></xp:label>
+				</xp:td>
+				<xp:td align="right">
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOType1', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).toString().toUpperCase()  != "PERM"){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text escape="true" id="computedField2">
+						<xp:this.converter>
+							<xp:convertNumber type="currency"
+								currencySymbol="$" currencyCode="USD">
+							</xp:convertNumber>
+						</xp:this.converter>
+						<xp:this.value><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'DesiredRate', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	return parseFloat(iVector.elementAt(0).toString()) ;
+	}
+} return 0;}]]></xp:this.value>
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOType1', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).toString().toUpperCase()  != "PERM"){
+		return false;
+	}
+	}
+} return true;}]]></xp:this.rendered>
+					<xp:label value="Desired Salary" id="label3"></xp:label>
+				</xp:td>
+				<xp:td align="right">
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOType1', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).toString().toUpperCase()  != "PERM"){
+		return false;
+	}
+	}
+} return true;}]]></xp:this.rendered>
+					<xp:text escape="true" id="computedField3">
+						<xp:this.converter>
+							<xp:convertNumber type="currency"
+								currencySymbol="$" currencyCode="USD">
+							</xp:convertNumber>
+						</xp:this.converter>
+						<xp:this.value><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'DesiredSalary', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	return parseFloat(iVector.elementAt(0).toString()) ;
+	}
+} return 0;}]]></xp:this.value>
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+		</xp:table>
+
+		<xp:table>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion1', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Q1:" id="jOQuestion1_Label1"
+						for="jOQuestion11">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion1', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.JOQuestion1}"
+						id="jOQuestion11">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion1', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer1_Label1"
+						for="answer11">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion1', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.Answer1}"
+						id="answer11">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion2', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Q2:" id="jOQuestion2_Label1"
+						for="jOQuestion21">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion2', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.JOQuestion2}"
+						id="jOQuestion21">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion2', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer2_Label1"
+						for="answer21">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion2', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.Answer2}"
+						id="answer21">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+
+				<xp:td>
+
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion3', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Q3:" id="jOQuestion3_Label1"
+						for="jOQuestion31">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion3', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.JOQuestion3}"
+						id="jOQuestion31">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion3', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer3_Label1"
+						for="answer31">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion3', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.Answer3}"
+						id="answer31">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion4', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Q4:" id="jOQuestion4_Label1"
+						for="jOQuestion41">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion4', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.JOQuestion4}"
+						id="jOQuestion41">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion4', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer4_Label1"
+						for="answer41">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion4', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.Answer4}"
+						id="answer41">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion5', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label id="jOQuestion5_Label1" for="jOQuestion51"
+						value="Q5:">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion5', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.JOQuestion5}"
+						id="jOQuestion51">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion5', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer5_Label1"
+						for="answer51">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion5', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.Answer5}"
+						id="answer51">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion6', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Q6:" id="jOQuestion6_Label1"
+						for="jOQuestion61">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion6', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.JOQuestion6}"
+						id="jOQuestion61">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion6', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer6_Label1"
+						for="answer61">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion6', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.Answer6}"
+						id="answer61">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion7', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Q7:" id="jOQuestion7_Label1"
+						for="jOQuestion71">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion7', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.JOQuestion7}"
+						id="jOQuestion71">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion7', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer7_Label1"
+						for="answer71">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion7', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.Answer7}"
+						id="answer71">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion8', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Q8:" id="jOQuestion8_Label1"
+						for="jOQuestion81">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion8', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.JOQuestion8}"
+						id="jOQuestion81">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion8', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer8_Label1"
+						for="answer81">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion8', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.Answer8}"
+						id="answer81">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion9', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="Q9:" id="jOQuestion9_Label1"
+						for="jOQuestion91">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion9', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.JOQuestion9}"
+						id="jOQuestion91">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+			<xp:tr>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion9', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:label value="A:" id="answer9_Label1"
+						for="answer91">
+					</xp:label>
+				</xp:td>
+				<xp:td>
+					<xp:this.rendered><![CDATA[#{javascript:var iVector:java.util.Vector = new java.util.Vector();
+iVector = SSJSgetItemValueSet(document1.getDocument(), 'JOQuestion9', iVector);
+if(iVector != null){
+	if(iVector.elementAt(0) != null){
+	if(iVector.elementAt(0).length > 1){
+		return true;
+	}
+	}
+} return false;}]]></xp:this.rendered>
+					<xp:text value="#{document1.Answer9}"
+						id="answer91">
+					</xp:text>
+				</xp:td>
+			</xp:tr>
+		</xp:table>
+	</xp:panel>
+	</xp:view>

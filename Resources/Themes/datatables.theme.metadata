@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="156" sequence="76" unid="3954ED64C29312AE85257EBC0048DBCD">
+<created><datetime dst="true">20150910T091548,61-04</datetime></created>
+<modified><datetime>20151117T135900,49-05</datetime></modified>
+<revised><datetime>20151117T135900,48-05</datetime></revised>
+<lastaccessed><datetime>20151117T135900,49-05</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20151013T151228,06-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
+<item name="$Flags"><text>34567Cg~`</text></item>
+<item name="$TITLE"><text>datatables.theme</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>datatables.theme</text></item>
+<item name="$CSSFiles"><textlist><text>bower_components/DataTables/media/css/jquery.dataTables.min.css</text><text>bower_components/DataTables/extensions/FixedColumns/css/dataTables.fixedColumns.min.css</text><text>bower_components/DataTables/extensions/KeyTable/css/dataTables.keyTable.css</text></textlist></item></note>

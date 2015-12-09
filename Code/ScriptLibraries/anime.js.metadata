@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="65a" sequence="253" unid="EF72F978CFED571785257EDD00550C21">
+<created><datetime dst="true">20151013T112856,65-04</datetime></created>
+<modified><datetime>20151208T133710,08-05</datetime></modified>
+<revised><datetime>20151208T133710,07-05</datetime></revised>
+<lastaccessed><datetime>20151208T133710,08-05</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20151013T151409,01-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
+<item name="$TITLE" sign="true"><text>anime.js</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+</note>

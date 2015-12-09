@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="16a" sequence="10" unid="9061B066F41A1C5985257EBC0048EFE2">
+<created><datetime dst="true">20150910T091640,02-04</datetime></created>
+<modified><datetime>20151117T114631,62-05</datetime></modified>
+<revised><datetime>20151117T114631,61-05</datetime></revised>
+<lastaccessed><datetime>20151117T114631,62-05</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20151013T151229,04-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
+<item name="$Flags"><text>34C=Q</text></item>
+<item name="$TITLE"><text>pastel-tweaks.css</text></item>
+<item name="$MimeType"><text>text/css</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>pastel-tweaks.css</text></item></note>

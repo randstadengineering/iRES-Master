@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<xp:panel id="notesPane">
+		<xp:this.styleClass><![CDATA[#{javascript:if (getCookie('groupingPaneState')=='') setCookie('notesPaneState','',0);
+(getCookie('groupingPaneState')!='is-visible') ? 'notesPane' : 'notesPane ' + getCookie('notesPaneState');}]]></xp:this.styleClass>
+		<xp:panel id="notes">
+			<xc:ccDocPipelineApplyDetail></xc:ccDocPipelineApplyDetail>
+		</xp:panel>
+		<xp:panel id="lastResults">
+
+			<xe:djTabContainer id="djTabContainer1"
+				selectedTab="djTabPane2">
+				<xe:djTabPane id="djTabPane2" title="Last Results">
+					<xc:ccLastResults>
+						<xc:this.unid><![CDATA[#{javascript:compositeData.applyDoc.getItemValueString("CandidateUniqueID2")}]]></xc:this.unid>
+					</xc:ccLastResults>
+				</xe:djTabPane>
+				<xe:djTabPane id="djTabPane1" title="Apply Notes">
+					<xc:ccApplyNote
+						applyDoc="#{javascript:compositeData.applyDoc}">
+					</xc:ccApplyNote>
+				</xe:djTabPane>
+			</xe:djTabContainer>
+		</xp:panel>
+		<xp:label value="Notes Pane" id="label1"
+			style="color:rgb(255,255,255);font-weight:bold">
+		</xp:label>
+
+	</xp:panel>
+</xp:view>

@@ -1,0 +1,82 @@
+.main-header header {
+  margin-left: 4px;
+  margin-bottom: 2px;
+}
+
+.main-header a {
+  position: absolute;
+  padding-left: 0px;
+  padding-right: 0px;
+  top: 0px;
+  font-size: 1em;
+  transition:0.25s all;
+}
+
+.main-nav {
+  position: absolute;
+  top: 0;
+  height: 0px;
+  background: #3B3B3B;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.main-nav a {
+  display: block;
+  background: linear-gradient(#3e3e3e, #383838);
+  border-top: 1px solid #484848;
+  border-bottom: 1px solid #2E2E2E;
+  color: white;
+  padding: 10px;
+}
+.main-nav a:hover, .main-nav a:focus {
+  background: linear-gradient(#484848, #383838);
+}
+.main-nav:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 34px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+.content {
+  padding: 100px 20px 1
+      0px 20px;
+}
+
+.close-menu {
+  display: none;
+}
+
+#main-nav:target {
+  width: 15%;
+}
+
+#main-nav:target + .page-wrap {
+  width: 85%;
+}
+#main-nav:target + .page-wrap .open-menu {
+  display: none;
+}
+#main-nav:target + .page-wrap .close-menu {
+  display: block;
+}
+#main-nav:target + .page-wrap .main-header {
+  width: 85%;
+  left: 15%;
+}
+
+#viewResumeBurgerMenu.open-menu {
+    /*width: 200px;*/
+    height: 100%;
+    transition: height 0.3s ease;
+    overflow-y: hidden;
+    }
+#viewResumeBurgerMenu {
+	right: 0px;
+	top: 41px;
+	overflow: hidden;
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="142e" sequence="22" unid="5FEDEA55B81DD9A285257F070066F928">
+<created><datetime>20151124T134444,56-05</datetime></created>
+<modified><datetime>20151209T070150,00-05</datetime></modified>
+<revised><datetime>20151209T070149,99-05</datetime></revised>
+<lastaccessed><datetime>20151209T070150,00-05</datetime></lastaccessed>
+<addedtofile><datetime>20151124T134444,57-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
+<item name="$Flags"><text>gC~4;</text></item>
+
+
+<item name="$TITLE" sign="true"><text>wpSearchlight.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+
+
+<item name="$FileNames" sign="true"><text>wpSearchlight.xsp</text></item>
+
+</note>

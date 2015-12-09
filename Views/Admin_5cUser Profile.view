@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='85257EDD00698137'>
+<noteinfo noteid='64a' unid='64C5323758E7041785257EDC00589D3F' sequence='9'>
+<created><datetime dst='true'>20151012T120754,23-04</datetime></created>
+<modified><datetime>20151117T114615,57-05</datetime></modified>
+<revised><datetime>20151117T114615,56-05</datetime></revised>
+<lastaccessed><datetime>20151117T114615,57-05</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20151013T151406,61-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>Admin\User Profile</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+dgAFAEAAPAAEAAwAFwAJAAQAdXNlckluaXRpYWxzcGlwZWxpbmVHcm91cFNlbGVjdGlvbnMkQ29u
+ZmxpY3QkUkVGBAAEAAAAJAAFAAQARm9ybQEACwBpUkVTUHJvZmlsZQAKAgQABAADAAcADAAFAAkz
+UzRTAA==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+GQABAABEAGYAAAAMAHVzZXJJbml0aWFscw==
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACAAIAiEAAAFZDAQAMAAQAAAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAABcAAAAAAAAAUAAB
+AAAKAAAAAAAAAAAAAgIAAAB1c2VySW5pdGlhbHNVc2VycGlwZWxpbmVHcm91cFNlbGVjdGlvbnMm
+AAEAAAABAQAJAQAACgEBDgoAAE8ArSsBAC8AAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD/
+/wAAAAAAAAAAAAAAAAAAQgAIAAAAAQD39/cAAQDh4eEAAQDh4eEAAAAAAAAAAAABAP///wABAP//
+/wAAAAEAAAAAAAEAAAAAAAEAAAAAAAAACAAAAAAAAQA=
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>PY</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$SelQuery' sign='true'>
+<rawitemdata type='f'>
+gQYAAAAAif8XAAAAAAABAAsAaVJFU1Byb2ZpbGUA
+</rawitemdata></item></note>
+

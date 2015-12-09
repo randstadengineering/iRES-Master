@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="26px" height="32px" viewBox="0 0 26 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>3Off</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Rectangle-1-Copy-2-+--3-Copy-Copy" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+            <rect id="Rectangle-1-Copy-2" stroke="#979797" stroke-width="2" sketch:type="MSShapeGroup" x="0" y="0" width="24" height="30"></rect>
+            <text id="-3" sketch:type="MSTextLayer" font-family="Arial" font-size="16" font-weight="normal" fill="#9B9B9B">
+                <tspan x="2" y="19"> </tspan>
+                <tspan x="6.4453125" y="19" font-size="18" text-decoration="underline">3</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

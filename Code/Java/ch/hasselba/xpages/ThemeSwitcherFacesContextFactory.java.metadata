@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="85257EDD00698137" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="5a2" sequence="26" unid="4953D2D925BACC1485257EC200461D63">
+<created><datetime dst="true">20150916T084550,43-04</datetime></created>
+<modified><datetime>20151117T115544,18-05</datetime></modified>
+<revised><datetime>20151117T115544,17-05</datetime></revised>
+<lastaccessed><datetime>20151117T115544,18-05</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20151013T151356,50-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Brian Hester/O=ATS</name></updatedby>
+<wassignedby><name>CN=Brian Hester/O=ATS</name></wassignedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>ch/hasselba/xpages/ThemeSwitcherFacesContextFactory.java</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>ch/hasselba/xpages/ThemeSwitcherFacesContextFactory.java</text></item>
+
+
+</note>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	
+
+	<xp:this.resources>
+		<xp:styleSheet href="/FormStyles.css"></xp:styleSheet>
+		<xp:styleSheet href="/candidateStyles.css"></xp:styleSheet>
+	</xp:this.resources>
+	
+	<xp:table style="width:550.0px;overflow:auto">
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Target Start Date:"
+					id="startdate_Label1" for="startdate1" styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td></xp:td>
+			<xp:td>
+				<xp:inputText value="#{document1.startdate}"
+					id="startdate1" style="width:7em">
+					<xp:dateTimeHelper id="dateTimeHelper1"></xp:dateTimeHelper>
+					<xp:this.converter>
+						<xp:convertDateTime type="date"
+							dateStyle="short">
+						</xp:convertDateTime>
+					</xp:this.converter>
+				</xp:inputText>
+			</xp:td>
+			<td>
+				<xp:label id="label2" value="Calculate Margin"></xp:label>
+			</td>
+			<td>
+				<xp:inputText id="inputText1" style="width:65px"></xp:inputText>
+			</td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Contract Submittal" id="label1"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td></xp:td>
+			<xp:td>
+				<xp:label value="Pay Rate" id="label3"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:label value="Bill Markup" id="label4"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:label value="Bill Rate" id="label5"
+					styleClass="cpLabel">
+				</xp:label>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Contract Rate? " id="label6"
+					styleClass="cpLabel">
+				</xp:label>
+				
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox1"
+					value="#{document1.RateInfo}" defaultValue="No">
+					<xp:selectItem itemLabel="Yes" id="selectItem1"></xp:selectItem>
+					<xp:selectItem itemLabel="No" id="selectItem2"></xp:selectItem>
+				</xp:comboBox></xp:td>
+			<xp:td>
+				<xp:inputText value="#{document1.Desired}" id="desired1"
+					style="width:60.0px">
+				</xp:inputText>
+				<xp:label value=" /hr" id="label8"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText value="#{document1.Markup}" id="markup1"
+					style="width:60.0px">
+					<xp:this.converter>
+						<xp:convertNumber type="number"></xp:convertNumber>
+					</xp:this.converter>
+				</xp:inputText>
+			<xp:label value=" /hr" id="label17"></xp:label></xp:td>
+			<xp:td>
+				<xp:inputText value="#{document1.RateInfo1}"
+					id="rateInfo11" style="width:60.0px">
+					<xp:this.converter>
+						<xp:convertNumber type="number"></xp:convertNumber>
+					</xp:this.converter>
+				</xp:inputText>
+			<xp:label value=" /hr" id="label19"></xp:label></xp:td>
+		</xp:tr>
+
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Overtime Rate? " id="label7"></xp:label>
+				
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox2" value="#{document1.OTInfo}"
+					defaultValue="No">
+					<xp:selectItem itemLabel="Yes" id="selectItem3"></xp:selectItem>
+					<xp:selectItem itemLabel="No" id="selectItem4"></xp:selectItem>
+				</xp:comboBox></xp:td>
+			<xp:td>
+				<xp:inputText value="#{document1.pay_ot}" id="pay_ot1"
+					style="width:60.0px">
+					<xp:this.converter>
+						<xp:convertNumber type="number"></xp:convertNumber>
+					</xp:this.converter>
+				</xp:inputText>
+				<xp:label value=" /hr" id="label9"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText value="#{document1.OTMarkup}"
+					id="oTMarkup1" style="width:60.0px">
+					<xp:this.converter>
+						<xp:convertNumber type="number"></xp:convertNumber>
+					</xp:this.converter>
+				</xp:inputText>
+			<xp:label value=" /hr" id="label18"></xp:label></xp:td>
+			<xp:td>
+				<xp:inputText value="#{document1.OTBillRate}"
+					id="oTBillRate1" style="width:60.0px">
+					<xp:this.converter>
+						<xp:convertNumber type="number"></xp:convertNumber>
+					</xp:this.converter>
+				</xp:inputText>
+			<xp:label value=" /hr" id="label20"></xp:label></xp:td>
+		</xp:tr>
+
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Per Diem? " id="label10"
+					styleClass="cpLabel">
+				</xp:label>
+				
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox3"
+					value="#{document1.PerDiemInfo}" defaultValue="No">
+					<xp:selectItem itemLabel="Yes" id="selectItem5"></xp:selectItem>
+					<xp:selectItem itemLabel="No" id="selectItem6"></xp:selectItem>
+				</xp:comboBox></xp:td>
+			<xp:td colspan="2">
+				<xp:label value="Comment: " id="label11"
+					styleClass="cpLabel">
+				</xp:label>
+				<xp:inputText value="#{document1.PerDiemComment}"
+					id="perDiemComment1">
+				</xp:inputText>
+			</xp:td>
+
+			<xp:td>
+				<xp:inputText value="#{document1.PerDiemAmt}"
+					id="perDiemAmt1" style="width:60.0px">
+					<xp:this.converter>
+						<xp:convertNumber type="number"></xp:convertNumber>
+					</xp:this.converter>
+				</xp:inputText>
+				<xp:label value=" /day" id="label12"></xp:label>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label value="Mobilization?" id="label13"
+					styleClass="cpLabel">
+				</xp:label>
+				
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox4" value="#{document1.MobInfo}"
+					defaultValue="No">
+					<xp:selectItem itemLabel="Yes" id="selectItem7"></xp:selectItem>
+					<xp:selectItem itemLabel="No" id="selectItem8"></xp:selectItem>
+				</xp:comboBox></xp:td>
+			<xp:td colspan="3">
+				<xp:inputText value="#{document1.MobComment}"
+					id="mobComment1" style="width:232.0px">
+				</xp:inputText>
+			</xp:td>
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label id="label14" styleClass="cpLabel">
+					<xp:this.value><![CDATA[R & R? ]]></xp:this.value>
+				</xp:label>
+				
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox5" value="#{document1.RRInfo}"
+					defaultValue="No">
+					<xp:selectItem itemLabel="Yes" id="selectItem9"></xp:selectItem>
+					<xp:selectItem itemLabel="No" id="selectItem10"></xp:selectItem>
+				</xp:comboBox></xp:td>
+			<xp:td colspan="3">
+				<xp:inputText value="#{document1.RRComment}"
+					id="rRComment1" style="width:232.0px">
+				</xp:inputText>
+			</xp:td>
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td>
+				<xp:label id="label15" value="Other Billable?"
+					styleClass="cpLabel">
+				</xp:label>
+				
+			</xp:td>
+			<xp:td>
+				<xp:comboBox id="comboBox6"
+					value="#{document1.OtherInfo}" defaultValue="No">
+					<xp:selectItem itemLabel="Yes" id="selectItem11"></xp:selectItem>
+					<xp:selectItem itemLabel="No" id="selectItem12"></xp:selectItem>
+				</xp:comboBox></xp:td>
+			<xp:td colspan="3">
+				<xp:inputText value="#{document1.OtherComment}"
+					id="otherComment1" style="width:232.0px">
+				</xp:inputText>
+			</xp:td>
+
+
+		</xp:tr>
+		<xp:tr>
+			<xp:td colspan="5">
+				<xp:label id="label16"
+					value="Where Did you Find This Candidate? " styleClass="cpLabel">
+				</xp:label>
+				<xp:comboBox id="comboBox7"
+					value="#{document1.CandidateSource}">
+					<xp:selectItem itemLabel="Careerbuilder" id="selectItem13"></xp:selectItem>
+					<xp:selectItem itemLabel="Other" id="selectItem14"></xp:selectItem>
+				</xp:comboBox>
+			</xp:td>
+
+
+
+		</xp:tr>
+	</xp:table>
+	
+	</xp:view>

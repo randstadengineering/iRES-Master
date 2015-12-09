@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+
+	<xp:this.resources>
+		<xp:script src="/gDriveAPI.js" clientSide="true"></xp:script>
+		<xp:script
+			src="https://apis.google.com/js/client.js?onload=checkAuth"
+			clientSide="true">
+		</xp:script>
+	</xp:this.resources>
+	
+	<div id="authorize-div" style="display: none">
+			<span>Authorize access to Drive API</span>
+			<!--Button for the user to click to initiate auth sequence -->
+			<button id="authorize-button"
+				onclick="handleAuthClick(event)">
+				Authorize
+			</button>
+		</div>
+		<pre id="output"></pre>
+</xp:view>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+<xp:panel  id="leftNavRepeatPanel">
+	<xp:panel styleClass="leftNavContainer" >
+		<xp:repeat id="repeat1" rows="30" var="rowData" indexVar="idx">
+			<xp:this.value><![CDATA[#{javascript:if(typeof param !== "undefined" && !param.isEmpty()){
+	sessionScope.joNumber = param.joNumber;
+	var iNav = fwUtils.joNavEntries(param.joNumber + ''); //forcing a string, just in case
+} else {
+	var iNav = fwUtils.individualNavEntries(sessionScope.user_initials);
+}
+return fromJson(iNav);}]]></xp:this.value>
+
+			<xp:text escape="false" id="computedField1"
+				styleClass="CatA">
+				<xp:this.rendered><![CDATA[#{javascript:if(rowData.categoryB != null){
+return false;
+} 
+return true;}]]></xp:this.rendered>
+				<xp:this.value><![CDATA[<a>#{javascript:rowData.categoryA}</a>]]></xp:this.value>
+				<xp:this.tagName><![CDATA[#{javascript:"div class=\"CatA\" data-pcat=\"" + rowData.categoryA + "\"" }]]></xp:this.tagName>
+			</xp:text>
+			<xp:text escape="false" id="computedField2"
+				styleClass="CatB">
+				<xp:this.rendered><![CDATA[#{javascript:if(rowData.categoryA != null){
+return false;
+} 
+return true;}]]></xp:this.rendered>
+				<xp:this.value><![CDATA[<a>#{javascript:rowData.categoryB} | 
+<span style="#{javascript:(rowData.categoryB=='Sent for review') ? 'color: #D0021B' : 'color: #3B3B3B'}">#{javascript:rowData.count.toFixed(0)}</span></a>]]></xp:this.value>
+				<xp:this.tagName><![CDATA[#{javascript:"div class=\"CatB\" data-cat=\"" + rowData.parentCat + "\" data-status=\"" + rowData.categoryB + "\""}]]></xp:this.tagName>
+			</xp:text>
+			<xp:text escape="true" id="computedField3" value="#{javascript:rowData.count} " tagName="a" rendered="false">
+				<xp:this.converter>
+					<xp:convertNumber type="number" integerOnly="true"></xp:convertNumber>
+				</xp:this.converter>
+			</xp:text>
+			<xp:text escape="true" id="detailIndexText" style="display:none">
+				<xp:this.value><![CDATA[#{javascript:if(rowData.categoryB != null){
+return rowData.categoryB;
+} 
+return rowData.categoryA;}]]></xp:this.value>
+			</xp:text>
+		</xp:repeat>
+	</xp:panel>
+	</xp:panel>
+</xp:view>

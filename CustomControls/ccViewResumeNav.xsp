@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:panel disableTheme="false">
+
+
+		<div class="resumeNav">
+			<div id="notesButton">
+
+				<xp:link id="btn_notes" styleClass="notesIcon">
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[var x = $('.notesPane');
+var y = $('.resumeSlideout');
+if (x.hasClass('is-visible')) {
+	createCookie('notesPaneState','',0);
+	x.removeClass('is-visible');
+	y.addClass('notesPaneHidden');
+} else {
+	createCookie('notesPaneState','is-visible',0);
+	x.addClass('is-visible');
+	y.removeClass('notesPaneHidden');
+}]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:link>
+
+			</div>
+
+			<div id="NAMButton">
+
+				<xp:link id="btn_nam" styleClass="namIcon">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="partial" execMode="partial" refreshId="btn_nam"
+						execId="btn_nam">
+
+
+						<xp:this.action><![CDATA[#{javascript:var selDoc = getCookie("lastDoc");
+
+fwUtils.changeSubStatus(selDoc, "Status = Not a match", "SubmittalStatus");
+
+//we need to set the cookie here, since this executes after the client
+var nextDocUNID = getCookie("nextDoc");
+setCookie("lastDoc", nextDocUNID);
+
+return selDoc;}]]></xp:this.action>
+						<xp:this.onComplete><![CDATA[var wkUNID = getCookie("lastDoc");
+XSP.partialRefreshGet( '#{id:groupingPane}', {
+    params: { 'docUNID': wkUNID }
+});]]></xp:this.onComplete>
+						<xp:this.script><![CDATA[navSetStatus('Applies', 'Not a Match');]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:link>
+
+			</div>
+
+
+			<div id="holdButton">
+
+				<xp:link id="btn_hold" styleClass="holdIcon">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="partial" execMode="partial" refreshId="btn_hold"
+						execId="btn_hold">
+
+						<xp:this.script><![CDATA[navSetStatus('Applies', 'Hold');]]></xp:this.script>
+						<xp:this.action><![CDATA[#{javascript:var selDoc = getCookie("lastDoc");
+
+fwUtils.changeSubStatus(selDoc, "Status = Hold", "SubmittalStatus");
+
+//we need to set the cookie here, since this executes after the client
+var nextDocUNID = getCookie("nextDoc");
+setCookie("lastDoc", nextDocUNID);
+
+return selDoc;
+/*
+function getCookie(cookieName){
+	var c = facesContext.getExternalContext().getRequestCookieMap().get(cookieName)
+	return (c!=null)?c.getValue():""
+}
+
+function setCookie(cookiename, cookieval, expires){
+	response = facesContext.getExternalContext().getResponse(); 
+	userCookie = new javax.servlet.http.Cookie(cookiename, cookieval);
+	if(expires) userCookie.setMaxAge(expires*24*60*60*1000); 
+	response.addCookie(userCookie); 
+}
+*/}]]></xp:this.action>
+						<xp:this.onComplete><![CDATA[	var wkUNID = getCookie("lastDoc");
+	
+	XSP.partialRefreshGet( '#{id:groupingPane}', {
+    params: { 'docUNID': wkUNID }
+});]]></xp:this.onComplete>
+					</xp:eventHandler>
+				</xp:link>
+
+			</div>
+
+			<div id="callButton">
+
+				<xp:link id="btn_call" styleClass="callIcon">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="partial" execMode="partial" refreshId="btn_call"
+						execId="btn_call">
+
+						<xp:this.script><![CDATA[navSetStatus('Applies', 'Call');]]></xp:this.script>
+						<xp:this.action><![CDATA[#{javascript:var selDoc = getCookie("lastDoc");
+
+fwUtils.changeSubStatus(selDoc, "Status = Call", "SubmittalStatus");
+
+//we need to set the cookie here, since this executes after the client
+var nextDocUNID = getCookie("nextDoc");
+setCookie("lastDoc", nextDocUNID);
+
+return selDoc;
+
+/*
+function getCookie(cookieName){
+	var c = facesContext.getExternalContext().getRequestCookieMap().get(cookieName)
+	return (c!=null)?c.getValue():""
+}
+
+function setCookie(cookiename, cookieval, expires){
+	response = facesContext.getExternalContext().getResponse(); 
+	userCookie = new javax.servlet.http.Cookie(cookiename, cookieval);
+	if(expires) userCookie.setMaxAge(expires*24*60*60*1000); 
+	response.addCookie(userCookie); 
+}
+*/}]]></xp:this.action>
+						<xp:this.onComplete><![CDATA[	var wkUNID = getCookie("lastDoc");
+	
+	XSP.partialRefreshGet( '#{id:groupingPane}', {
+    params: { 'docUNID': wkUNID }
+});
+
+/*
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+*/]]></xp:this.onComplete>
+					</xp:eventHandler>
+				</xp:link>
+
+			</div>
+			<xp:panel id="priorityButtons">
+
+				<xp:link id="button4">
+					<xp:this.styleClass><![CDATA[#{javascript:if (document1.getItemValueString("rating")=="A") {
+	return "oneIcon select";
+} else {
+	return "oneIcon";
+}}]]></xp:this.styleClass>
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="norefresh">
+
+						<xp:this.action><![CDATA[#{javascript:var selDoc = getCookie("lastDoc");
+fwUtils.changeSubStatus(selDoc, "A", "Rating");
+return selDoc;
+}]]></xp:this.action>
+						<xp:this.script><![CDATA[navSetRating("1");]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:link>
+
+
+				<xp:link id="button5">
+					<xp:this.styleClass><![CDATA[#{javascript:if (document1.getItemValueString("rating")=="B") {
+	return "twoIcon select";
+} else {
+	return "twoIcon";
+}}]]></xp:this.styleClass>
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="norefresh">
+
+						<xp:this.action><![CDATA[#{javascript:var selDoc = getCookie("lastDoc");
+fwUtils.changeSubStatus(selDoc, "B", "Rating");
+return selDoc;
+}]]></xp:this.action>
+						<xp:this.script><![CDATA[navSetRating("2");]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:link>
+
+				<xp:link id="button6">
+					<xp:this.styleClass><![CDATA[#{javascript:if (document1.getItemValueString("rating")=="C") {
+	return "threeIcon select";
+} else {
+	return "threeIcon";
+}}]]></xp:this.styleClass>
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="norefresh">
+
+						<xp:this.action><![CDATA[#{javascript:var selDoc = getCookie("lastDoc");
+fwUtils.changeSubStatus(selDoc, "C", "Rating");
+return selDoc;
+}]]></xp:this.action>
+						<xp:this.script><![CDATA[navSetRating("3");]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:link>
+
+				<xp:link id="button7">
+					<xp:this.styleClass><![CDATA[#{javascript:if (document1.getItemValueString("rating")=="D") {
+	return "fourIcon select";
+} else {
+	return "fourIcon";
+}}]]></xp:this.styleClass>
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="norefresh">
+
+						<xp:this.action><![CDATA[#{javascript:var selDoc = getCookie("lastDoc");
+fwUtils.changeSubStatus(selDoc, "D", "Rating");
+return selDoc;
+}]]></xp:this.action>
+						<xp:this.script><![CDATA[navSetRating("4");]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:link>
+
+				</xp:panel>
+			<div id="submitButton">
+
+				<xp:link styleClass="submitIcon" id="link2">
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="partial" refreshId="submittalDialog">
+
+						<xp:this.action><![CDATA[#{javascript:viewScope.submitApplyUNID = getCookie('lastDoc');
+getComponent("submittalDialog").show();}]]></xp:this.action>
+						<xp:this.script><![CDATA[return checkForOpenSub();]]></xp:this.script>
+					</xp:eventHandler></xp:link>
+
+			</div>
+			<div id="menuButton">
+
+				<xp:link styleClass="barmenuIcon open-menu"
+					value="#main-nav" id="link1">
+					<xp:this.attrs>
+						<xp:attr name="bindto"
+							value="viewResumeBurgerMenu">
+						</xp:attr>
+					</xp:this.attrs>
+					
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[toggleBurgerMenu('viewResumeBurgerMenu');]]></xp:this.script>
+					</xp:eventHandler></xp:link>
+
+			</div>
+
+
+		</div>
+
+
+
+	</xp:panel>
+	
+	<xc:ccViewResumeBurgerMenu></xc:ccViewResumeBurgerMenu></xp:view>
